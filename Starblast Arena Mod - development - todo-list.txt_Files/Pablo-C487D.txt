@@ -1,0 +1,605 @@
+DMG = 10
+RATE = 0.2
+BSPEED = 180
+RECOIL = 15
+ERR = 2.5
+
+
+return model =
+  name: 'Pablo'
+  level:6
+  model:25
+  size:2.55
+  specs:
+    shield:
+      capacity:[300,350]
+      reload:[6,7]
+    generator:
+      capacity:[10,10]
+      reload:[100,150]
+    ship:
+      mass:270
+      speed:[90,100]
+      rotation:[30,45]
+      acceleration:[100,120]
+  bodies:
+    cannons:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-25,-35,-30,-20,-20,0,20,30,30]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,5,6,6,5,5,5,5,0]
+      height: [0,5,6,6,5,5,5,5,0]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons2:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-25,-35,-30,-20,-20,0,20,30,30]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,5,6,6,5,5,5,5,0]
+      height: [0,5,6,6,5,5,5,5,0]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons3:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-25,-35,-30,-20,-20,0,20,30,30]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,5,6,6,5,5,5,5,0]
+      height: [0,5,6,6,5,5,5,5,0]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons4:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons5:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons6:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons7:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons8:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons9:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons10:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons11:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons12:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons13:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons14:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons15:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons16:
+      section_segments: 6
+      offset:
+        x: 10
+        y: -90
+        z: 0
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons17:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: 10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+    cannons18:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -90
+        z: -10
+      position:
+        x: [0,0]
+        y: [-25,-35]
+        z: [0,0]
+      width: [0,5]
+      height: [0,5]
+      angle: 0
+      laser:
+        damage: [DMG,DMG]
+        rate: RATE
+        type: 1
+        speed: [BSPEED,BSPEED]
+        number: 1
+        angle: 0
+        error: ERR
+        recoil: RECOIL
+      propeller: false
+      texture: [17,3,63,17,13,4,4]
+      
+    main:
+      section_segments:[35,55,125,145,215,235,305,325,395]
+      offset:
+        x:0
+        y:20
+        z:0
+      position:
+        x:[0,0,0,0,0,0,0,0,0,0]
+        y:[-50,-50,-45,-10,0,20,30,45,45]
+        z:[0,0,0,0,0,0,0,0,0,0]
+      width:[0,25,28,37,28,28,36,30,0]
+      height:[0,25,25,25,18,18,20,15,0]
+      propeller:0
+      texture:[3,4,2,4,15,4,2]
+    cockpittop:
+      section_segments: 6
+      offset:
+        x: 0
+        y: 20
+        z: 20.6
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-40,-40,-40,-28,-10,-4,28,28]
+        z: [0,0,0,0,0,0,0,0]
+      width: [0,5,6,10,13,13,11,0]
+      height: [0,5,5,6,8,7,5,0]
+      propeller: false
+      texture: [6.9,9,9,9,4,11,3.9]
+    cockpitbottom:
+      section_segments: 6
+      offset:
+        x: 0
+        y: 20
+        z: 19
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-40,-46,-40,-28,-13,30,30]
+        z: [0,0,0,0,0,0,0]
+      width: [0,4,8,13,16,15,0]
+      height: [0,3,5,6,8,5,0]
+      propeller: false
+      texture: [ 3.9 ]
+    toppropulsors:
+      section_segments: 10
+      offset:
+        x: 10
+        y: 32
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [10,20,25,30,40,50,40]
+        z: [0,0,0,0,0,0,0]
+      width: [10,10,10,10,15,10,0]
+      height: [10,10,10,10,15,10,0]
+      texture: [3,3,63,63,4,17]
+      propeller: true
+    detail15:
+      section_segments: 6
+      offset:
+        x: 8
+        y: -3
+        z: 0
+      position:
+        x: [0,0,0,0]
+        y: [-30,26,30,30]
+        z: [0,0,0,0]
+      width: [16,16,6,0]
+      height: [4,4,2,0]
+      texture: [16.9,3.9,3.9]
+      angle: 105
+    barrelrings:
+      vertical: 1
+      section_segments: 8
+      offset:
+        x: 20
+        y: 0
+        z: -30
+      position:
+        x: [0,0,0,0,0]
+        y: [-5,5,5,-5,-5]
+        z: [0,0,0,0,0]
+      width: [20,20,15,15,20]
+      height: [25,25,20,20,25]
+      texture: [ 63 ]
+    ring1:
+      section_segments: 8
+      offset:
+        x: 15
+        y: -4.5
+        z: 4
+      position:
+        x: [0,0,0,0,0]
+        y: [-5,5,5,-5,-5]
+        z: [0,0,0,0,0]
+      width: [20,20,15,15,20]
+      height: [19,19,14,14,19]
+      texture: [4]
+      angle: 15
+    Main_rings:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -31
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,15,18,18,18,18,18,15,15,0]
+      height: [0,15,18,18,18,18,18,15,15,0]
+      texture: [17.93,4,4,4,13,17,4,18]
+    Main_rings2:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -47.8
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,12,14,14,14,14,14,12,12,0]
+      height: [0,12,14,14,14,14,14,12,12,0]
+      texture: [17.93,4,4,4,18,17,4,18]
+    Main_rings3:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -85
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,12,12,12,12,12,10,10,0]
+      height: [0,10,12,12,12,12,12,10,10,0]
+      texture: [17.93,4,4,4,1,17,4,18]
+
+      
+      
+      
+      
+      
+      
+      
+      
+    

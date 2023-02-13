@@ -1,0 +1,2114 @@
+
+
+// ARENA MOD PROTOTYPE v0.95
+// CODE BY NEX
+
+// if you get this error when starting the mod:
+// "TypeError: Cannot read properties of undefined (reading 'removeServerObject')"
+// just restart the mod and it will be fixed
+
+POINT =
+{
+  x: 0, // x
+  y: 0, // y
+  radius: 45, // point radius
+  limit: 30, // limit of capture points (in seconds per player)
+};
+
+SPAWN =
+{
+  distance: 156,
+  radius: 45
+};
+
+// Ships
+var switch_ship_codes = [601,610];
+var spectator_ship_code = 191;
+var admin_ship_codes = [791,794];
+var gship = 605; // Change that, if you want to give you an other ship
+var gvships = 502;
+var ShipMaxRegen = 101;
+var max_stats = 88888888;
+// Crystals
+var max_crystals = 720; // Change this, if you want an other gems value
+// Alien
+var Pts = 0;
+var AlienLevel = 0; // The alien level
+var AlienCode = 0;  // 10 Chicken
+                    // 11 Crab
+                    // 12 Fortress | 1 Boss
+                    // 13 Some weird new thingy | don't use this
+                    // 14 Candlestick 
+                    // 15 Hirsute | 2 Boss
+                    // 16 Piranha | 3 Boss (level 3)
+                    // 17 Pointu
+                    // 18 Fork
+                    // 19 Saucer  | 4 Boss
+                    // 20 Final Boss  | 5 Boss
+// Asteroide
+var ASTsize = 100; // if you want to change the asteroide size 
+                   // normal size 	30
+// Collectible
+var SecDa = 12; // if you want to change the secondary weapon
+                // 10 rockets, 11 missiles, 12 torpedo
+                // 20 light mines, 21 heavy mines
+//  Admin
+var SHealing = false; // if you want that the admin ship have healing lasers
+var SCollider = true; // if you want that the admin ship have a collider
+// Don't change these
+var infinite_gems = max_crystals - 1;
+var admin = 192;
+var max_sheild = 999; // nice spelling meg
+var max_stats = 88888888;
+var max_regen = 999999;
+var switch_ship_delay = 0.5*60;
+var spectator_switch_delay = 1*60;
+var shiptree = [];
+// Admin
+
+
+
+// SHIPS
+
+
+
+var Spectator_191 = '{"name":"Spectator","level":1.9,"model":1,"size":0.025,"zoom":0.075,"specs":{"shield":{"capacity":[1e-30,1e-30],"reload":[1000,1000]},"generator":{"capacity":[1e-30,1e-30],"reload":[1,1]},"ship":{"mass":1,"speed":[200,200],"rotation":[1000,1000],"acceleration":[1000,1000]}},"bodies":{"face":{"section_segments":100,"angle":0,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"y":[-2,-2,2,2],"z":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"width":[0,1,1,0],"height":[0,1,1,0],"vertical":true,"texture":[6]}},"typespec":{"name":"Spectator","level":1,"model":1,"code":101,"specs":{"shield":{"capacity":[1e-30,1e-30],"reload":[1000,1000]},"generator":{"capacity":[1e-30,1e-30],"reload":[1,1]},"ship":{"mass":1,"speed":[200,200],"rotation":[1000,1000],"acceleration":[1000,1000]}},"shape":[0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001],"lasers":[],"radius":0.001}}';
+var ᐲᖨᐊᑦᔪᐊᓐᑐᙯᓪᐄᓭ_791 = '{"name":"ᐲᖨᐊᑦᔪᐊᓐᑐᙯᓪᐄᓭ","designer":"nex","level":7.9,"model":1,"size":2.333,"specs":{"shield":{"capacity":[5000,5000],"reload":[50,50]},"generator":{"capacity":[1000,1000],"reload":[300,300]},"ship":{"mass":4000,"speed":[200,200],"rotation":[70,70],"acceleration":[150,115],"dash":{"rate":2,"burst_speed":[750,750],"speed":[1000,1000],"acceleration":[40,40],"initial_energy":[1000,1000],"energy":[299,299]}}},"bodies":{"Aneedleusedforhandsewingisalongslendertoolwithapointedtipatoneendandaholeoreyetoholdthesewingthread":{"section_segments":12,"offset":{"x":0,"y":-25,"z":-17},"position":{"x":[0,0,0,0,0,0,0,0],"y":[-120,-80,-35,0,20,40,70,60],"z":[10,10,10,10,10,0,0,0]},"width":[0,4,7,10,13,10,8,0],"height":[0,4,7,10,13,10,8,0],"texture":[3,4,63,4,13,4,17],"propeller":true},"sideneedles":{"section_segments":12,"offset":{"x":19,"y":5,"z":-10},"position":{"x":[0,0,0,0,0,-6,-6],"y":[-90,-70,-40,-20,0,30,20],"z":[0,0,0,0,0,0,0]},"width":[0,3,6,7,8,9,0],"height":[0,3,6,7,8,9,0],"texture":[3,4,10,4,13,17],"propeller":true,"angle":2},"upneedie":{"section_segments":12,"offset":{"x":0,"y":25,"z":4},"position":{"x":[0,0,0,0,0,0,0],"y":[-90,-70,-40,-20,0,30,50],"z":[0,0,0,0,0,0,4]},"width":[0,3,6,7,8,12,0],"height":[0,3,6,7,8,12,0],"texture":[3,4,10,4,13,4],"propeller":true,"angle":0,"laser":{"damage":[500,500],"rate":1.6,"type":1,"speed":[220,270],"number":1,"error":0,"angle":0,"recoil":35}},"properler":{"section_segments":8,"offset":{"x":20,"y":135,"z":9},"position":{"x":[0,0,0,0,0,0,0],"y":[45,40,60,70,80,98,105],"z":[0,0,0,0,0,0,0]},"width":[0,10,14,6,9,6,0],"height":[0,10,14,6,9,6,0],"texture":[18,2,4,2,10,3],"propeller":false,"angle":180},"main_DOESNOTSHOOT":{"section_segments":8,"offset":{"x":0,"y":-25,"z":-1},"position":{"x":[0,0,0,0,0,0,0,0,0],"y":[-30,-20,0,25,45,65,80,100,90],"z":[2,2,1.5,0,0,0,0,0,0]},"width":[0,6,10,16,25,15,20,20,0],"height":[0,2,4,8,10,8,9,9,0],"texture":[3,2,11,1,18,18,4,17],"propeller":true},"real_properler":{"section_segments":8,"offset":{"x":20,"y":93,"z":9},"position":{"x":[0,0],"y":[0,0],"z":[0,0]},"width":[10,0],"height":[10,0],"texture":[17],"propeller":true,"angle":0},"cockpit":{"section_segments":8,"offset":{"x":0,"y":-25,"z":-1},"position":{"x":[0],"y":[0],"z":[0]},"width":[0],"height":[0],"texture":[9],"propeller":false}},"wings":{"main":{"offset":{"x":8,"y":-10,"z":-11},"length":[16,16,15,20],"width":[60,80,60,35,20],"angle":[-45,10,30,0],"position":[0,0,50,70,65],"texture":[13,63,1,8],"doubleside":true,"bump":{"position":0,"size":10}},"winglets":{"offset":{"x":11,"y":31,"z":-2},"length":[45],"width":[50,15],"angle":[40],"position":[0,60],"texture":[63],"doubleside":true,"bump":{"position":0,"size":10}}},"typespec":{"name":"ᐲᖨᐊᑦᔪᐊᓐᑐᙯᓪᐄᓭ","level":7.9,"model":1,"code":791,"specs":{"shield":{"capacity":[5000,5000],"reload":[50,50]},"generator":{"capacity":[1000,1000],"reload":[300,300]},"ship":{"mass":4000,"speed":[200,200],"rotation":[70,70],"acceleration":[150,115],"dash":{"rate":2,"burst_speed":[750,750],"speed":[1000,1000],"acceleration":[40,40],"initial_energy":[1000,1000],"energy":[299,299]}}},"shape":[6.766,4.032,3.988,3.017,2.403,2.03,1.798,1.66,1.565,1.505,1.475,1.474,1.511,1.574,1.673,1.85,2.113,3.924,4.353,4.391,4.291,4.98,5.062,4.648,4.512,3.506,4.512,4.648,5.062,4.98,4.291,4.391,4.353,3.924,2.113,1.85,1.673,1.574,1.511,1.474,1.475,1.505,1.565,1.66,1.798,2.03,2.403,3.017,3.988,4.032],"lasers":[{"x":0,"y":-3.033,"z":0.187,"angle":0,"damage":[500,500],"rate":1.6,"type":1,"speed":[220,270],"number":1,"spread":0,"error":0,"recoil":35}],"radius":6.766}}';
+var sans_792 = '{"name":"sans","level":7.9,"model":2,"size":1.7,"specs":{"shield":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"generator":{"capacity":[100000000000000000000,100000000000000000000],"reload":[100000000000000000000,100000000000000000000]},"ship":{"mass":10000000000,"speed":[340,340],"rotation":[360,360],"acceleration":[500,500]}},"bodies":{"pix1":{"section_segments":12,"offset":{"x":0,"y":-130,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[60,60],"height":[0,0],"texture":1,"laser":{"damage":[100,100],"rate":10,"type":1,"speed":[280,280],"number":3,"angle":50}},"pix2":{"section_segments":12,"offset":{"x":0,"y":-120,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[90,90],"height":[0,0],"texture":1,"laser":{"damage":[5000,5000],"rate":10,"type":2,"speed":[290,290],"number":1}},"pix3":{"section_segments":12,"offset":{"x":0,"y":-110,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[110,110],"height":[0,0],"texture":1,"laser":{"damage":[255,255],"rate":10,"type":1,"speed":[500,500],"number":3,"angle":20}},"pix4":{"section_segments":12,"offset":{"x":0,"y":-85,"z":0},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[130,130],"height":[0,0],"texture":1},"pix5":{"section_segments":12,"offset":{"x":0,"y":-55,"z":0},"position":{"x":[0,0,0],"y":[-20,20],"z":[0,0]},"width":[140,140],"height":[0,0],"texture":1},"pix6":{"section_segments":12,"offset":{"x":0,"y":-25,"z":0},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[130,130],"height":[0,0],"texture":1},"pix7":{"section_segments":12,"offset":{"x":0,"y":-5,"z":0},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[140,140],"height":[0,0],"texture":1},"pix8":{"section_segments":12,"offset":{"x":0,"y":40,"z":0},"position":{"x":[0,0,0],"y":[-35,35],"z":[0,0]},"width":[150,150],"height":[0,0],"texture":1},"pix9":{"section_segments":12,"offset":{"x":0,"y":85,"z":0},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[140,140],"height":[0,0],"texture":1},"pix10":{"section_segments":12,"offset":{"x":0,"y":100,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[130,130],"height":[0,0],"texture":1},"pix11":{"section_segments":12,"offset":{"x":0,"y":110,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[120,120],"height":[0,0],"texture":1},"pix12":{"section_segments":12,"offset":{"x":0,"y":120,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[110,110],"height":[0,0],"texture":1},"pix13":{"section_segments":12,"offset":{"x":0,"y":130,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[90,90],"height":[0,0],"texture":1},"pix14":{"section_segments":12,"offset":{"x":0,"y":140,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[60,60],"height":[0,0],"texture":1},"pix15":{"section_segments":12,"offset":{"x":0,"y":-110,"z":1},"position":{"x":[-5,-5,-5],"y":[-5,5],"z":[0,0]},"width":[45,45],"height":[0,0],"texture":4},"pix16":{"section_segments":12,"offset":{"x":0,"y":-100,"z":1},"position":{"x":[45,45,45],"y":[-5,5],"z":[0,0]},"width":[15,15],"height":[0,0],"texture":4},"pix17":{"section_segments":12,"offset":{"x":0,"y":-90,"z":1},"position":{"x":[70,70,70],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix18":{"section_segments":12,"offset":{"x":0,"y":-80,"z":1},"position":{"x":[80,80,80],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix19":{"section_segments":12,"offset":{"x":0,"y":-55,"z":1},"position":{"x":[95,95,95],"y":[-20,20],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix20":{"section_segments":12,"offset":{"x":0,"y":-70,"z":1},"position":{"x":[-5,-5,-5],"y":[-5,5],"z":[0,0]},"width":[65,65],"height":[0,0],"texture":4},"pix21":{"section_segments":12,"offset":{"x":0,"y":-100,"z":0},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[120,120],"height":[0,0],"texture":1},"pix22":{"section_segments":12,"offset":{"x":0,"y":-60,"z":1},"position":{"x":[105,105,105],"y":[-5,5],"z":[0,0]},"width":[15,15],"height":[0,0],"texture":4},"pix23":{"section_segments":12,"offset":{"x":0,"y":-50,"z":1},"position":{"x":[85,85,85],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix24":{"section_segments":12,"offset":{"x":0,"y":-60,"z":1},"position":{"x":[70,70,70],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix25":{"section_segments":12,"offset":{"x":0,"y":-60,"z":1},"position":{"x":[-95,-95,-95],"y":[-5,5],"z":[0,0]},"width":[25,25],"height":[0,0],"texture":4},"pix26":{"section_segments":12,"offset":{"x":0,"y":-50,"z":1},"position":{"x":[-100,-100,-100],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix27":{"section_segments":12,"offset":{"x":0,"y":-40,"z":1},"position":{"x":[-95,-95,-95],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix28":{"section_segments":12,"offset":{"x":0,"y":-70,"z":1},"position":{"x":[-90,-90,-90],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix29":{"section_segments":12,"offset":{"x":0,"y":-80,"z":1},"position":{"x":[-85,-85,-85],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix30":{"section_segments":12,"offset":{"x":0,"y":-90,"z":1},"position":{"x":[-75,-75,-75],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix31":{"section_segments":12,"offset":{"x":0,"y":-95,"z":1},"position":{"x":[-65,-65,-65],"y":[-10,10],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix32":{"section_segments":12,"offset":{"x":0,"y":-100,"z":1},"position":{"x":[-55,-55,-55],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix33":{"section_segments":12,"offset":{"x":0,"y":-70,"z":1},"position":{"x":[75,75,75],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix34":{"section_segments":12,"offset":{"x":0,"y":-90,"z":1},"position":{"x":[35,35,35],"y":[-15,15],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix35":{"section_segments":12,"offset":{"x":0,"y":-90,"z":1},"position":{"x":[5,5,5],"y":[-15,15],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix36":{"section_segments":12,"offset":{"x":0,"y":-90,"z":1},"position":{"x":[-35,-35,-35],"y":[-15,15],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix37":{"section_segments":12,"offset":{"x":0,"y":-80,"z":1},"position":{"x":[-65,-65,-65],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix38":{"section_segments":12,"offset":{"x":0,"y":-30,"z":1},"position":{"x":[0,0,0],"y":[-15,15],"z":[0,0]},"width":[20,20],"height":[0,0],"texture":4,"laser":{"damage":[200,200],"rate":4,"type":1,"speed":[200,200],"number":1,"error":350}},"pix39":{"section_segments":12,"offset":{"x":0,"y":-5,"z":1},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4,"laser":{"damage":[50,50],"rate":10,"type":1,"speed":[60,60],"number":2,"error":180}},"pix40":{"section_segments":12,"offset":{"x":0,"y":-30,"z":1},"position":{"x":[70,70,70],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix41":{"section_segments":12,"offset":{"x":0,"y":-20,"z":1},"position":{"x":[55,55,55],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix42":{"section_segments":12,"offset":{"x":0,"y":-5,"z":1},"position":{"x":[70,70,70],"y":[-10,10],"z":[0,0]},"width":[30,30],"height":[0,0],"texture":4},"pix43":{"section_segments":12,"offset":{"x":0,"y":0,"z":1},"position":{"x":[110,110,110],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix44":{"section_segments":12,"offset":{"x":0,"y":20,"z":1},"position":{"x":[80,80,80],"y":[-15,15],"z":[0,0]},"width":[50,50],"height":[0,0],"texture":4},"pix45":{"section_segments":12,"offset":{"x":0,"y":50,"z":1},"position":{"x":[70,70,70],"y":[-5,5],"z":[0,0]},"width":[30,30],"height":[0,0],"texture":4},"pix46":{"section_segments":12,"offset":{"x":0,"y":-30,"z":1},"position":{"x":[-70,-70,-70],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix47":{"section_segments":12,"offset":{"x":0,"y":-20,"z":1},"position":{"x":[-55,-55,-55],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix48":{"section_segments":12,"offset":{"x":0,"y":-5,"z":1},"position":{"x":[-70,-70,-70],"y":[-10,10],"z":[0,0]},"width":[30,30],"height":[0,0],"texture":4},"pix49":{"section_segments":12,"offset":{"x":0,"y":0,"z":1},"position":{"x":[-110,-110,-110],"y":[-5,5],"z":[0,0]},"width":[10,10],"height":[0,0],"texture":4},"pix50":{"section_segments":12,"offset":{"x":0,"y":20,"z":1},"position":{"x":[-80,-80,-80],"y":[-15,15],"z":[0,0]},"width":[50,50],"height":[0,0],"texture":4},"pix51":{"section_segments":12,"offset":{"x":0,"y":50,"z":1},"position":{"x":[-70,-70,-70],"y":[-5,5],"z":[0,0]},"width":[30,30],"height":[0,0],"texture":4},"pix52":{"section_segments":12,"offset":{"x":0,"y":20,"z":2},"position":{"x":[-75,-75,-75],"y":[-25,25],"z":[0,0]},"width":[15,15],"height":[0,0],"texture":63},"pix53":{"section_segments":12,"offset":{"x":0,"y":20,"z":2},"position":{"x":[-75,-75,-75],"y":[-15,15],"z":[0,0]},"width":[25,25],"height":[0,0],"texture":63},"pix54":{"section_segments":12,"offset":{"x":0,"y":20,"z":2},"position":{"x":[-75,-75,-75],"y":[-5,5],"z":[0,0]},"width":[35,35],"height":[0,0],"texture":63},"pix55":{"section_segments":12,"offset":{"x":0,"y":20,"z":3},"position":{"x":[-75,-75,-75],"y":[-5,5],"z":[0,0]},"width":[5,5],"height":[0,0],"texture":4},"pix56":{"section_segments":12,"offset":{"x":0,"y":40,"z":-1},"position":{"x":[0,0,0],"y":[-35,35],"z":[0,0]},"width":[160,160],"height":[0,0],"texture":4},"pix57":{"section_segments":12,"offset":{"x":0,"y":40,"z":-1},"position":{"x":[0,0,0],"y":[-55,55],"z":[0,0]},"width":[150,150],"height":[0,0],"texture":4},"pix58":{"section_segments":12,"offset":{"x":0,"y":35,"z":-1},"position":{"x":[0,0,0],"y":[-70,70],"z":[0,0]},"width":[140,140],"height":[0,0],"texture":4},"pix59":{"section_segments":12,"offset":{"x":0,"y":110,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[130,130],"height":[0,0],"texture":4},"pix60":{"section_segments":12,"offset":{"x":0,"y":120,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[120,120],"height":[0,0],"texture":4},"pix61":{"section_segments":12,"offset":{"x":0,"y":130,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[110,110],"height":[0,0],"texture":4},"pix62":{"section_segments":12,"offset":{"x":0,"y":140,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[90,90],"height":[0,0],"texture":4},"pix63":{"section_segments":12,"offset":{"x":0,"y":150,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[60,60],"height":[0,0],"texture":4},"pix64":{"section_segments":12,"offset":{"x":0,"y":40,"z":1},"position":{"x":[-75,-75,-75],"y":[-5,5],"z":[0,0]},"width":[45,45],"height":[0,0],"texture":4},"pix65":{"section_segments":12,"offset":{"x":0,"y":40,"z":1},"position":{"x":[75,75,75],"y":[-5,5],"z":[0,0]},"width":[45,45],"height":[0,0],"texture":4},"pix66":{"section_segments":12,"offset":{"x":0,"y":-55,"z":-1},"position":{"x":[0,0,0],"y":[-20,20],"z":[0,0]},"width":[150,150],"height":[0,0],"texture":4},"pix67":{"section_segments":12,"offset":{"x":0,"y":-85,"z":-1},"position":{"x":[0,0,0],"y":[-10,10],"z":[0,0]},"width":[140,140],"height":[0,0],"texture":4},"pix68":{"section_segments":12,"offset":{"x":0,"y":-100,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[130,130],"height":[0,0],"texture":4},"pix69":{"section_segments":12,"offset":{"x":0,"y":-110,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[120,120],"height":[0,0],"texture":4},"pix70":{"section_segments":12,"offset":{"x":0,"y":-120,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[110,110],"height":[0,0],"texture":4},"pix71":{"section_segments":12,"offset":{"x":0,"y":-130,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[90,90],"height":[0,0],"texture":4},"pix72":{"section_segments":12,"offset":{"x":0,"y":-140,"z":-1},"position":{"x":[0,0,0],"y":[-5,5],"z":[0,0]},"width":[60,60],"height":[0,0],"texture":4}},"typespec":{"name":"sans","level":7.9,"model":2,"code":792,"specs":{"shield":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"generator":{"capacity":[100000000000000000000,100000000000000000000],"reload":[100000000000000000000,100000000000000000000]},"ship":{"mass":10000000000,"speed":[340,340],"rotation":[360,360],"acceleration":[500,500]}},"shape":[4.939,5.019,5.182,5.335,5.436,5.516,5.661,5.682,5.752,5.702,5.48,5.263,5.125,5.481,5.613,5.848,6.008,6.037,5.95,5.891,5.921,5.802,5.651,5.54,5.364,5.28,5.364,5.54,5.651,5.802,5.921,5.891,5.95,6.037,6.008,5.848,5.613,5.481,5.125,5.263,5.48,5.702,5.752,5.682,5.661,5.516,5.436,5.335,5.182,5.019],"lasers":[{"x":0,"y":-4.59,"z":0,"angle":0,"damage":[100,100],"rate":10,"type":1,"speed":[280,280],"number":3,"spread":50,"error":0,"recoil":0},{"x":0,"y":-4.25,"z":0,"angle":0,"damage":[5000,5000],"rate":10,"type":2,"speed":[290,290],"number":1,"spread":0,"error":0,"recoil":0},{"x":0,"y":-3.91,"z":0,"angle":0,"damage":[255,255],"rate":10,"type":1,"speed":[500,500],"number":3,"spread":20,"error":0,"recoil":0},{"x":0,"y":-1.53,"z":0.034,"angle":0,"damage":[200,200],"rate":4,"type":1,"speed":[200,200],"number":1,"spread":0,"error":350,"recoil":0},{"x":0,"y":-0.51,"z":0.034,"angle":0,"damage":[50,50],"rate":10,"type":1,"speed":[60,60],"number":2,"spread":0,"error":180,"recoil":0}],"radius":6.037}}';
+var AdminToolCircumcision_793 = '{"name":"AdminToolPrecision","level":7.9,"model":3,"size":1,"zoom":0.7,"specs":{"shield":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"generator":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"ship":{"mass":1e+300,"speed":[800,800],"rotation":[1e+300,1e+300],"acceleration":[1e+300,1e+300]}},"bodies":{"object0":{"section_segments":[45,135,225,315],"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0],"y":[-30,-30,0,0],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"texture":[4],"angle":0,"laser":{"damage":[1055,1055],"rate":10,"speed":[400,400],"number":1}}},"typespec":{"name":"AdminToolPrecision","level":7.9,"model":1,"code":791,"specs":{"shield":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"generator":{"capacity":[1e+300,1e+300],"reload":[1e+300,1e+300]},"ship":{"mass":1e+300,"speed":[800,800],"rotation":[1e+300,1e+300],"acceleration":[1e+300,1e+300]}},"shape":[0.601,0.604,0.373,0.227,0.166,0.129,0.11,0.097,0.085,0.079,0.075,0.073,0.071,0.071,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.071,0.073,0.075,0.079,0.085,0.097,0.11,0.129,0.166,0.227,0.373,0.604],"lasers":[{"x":0,"y":-0.6,"z":0,"angle":0,"damage":[1055,1055],"rate":10,"speed":[400,400],"number":1,"spread":0,"error":0,"recoil":0}],"radius":0.604}}';
+var Shadow_X_1e100_794 = '{"name":"Shadow X-1e+100","level":7.9,"model":4,"size":0.8,"zoom":0.4,"specs":{"shield":{"capacity":[1e+100,1e+100],"reload":[1e+100,1e+100]},"generator":{"capacity":[2e+101,2e+101],"reload":[2e+101,2e+101]},"ship":{"mass":1e+100,"speed":[155,155],"rotation":[60,60],"acceleration":[150,150]}},"bodies":{"main":{"section_segments":10,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0,0],"y":[-100,-98,-95,-70,-40,0,40,70,80,90,100],"z":[0,0,0,0,0,0,0,0,0,0,0]},"width":[0,10,20,30,40,20,20,40,40,40,20,0],"height":[0,4,4,20,20,10,10,15,15,15,10,10],"texture":[12,5,63,4,4,63,4,4,5]},"back":{"section_segments":10,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0],"y":[90,95,100,105,90],"z":[0,0,0,0,0]},"width":[10,15,18,19,2],"height":[3,5,7,8,2],"texture":[63],"propeller":true},"cockpit":{"section_segments":8,"offset":{"x":0,"y":-25,"z":15},"position":{"x":[0,0,0,0,0,0],"y":[-45,-40,-25,0,5],"z":[0,0,0,0,0,0]},"width":[0,10,15,13,0],"height":[0,10,15,5,0],"texture":[9]},"laser":{"section_segments":10,"offset":{"x":70,"y":10,"z":-20},"position":{"x":[0,0,0,0,0,0,0,0,0,0],"y":[-20,-15,0,10,20,25,30,40,70,60],"z":[0,0,0,0,0,0,0,0,0,0]},"width":[0,10,15,15,15,10,10,15,5,0],"height":[0,10,15,15,15,10,10,15,5,0],"texture":[3,4,10,3],"propeller":true,"laser":{"damage":[1e+100,1e+100],"rate":6,"type":1,"speed":[180,210],"number":1}}},"wings":{"top":{"offset":{"x":0,"y":50,"z":5},"length":[30],"width":[70,30],"angle":[90],"position":[0,50],"texture":[4],"bump":{"position":10,"size":15}},"side_joins":{"offset":{"x":0,"y":30,"z":-3},"length":[100],"width":[100,40],"angle":[0],"position":[-50,50],"texture":[4],"bump":{"position":10,"size":10}}},"typespec":{"name":"Shadow X-1e+100","level":7.9,"model":3,"code":793,"specs":{"shield":{"capacity":[1e+100,1e+100],"reload":[1e+100,1e+100]},"generator":{"capacity":[2e+101,2e+101],"reload":[2e+101,2e+101]},"ship":{"mass":1e+100,"speed":[155,155],"rotation":[60,60],"acceleration":[150,150]}},"shape":[1.6,1.582,1.552,1.313,1.138,1.009,0.919,0.75,0.688,0.708,0.733,1.157,1.297,1.359,1.392,1.431,1.696,1.975,2.192,2.258,1.661,1.429,1.58,1.628,1.705,1.835,1.705,1.628,1.58,1.429,1.661,2.258,2.192,1.975,1.696,1.431,1.392,1.359,1.297,1.157,0.733,0.708,0.688,0.75,0.919,1.009,1.138,1.313,1.552,1.582],"lasers":[{"x":1.12,"y":-0.16,"z":-0.32,"angle":0,"damage":[1e+100,1e+100],"rate":6,"type":1,"speed":[180,210],"number":1,"spread":0,"error":0,"recoil":0},{"x":-1.12,"y":-0.16,"z":-0.32,"angle":0,"damage":[1e+100,1e+100],"rate":6,"type":1,"speed":[180,210],"number":1,"spread":0,"error":0,"recoil":0}],"radius":2.258}}';
+var A_Speedster_701 = '{"name":"A-Speedster","level":7,"model":1,"size":1.5,"specs":{"shield":{"capacity":[750,750],"reload":[15,15]},"generator":{"capacity":[330,330],"reload":[150,150]},"ship":{"mass":700,"speed":[45,45],"rotation":[20,20],"acceleration":[150,150]}},"bodies":{"main":{"section_segments":8,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0],"y":[-100,-95,0,0,70,65],"z":[0,0,0,0,0,0]},"width":[0,10,40,20,20,0],"height":[0,5,30,30,15,0],"texture":[6,11,5,63,12],"propeller":true,"laser":{"damage":[250,250],"rate":1,"type":1,"speed":[100,100],"number":1,"error":0,"recoil":300}},"cockpit":{"section_segments":8,"offset":{"x":0,"y":-60,"z":15},"position":{"x":[0,0,0,0,0,0,0],"y":[-20,0,20,40,50],"z":[-7,-5,0,0,0]},"width":[0,10,10,10,0],"height":[0,10,15,12,0],"texture":[9]},"side_propulsors":{"section_segments":10,"offset":{"x":50,"y":25,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0],"y":[-20,-15,0,10,20,25,30,40,80,70],"z":[0,0,0,0,0,0,0,0,0,0]},"width":[0,15,20,20,20,15,15,20,10,0],"height":[0,15,20,20,20,15,15,20,10,0],"propeller":true,"texture":[4,4,2,2,5,63,5,4,12]},"cannons":{"section_segments":12,"offset":{"x":30,"y":40,"z":45},"position":{"x":[0,0,0,0,0,0,0],"y":[-50,-45,-20,0,20,30,40],"z":[0,0,0,0,0,0,0]},"width":[0,5,7,10,3,5,0],"height":[0,5,7,8,3,5,0],"angle":-10,"laser":{"damage":[20,20],"rate":3,"type":1,"speed":[200,200],"number":1,"error":0},"propeller":false,"texture":[6,4,10,4,63,4]}},"wings":{"join":{"offset":{"x":0,"y":0,"z":10},"length":[40,0],"width":[10,20],"angle":[-1],"position":[0,30],"texture":[63],"bump":{"position":0,"size":25}},"winglets":{"offset":{"x":0,"y":-40,"z":10},"doubleside":true,"length":[45,10],"width":[5,20,30],"angle":[50,-10],"position":[90,80,50],"texture":[4],"bump":{"position":10,"size":30}}},"typespec":{"name":"A-Speedster","level":6,"model":5,"code":605,"specs":{"shield":{"capacity":[750,750],"reload":[15,15]},"generator":{"capacity":[330,330],"reload":[150,150]},"ship":{"mass":700,"speed":[45,45],"rotation":[20,20],"acceleration":[150,150]}},"shape":[3,2.914,2.408,1.952,1.675,1.49,1.349,1.263,1.198,1.163,1.146,1.254,1.286,1.689,2.06,2.227,2.362,2.472,2.832,3.082,3.436,3.621,3.481,2.48,2.138,2.104,2.138,2.48,3.481,3.621,3.436,3.082,2.832,2.472,2.362,2.227,2.06,1.689,1.286,1.254,1.146,1.163,1.198,1.263,1.349,1.49,1.675,1.952,2.408,2.914],"lasers":[{"x":0,"y":-3,"z":0,"angle":0,"damage":[250,250],"rate":1,"type":1,"speed":[100,100],"number":1,"spread":0,"error":0,"recoil":300},{"x":1.16,"y":-0.277,"z":1.35,"angle":-10,"damage":[20,20],"rate":3,"type":1,"speed":[200,200],"number":1,"spread":0,"error":0,"recoil":0},{"x":-1.16,"y":-0.277,"z":1.35,"angle":10,"damage":[20,20],"rate":3,"type":1,"speed":[200,200],"number":1,"spread":0,"error":0,"recoil":0}],"radius":3.621}}';
+var Advanced_Fighter_601 = '{"name":"Advanced-Fighter","level":6,"model":1,"size":2,"specs":{"shield":{"capacity":[200,350],"reload":[4,6]},"generator":{"capacity":[120,200],"reload":[50,53]},"ship":{"mass":380,"speed":[70,75],"rotation":[30,50],"acceleration":[70,100]}},"bodies":{"main":{"section_segments":12,"offset":{"x":0,"y":0,"z":10},"position":{"x":[0,0,0,0,0,0,0,0],"y":[-100,-80,-90,-50,0,50,100,90],"z":[0,0,0,0,0,0,0,0]},"width":[0,5,15,25,40,25,20,0],"height":[0,5,10,30,25,20,10,0],"propeller":true,"texture":[4,4,1,1,10,1,1],"laser":{"damage":[90,150],"rate":1,"type":2,"speed":[180,240],"number":1,"recoil":150,"error":0}},"cockpit":{"section_segments":12,"offset":{"x":0,"y":-35,"z":33},"position":{"x":[0,0,0,0,0,0,0],"y":[-30,-20,10,30,40],"z":[0,0,0,0,0,0,0]},"width":[0,12,15,10,0],"height":[0,12,18,12,0],"propeller":false,"texture":[7,9,9,7]},"side_propellers":{"section_segments":10,"offset":{"x":30,"y":30,"z":0},"position":{"x":[0,0,0,0,0,0],"y":[-50,-20,0,20,80,70],"z":[0,0,0,0,0,0]},"width":[15,20,10,25,10,0],"height":[10,15,15,10,5,0],"angle":0,"propeller":true,"texture":[3,63,4,10,3]},"cannons":{"section_segments":12,"offset":{"x":70,"y":50,"z":-30},"position":{"x":[0,0,0,0,0,0,0],"y":[-50,-45,-20,0,20,50,55],"z":[0,0,0,0,0,0,0]},"width":[0,5,10,10,15,10,0],"height":[0,5,15,15,10,5,0],"angle":0,"propeller":false,"texture":[4,4,10,4,63,4],"laser":{"damage":[6,12],"rate":3,"type":1,"speed":[100,150],"number":1,"error":0}},"cannons2":{"section_segments":12,"offset":{"x":95,"y":50,"z":-40},"position":{"x":[0,0,0,0],"y":[-50,-20,40,50],"z":[0,0,0,0]},"width":[2,5,5,2],"height":[2,15,15,2],"angle":0,"propeller":false,"texture":6,"laser":{"damage":[4,10],"rate":3,"type":1,"speed":[100,150],"number":1,"error":0}}},"wings":{"main":{"length":[100,30,20],"width":[100,50,40,30],"angle":[-25,20,25],"position":[30,70,50,50],"bump":{"position":-20,"size":20},"offset":{"x":0,"y":0,"z":0},"texture":[11,11,63],"doubleside":true},"winglets":{"length":[40],"width":[40,20,30],"angle":[10,-10],"position":[-50,-70,-65],"bump":{"position":0,"size":30},"texture":63,"offset":{"x":0,"y":0,"z":0}}},"typespec":{"name":"Advanced-Fighter","level":6,"model":1,"code":601,"specs":{"shield":{"capacity":[200,350],"reload":[4,6]},"generator":{"capacity":[120,200],"reload":[50,53]},"ship":{"mass":380,"speed":[70,75],"rotation":[30,50],"acceleration":[70,100]}},"shape":[4,3.65,3.454,3.504,3.567,2.938,1.831,1.707,1.659,1.943,1.92,1.882,1.896,3.96,5.654,5.891,6.064,5.681,5.436,5.573,5.122,4.855,4.675,4.626,4.479,4.008,4.479,4.626,4.675,4.855,5.122,5.573,5.436,5.681,6.064,5.891,5.654,3.96,3.88,1.882,1.92,1.943,1.659,1.707,1.831,2.938,3.567,3.504,3.454,3.65],"lasers":[{"x":0,"y":-4,"z":0.4,"angle":0,"damage":[90,150],"rate":1,"type":2,"speed":[180,240],"number":1,"spread":0,"error":0,"recoil":150},{"x":2.8,"y":0,"z":-1.2,"angle":0,"damage":[6,12],"rate":3,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0},{"x":-2.8,"y":0,"z":-1.2,"angle":0,"damage":[6,12],"rate":3,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0},{"x":3.8,"y":0,"z":-1.6,"angle":0,"damage":[4,10],"rate":3,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0},{"x":-3.8,"y":0,"z":-1.6,"angle":0,"damage":[4,10],"rate":3,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0}],"radius":6.064}}';
+var Scorpion_602 = '{"name":"Scorpion","level":6,"model":2,"size":2,"specs":{"shield":{"capacity":[225,400],"reload":[5,7]},"generator":{"capacity":[80,175],"reload":[38,42]},"ship":{"mass":420,"speed":[75,85],"rotation":[50,65],"acceleration":[80,100]}},"bodies":{"main":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[0,0,0,0,0,0,0,0],"y":[-90,-40,-30,0,50,100,120,110],"z":[-10,-5,0,0,0,0,20,20]},"width":[0,12,20,15,25,10,5],"height":[0,10,15,25,15,10,5],"texture":[1,4,63,11,11,4],"propeller":false},"tail":{"section_segments":14,"offset":{"x":0,"y":70,"z":50},"position":{"x":[0,0,0,0,0,0],"y":[-70,-25,-10,20,40,50],"z":[0,0,0,0,-10,-20]},"width":[0,5,35,25,5,5],"height":[0,5,25,20,5,5],"texture":[6,4,63,10,4],"laser":{"damage":[50,100],"rate":0.9,"type":2,"speed":[170,230],"number":1,"angle":0,"error":0,"recoil":100}},"cockpit":{"section_segments":8,"offset":{"x":13,"y":-44,"z":12},"position":{"x":[-5,0,0,0,0],"y":[-15,-5,0,5,15],"z":[0,0,0,1,0]},"width":[0,8,10,8,0],"height":[0,5,5,5,0],"texture":[6,5],"propeller":false},"deco":{"section_segments":8,"offset":{"x":70,"y":0,"z":-10},"position":{"x":[0,0,0,10,-5,0,0,0],"y":[-115,-80,-100,-60,-30,-10,20,0],"z":[0,0,0,0,0,0,0,0]},"width":[1,5,10,15,15,20,10,0],"height":[1,5,15,20,35,30,10,0],"texture":[6,6,1,1,11,2,12],"laser":{"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"angle":5,"error":0},"propeller":true},"wingends":{"section_segments":8,"offset":{"x":105,"y":-80,"z":-10},"position":{"x":[0,2,4,2,0],"y":[-20,-10,0,10,20],"z":[0,0,0,0,0]},"width":[2,3,6,3,2],"height":[5,15,22,17,5],"texture":4,"angle":0,"propeller":false}},"wings":{"main":{"length":[80,30],"width":[40,30,20],"angle":[-10,20],"position":[30,-50,-80],"texture":63,"bump":{"position":30,"size":10},"offset":{"x":0,"y":0,"z":0}},"font":{"length":[80,30],"width":[20,15],"angle":[-10,20],"position":[-20,-40],"texture":4,"bump":{"position":30,"size":10},"offset":{"x":0,"y":0,"z":0}}},"typespec":{"name":"Scorpion","level":6,"model":2,"code":602,"specs":{"shield":{"capacity":[225,400],"reload":[5,7]},"generator":{"capacity":[80,175],"reload":[38,42]},"ship":{"mass":420,"speed":[75,85],"rotation":[50,65],"acceleration":[80,100]}},"shape":[3.6,2.846,2.313,2.192,5.406,5.318,5.843,5.858,5.621,4.134,3.477,3.601,3.622,3.464,3.351,3.217,1.458,1.391,1.368,1.37,1.635,2.973,3.47,3.911,4.481,4.804,4.481,3.911,3.47,2.973,1.635,1.37,1.368,1.391,1.458,3.217,3.351,3.464,3.622,3.601,3.477,4.134,5.621,5.858,5.843,5.318,5.406,2.192,2.313,2.846],"lasers":[{"x":0,"y":0,"z":2,"angle":0,"damage":[50,100],"rate":0.9,"type":2,"speed":[170,230],"number":1,"spread":0,"error":0,"recoil":100},{"x":2.8,"y":-4.6,"z":-0.4,"angle":0,"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"spread":5,"error":0,"recoil":0},{"x":-2.8,"y":-4.6,"z":-0.4,"angle":0,"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"spread":5,"error":0,"recoil":0}],"radius":5.858}}';
+shiptree.push(Advanced_Fighter_601);
+shiptree.push(Scorpion_602);
+
+
+
+shiptree.push(A_Speedster_701);
+shiptree.push(Spectator_191);
+shiptree.push(ᐲᖨᐊᑦᔪᐊᓐᑐᙯᓪᐄᓭ_791);
+shiptree.push(sans_792);
+shiptree.push(AdminToolCircumcision_793);
+shiptree.push(Shadow_X_1e100_794);
+// Dueling ships
+  // SDC ships
+var Contraband_609 = '{"name":"Contraband","level":6,"model":9,"size":1.6,"zoom":0.85,"specs":{"shield":{"capacity":[190,275],"reload":[6,8]},"generator":{"capacity":[125,200],"reload":[30,42.5]},"ship":{"mass":150,"speed":[100,125],"rotation":[60,80],"acceleration":[70,120]}},"bodies":{"main":{"section_segments":8,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0],"y":[-75,-80,-20,0,15,20,60,65,80,100,90],"z":[0,0,0,0,0,0,0,0,0,0,0]},"width":[0,8,24,26,20,20,20,20,25,12,0],"height":[0,5,25,25,20,15,15,15,20,10,0],"texture":[1,2,4,63,5,10,5,63,4,17],"propeller":true,"laser":{"damage":[100,150],"rate":1,"type":2,"speed":[110,150],"recoil":250,"number":1,"error":0}},"cockpit":{"section_segments":8,"offset":{"x":0,"y":-55,"z":15},"position":{"x":[0,0,0,0,0,0,0],"y":[-10,0,20,40,50],"z":[-7,-5,0,0,0]},"width":[0,5,10,10,0],"height":[0,10,15,12,0],"texture":[9]},"side_propulsors":{"section_segments":8,"offset":{"x":35,"y":25,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0],"y":[-20,-15,-4,6,15,20,35,40,50,85,75],"z":[0,0,0,0,0,0,0,0,0,0,0]},"width":[0,15,20,20,20,15,15,18,18,10,0],"height":[0,15,20,20,20,15,15,18,16,10,0],"propeller":true,"texture":[4,4,63,3,5,8,5,63,4,17]},"cannons":{"section_segments":12,"offset":{"x":18,"y":65,"z":20},"position":{"x":[0,0,0,0,0],"y":[-50,-45,-20,-5,5],"z":[0,0,0,0,0]},"width":[0,5,7,8,0],"height":[0,5,7,8,0],"angle":0,"laser":{"damage":[4,8],"rate":4,"type":1,"speed":[150,200],"number":1,"error":0},"propeller":false,"texture":[6,4,63,4,63,4]}},"wings":{"join":{"offset":{"x":0,"y":20,"z":0},"length":[37,0],"width":[20,70],"angle":[0],"position":[-95,0],"texture":[63],"doubleside":true,"bump":{"position":0,"size":0}},"join2":{"offset":{"x":25,"y":52,"z":0},"length":[35],"width":[10,10],"angle":[0],"position":[0,0,0,50],"texture":[8],"doubleside":1,"bump":{"position":0,"size":0}},"wing1":{"doubleside":true,"offset":{"x":50,"y":52,"z":-36},"length":[0,30,20,30],"width":[0,0,100,100,0],"angle":[110,70,90,110],"position":[0,0,0,0,0],"texture":[63],"bump":{"position":0,"size":5}}},"typespec":{"name":"Contraband","level":6,"model":14,"code":614,"specs":{"shield":{"capacity":[190,275],"reload":[6,8]},"generator":{"capacity":[125,200],"reload":[30,42.5]},"ship":{"mass":150,"speed":[100,125],"rotation":[60,80],"acceleration":[70,120]}},"shape":[2.72,2.573,2.079,1.758,1.578,1.455,1.368,1.312,1.283,1.278,1.269,1.222,1.193,1.961,2.033,2.148,2.313,2.561,2.818,3.145,3.625,3.791,3.803,3.701,3.223,3.206,3.223,3.701,3.803,3.791,3.625,3.145,2.818,2.561,2.313,2.148,2.033,1.961,1.193,1.222,1.269,1.278,1.283,1.312,1.368,1.455,1.578,1.758,2.079,2.573],"lasers":[{"x":0,"y":-2.56,"z":0,"angle":0,"damage":[100,150],"rate":1,"type":2,"speed":[110,150],"number":1,"spread":0,"error":0,"recoil":250},{"x":0.576,"y":0.48,"z":0.64,"angle":0,"damage":[4,8],"rate":4,"type":1,"speed":[150,200],"number":1,"spread":0,"error":0,"recoil":0},{"x":-0.576,"y":0.48,"z":0.64,"angle":0,"damage":[4,8],"rate":4,"type":1,"speed":[150,200],"number":1,"spread":0,"error":0,"recoil":0}],"radius":3.803}}';
+var Chimera_610 = '{"name":"Chimera","level":6,"model":10,"size":1.75,"zoom":0.8,"specs":{"shield":{"capacity":[260,315],"reload":[8,10]},"generator":{"capacity":[190,250],"reload":[30,45]},"ship":{"mass":220,"speed":[90,110],"rotation":[40,62],"acceleration":[90,125]}},"bodies":{"rail1":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[-10,-15,-15,0,0,0,0,0],"y":[-117,-105,-60,0,70,105,90],"z":[0,0,0,0,0,0,0,0]},"width":[0,5,5,25,25,15,0],"height":[0,10,15,20,25,15,0],"propeller":false,"texture":[63,3,18,11,3,12]},"side_propulsors":{"section_segments":10,"offset":{"x":22,"y":17,"z":9.8},"position":{"x":[0,0,0,0,0,0,0,0,-5,-5],"y":[-20,-15,0,10,20,25,30,40,80,70],"z":[0,0,0,0,0,0,0,0,0,0]},"width":[0,10,15,18,20,13,15,18,10,0],"height":[0,10,15,18,20,13,15,18,10,0],"propeller":true,"texture":[4,4,2,2,5,63,5,4,12]},"rail2":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[10,15,15,0,0,0,0,0],"y":[-117,-105,-60,0,70,105,90],"z":[0,0,0,0,0,0,0,0]},"width":[0,5,5,25,25,15,0],"height":[0,10,15,20,25,15,0],"propeller":true,"texture":[63,3,18,11,3,12]},"gunDeco0":{"vertical":true,"section_segments":24,"offset":{"x":2,"y":-5,"z":101},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco1":{"vertical":true,"section_segments":24,"offset":{"x":2,"y":-5,"z":90},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco2":{"vertical":true,"section_segments":24,"offset":{"x":2,"y":-5,"z":79},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco3":{"vertical":true,"section_segments":24,"offset":{"x":2,"y":-5,"z":68},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco4":{"vertical":true,"section_segments":24,"offset":{"x":2,"y":-5,"z":57},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"railCells":{"vertical":true,"section_segments":8,"offset":{"x":0,"y":10,"z":35},"position":{"x":[0,0,0,0],"y":[0,0,20,20],"z":[0,0,0,0]},"width":[0,10,10,0],"height":[0,10,10,0],"propeller":false,"texture":[8,8,17,17]},"sparkGuns":{"section_segments":8,"offset":{"x":15,"y":-90,"z":10},"position":{"x":[0,0,0,0],"y":[0,0,10,9],"z":[0,0,0,0]},"width":[0,10,10,0],"height":[0,10,10,0],"angle":90,"propeller":false,"texture":[8,8,17,17],"laser":{"damage":[1,2],"rate":10,"type":2,"speed":[10,20],"number":5,"error":65}},"cockpit":{"section_segments":8,"offset":{"x":0,"y":5,"z":25},"position":{"x":[0,0,0,0,0,0,0],"y":[-15,0,20,45,70],"z":[0,0,0,0,1]},"width":[0,8,12,13,0],"height":[0,12,15,12,0],"propeller":false,"texture":[4,9,9,4]},"cannon":{"section_segments":8,"offset":{"x":0,"y":-10,"z":10},"position":{"x":[0,0,0,0,0,0],"y":[-43,-50,-20,0,20,50],"z":[0,0,0,0,0,0]},"width":[0,5,10,10,15,0],"height":[0,5,15,15,10,0],"angle":0,"laser":{"damage":[3,6],"speed":[150,200],"rate":1.69,"type":1,"number":30,"recoil":8,"error":0},"propeller":false,"texture":[17,3,3,3,3,3]},"deco":{"section_segments":8,"offset":{"x":45,"y":50,"z":-10},"position":{"x":[0,0,5,5,0,0],"y":[-52,-50,-20,0,20,25],"z":[0,0,0,0,0,0]},"width":[0,5,10,10,5,0],"height":[0,5,8,10,8,0],"angle":1,"laser":{"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"error":0},"texture":10}},"wings":{"main":{"length":[55,15],"width":[70,50,50],"angle":[-10,20],"position":[30,50,70],"doubleside":true,"bump":{"position":30,"size":10},"texture":[18,63],"offset":{"x":0,"y":0,"z":5}},"winglets":{"length":[12,8],"width":[20,15,65],"angle":[10,-10],"position":[-50,-40,-55],"doubleside":true,"bump":{"position":0,"size":30},"texture":63,"offset":{"x":12,"y":0,"z":5}},"stab1":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":0,"y":0,"z":0}},"stab2":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":-5,"y":-30,"z":0}},"stab3":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":-10,"y":-60,"z":0}}},"typespec":{"name":"Chimera","level":6,"model":10,"code":610,"specs":{"shield":{"capacity":[260,315],"reload":[8,10]},"generator":{"capacity":[190,250],"reload":[30,45]},"ship":{"mass":220,"speed":[90,110],"rotation":[40,62],"acceleration":[90,125]}},"shape":[3.633,4.11,3.726,3.257,2.605,2.066,1.735,1.519,1.364,0.947,0.905,0.883,1.719,1.815,1.948,2.15,2.383,2.951,3.275,3.748,4.094,3.227,3.437,3.52,3.712,3.682,3.712,3.52,3.437,3.227,4.094,3.748,3.275,2.951,2.383,2.15,1.948,1.815,1.719,0.883,0.905,0.947,1.364,1.519,1.735,2.066,2.605,3.257,3.726,4.11],"lasers":[{"x":0.525,"y":-3.15,"z":0.35,"angle":90,"damage":[1,2],"rate":10,"type":2,"speed":[10,20],"number":5,"spread":0,"error":65,"recoil":0},{"x":-0.525,"y":-3.15,"z":0.35,"angle":-90,"damage":[1,2],"rate":10,"type":2,"speed":[10,20],"number":5,"spread":0,"error":65,"recoil":0},{"x":0,"y":-2.1,"z":0.35,"angle":0,"damage":[3,6],"rate":1.69,"type":1,"speed":[150,200],"number":30,"spread":0,"error":0,"recoil":8},{"x":1.543,"y":-0.07,"z":-0.35,"angle":1,"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0},{"x":-1.543,"y":-0.07,"z":-0.35,"angle":-1,"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0}],"radius":4.11}}';
+shiptree.push(Contraband_609);
+shiptree.push(Chimera_610);
+// ability versions of ships
+var Rock_Tower_696 = '{"name":"Rock-Tower","level":6.9,"model":6,"size":2.1,"specs":{"shield":{"capacity":[500,500],"reload":[11,11]},"generator":{"capacity":[400,400],"reload":[1,1]},"ship":{"mass":550,"speed":[75,75],"rotation":[60,60],"acceleration":[80,80]}},"bodies":{"main":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[0,0,0,0,0,0,0,0,0,0],"y":[-90,-85,-70,-60,-20,-25,40,85,70],"z":[-10,-8,-5,0,0,0,0,0,0]},"width":[0,40,45,10,12,30,30,20,0],"height":[0,10,12,8,12,10,25,20,0],"texture":[4,63,4,4,4,11,10,12],"propeller":true},"cockpit":{"section_segments":12,"offset":{"x":0,"y":30,"z":20},"position":{"x":[0,0,0,0,0,0,0,0],"y":[-30,-20,0,10,20,30],"z":[0,0,0,0,0,0]},"width":[0,10,15,15,10,5],"height":[0,10,15,15,10,5],"texture":9,"propeller":false},"dimeds_micropenis":{"section_segments":6,"offset":{"x":25,"y":-70,"z":-10},"position":{"x":[0,0,0,0,0,0],"y":[-20,-10,-20,0,10,12],"z":[0,0,0,0,0,0]},"width":[0,0,5,7,6,0],"height":[0,0,5,7,6,0],"texture":[6,6,6,10,12],"angle":0,"laser":{"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"error":6}},"dimeds_micropenis2":{"section_segments":6,"offset":{"x":8,"y":-74,"z":-10},"position":{"x":[0,0,0,0,0,0],"y":[-20,-10,-20,0,10,12],"z":[0,0,0,0,0,0]},"width":[0,0,5,7,6,0],"height":[0,0,5,7,6,0],"texture":[6,6,6,10,12],"angle":0,"laser":{"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"error":6}},"propulsors":{"section_segments":8,"offset":{"x":30,"y":50,"z":0},"position":{"x":[0,0,5,5,0,0,0],"y":[-45,-50,-20,0,20,50,40],"z":[0,0,0,0,0,0,0]},"width":[0,10,15,15,15,10,0],"height":[0,15,20,25,20,10,0],"texture":[11,2,3,4,5,12],"angle":0,"propeller":true}},"wings":{"main":{"length":[55,15],"width":[60,40,30],"angle":[-10,20],"position":[30,40,30],"texture":63,"doubleside":true,"offset":{"x":0,"y":20,"z":-5},"bump":{"position":30,"size":20}},"finalizer_fins":{"length":[20],"width":[20,10],"angle":[-70],"position":[-42,-30],"texture":63,"doubleside":true,"offset":{"x":35,"y":-35,"z":0},"bump":{"position":0,"size":30}}},"typespec":{"name":"Rock-Tower","level":6.9,"model":6,"code":696,"specs":{"shield":{"capacity":[500,500],"reload":[11,11]},"generator":{"capacity":[400,400],"reload":[1,1]},"ship":{"mass":550,"speed":[75,75],"rotation":[60,60],"acceleration":[80,80]}},"shape":[3.956,3.982,3.974,3.976,3.946,3.508,1.532,1.64,1.556,1.426,1.347,1.298,1.269,1.764,1.894,2.075,3.269,3.539,3.933,3.989,4.058,4.127,4.524,4.416,3.634,3.577,3.634,4.416,4.524,4.127,4.058,3.989,3.933,3.539,3.269,2.075,1.894,1.764,1.68,1.298,1.347,1.426,1.556,1.64,1.532,3.508,3.946,3.976,3.974,3.982],"lasers":[{"x":1.05,"y":-3.78,"z":-0.42,"angle":0,"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"spread":0,"error":6,"recoil":0},{"x":-1.05,"y":-3.78,"z":-0.42,"angle":0,"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"spread":0,"error":6,"recoil":0},{"x":0.336,"y":-3.948,"z":-0.42,"angle":0,"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"spread":0,"error":6,"recoil":0},{"x":-0.336,"y":-3.948,"z":-0.42,"angle":0,"damage":[8,8],"rate":8,"type":1,"speed":[240,240],"number":1,"spread":0,"error":6,"recoil":0}],"radius":4.524}}';
+var Chimera_700 = '{"name":"Chimera","level":6.9,"model":10,"size":1.75,"zoom":0.8,"specs":{"shield":{"capacity":[315,315],"reload":[10,10]},"generator":{"capacity":[800,800],"reload":[90,90]},"ship":{"mass":220,"speed":[110,110],"rotation":[62,62],"acceleration":[125,125]}},"bodies":{"rail1":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[-30,-35,-35,0,0,0,0,0],"y":[-117,-105,-60,0,70,105,90],"z":[0,0,0,0,0,0,0,0]},"width":[0,5,5,25,25,15,0],"height":[0,10,15,20,25,15,0],"propeller":false,"texture":[63,3,18,11,3,12]},"side_propulsors":{"section_segments":10,"offset":{"x":22,"y":17,"z":9.8},"position":{"x":[0,0,0,0,0,0,0,0,-5,-5],"y":[-20,-15,0,10,20,25,30,40,80,70],"z":[0,0,0,0,0,0,0,0,0,0]},"width":[0,10,15,18,20,13,15,18,10,0],"height":[0,10,15,18,20,13,15,18,10,0],"propeller":true,"texture":[4,4,2,2,5,63,5,4,12]},"rail2":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[30,35,35,0,0,0,0,0],"y":[-117,-105,-60,0,70,105,90],"z":[0,0,0,0,0,0,0,0]},"width":[0,5,5,25,25,15,0],"height":[0,10,15,20,25,15,0],"propeller":true,"texture":[63,3,18,11,3,12]},"gunDeco0":{"vertical":true,"section_segments":24,"offset":{"x":22,"y":-5,"z":101},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco1":{"vertical":true,"section_segments":24,"offset":{"x":22,"y":-5,"z":90},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco2":{"vertical":true,"section_segments":24,"offset":{"x":22,"y":-5,"z":79},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco3":{"vertical":true,"section_segments":24,"offset":{"x":22,"y":-5,"z":68},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"gunDeco4":{"vertical":true,"section_segments":24,"offset":{"x":22,"y":-5,"z":57},"position":{"x":[0,10,10,0],"y":[0,10,20,30],"z":[0,0,0,0]},"width":[0,5,5,0],"height":[0,5,5,0],"propeller":false,"texture":[17,17,17,17]},"railCells":{"vertical":true,"section_segments":8,"offset":{"x":0,"y":10,"z":35},"position":{"x":[0,0,0,0],"y":[0,0,20,20],"z":[0,0,0,0]},"width":[0,10,10,0],"height":[0,10,10,0],"propeller":false,"texture":[8,8,17,17]},"sparkGuns":{"section_segments":8,"offset":{"x":35,"y":-90,"z":10},"position":{"x":[0,0,0,0],"y":[0,0,10,9],"z":[0,0,0,0]},"width":[0,10,10,0],"height":[0,10,10,0],"angle":90,"propeller":false,"texture":[8,8,17,17],"laser":{"damage":[10,20],"rate":10,"type":2,"speed":[20,30],"number":5,"error":65}},"cockpit":{"section_segments":8,"offset":{"x":0,"y":5,"z":25},"position":{"x":[0,0,0,0,0,0,0],"y":[-15,0,20,45,70],"z":[0,0,0,0,1]},"width":[0,8,12,13,0],"height":[0,12,15,12,0],"propeller":false,"texture":[4,9,9,4]},"cannon":{"section_segments":8,"offset":{"x":0,"y":-10,"z":10},"position":{"x":[0,0,0,0,0,0],"y":[-43,-50,-20,0,20,50],"z":[0,0,0,0,0,0]},"width":[0,5,10,10,15,0],"height":[0,5,15,15,10,0],"angle":0,"laser":{"damage":[30.76923076923077,30.76923076923077],"speed":[150,250],"rate":1.69,"type":1,"number":13,"recoil":8,"error":0},"propeller":false,"texture":[17,3,3,3,3,3]},"deco":{"section_segments":8,"offset":{"x":45,"y":50,"z":-10},"position":{"x":[0,0,5,5,0,0],"y":[-52,-50,-20,0,20,25],"z":[0,0,0,0,0,0]},"width":[0,5,10,10,5,0],"height":[0,5,8,10,8,0],"angle":1,"laser":{"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"error":0},"texture":10}},"wings":{"main":{"length":[55,15],"width":[70,50,50],"angle":[-10,20],"position":[30,50,70],"doubleside":true,"bump":{"position":30,"size":10},"texture":[18,63],"offset":{"x":0,"y":0,"z":5}},"winglets":{"length":[12,8],"width":[20,15,65],"angle":[10,-10],"position":[-50,-40,-55],"doubleside":true,"bump":{"position":0,"size":30},"texture":63,"offset":{"x":32,"y":0,"z":5}},"stab1":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":0,"y":0,"z":0}},"stab2":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":-5,"y":-30,"z":0}},"stab3":{"length":[40,10],"width":[50,20,20],"angle":[40,30],"position":[70,75,80],"doubleside":true,"texture":63,"bump":{"position":0,"size":20},"offset":{"x":-10,"y":-60,"z":0}}},"typespec":{"name":"Chimera","level":6.9,"model":10,"code":700,"specs":{"shield":{"capacity":[315,315],"reload":[10,10]},"generator":{"capacity":[800,800],"reload":[90,90]},"ship":{"mass":220,"speed":[110,110],"rotation":[62,62],"acceleration":[125,125]}},"shape":[2.104,2.107,4.227,4.05,3.698,3.363,2.829,2.481,2.234,2.064,1.041,0.961,1.719,1.815,1.948,2.15,2.383,2.951,3.275,3.748,4.094,3.227,3.437,3.52,3.712,3.682,3.712,3.52,3.437,3.227,4.094,3.748,3.275,2.951,2.383,2.15,1.948,1.815,1.719,0.961,1.041,2.064,2.234,2.481,2.829,3.363,3.698,4.05,4.227,2.107],"lasers":[{"x":1.225,"y":-3.15,"z":0.35,"angle":90,"damage":[10,20],"rate":10,"type":2,"speed":[20,30],"number":5,"spread":0,"error":65,"recoil":0},{"x":-1.225,"y":-3.15,"z":0.35,"angle":-90,"damage":[10,20],"rate":10,"type":2,"speed":[20,30],"number":5,"spread":0,"error":65,"recoil":0},{"x":0,"y":-2.1,"z":0.35,"angle":0,"damage":[30.76923076923077,30.76923076923077],"rate":1.69,"type":1,"speed":[150,250],"number":13,"spread":0,"error":0,"recoil":8},{"x":1.543,"y":-0.07,"z":-0.35,"angle":1,"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0},{"x":-1.543,"y":-0.07,"z":-0.35,"angle":-1,"damage":[4,8],"rate":5,"type":1,"speed":[100,150],"number":1,"spread":0,"error":0,"recoil":0}],"radius":4.227}}';
+var Torpedo_698 = '{"name":"Torpedo","level":6.9,"model":8,"size":1.5,"specs":{"shield":{"capacity":[150,150],"reload":[-1,-1]},"generator":{"capacity":[1,1],"reload":[1,1]},"ship":{"mass":200,"speed":[100,100],"rotation":[20,20],"acceleration":[50,50]}},"bodies":{"main":{"section_segments":10,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0],"y":[-100,-90,-80,-25,0,60,80,110,100],"z":[0,0,0,0,0,0,0,0,0]},"width":[0,15,20,20,20,20,10,10,0],"height":[0,15,20,20,20,20,10,10,0],"propeller":true,"texture":[13,63,3,10,63,4,12,17]}},"wings":{"main1":{"length":[10,25],"width":[5,30,20],"angle":[45,45],"position":[0,0,0],"doubleside":true,"offset":{"x":0,"y":95,"z":0},"bump":{"position":30,"size":25,"texture":[0]}},"main2":{"length":[10,25],"width":[5,30,20],"angle":[-45,-45],"position":[0,0,0],"doubleside":true,"offset":{"x":0,"y":95,"z":0},"bump":{"position":30,"size":25,"texture":[0]}}},"typespec":{"name":"Torpedo","level":6.9,"model":8,"code":698,"specs":{"shield":{"capacity":[150,150],"reload":[-1,-1]},"generator":{"capacity":[1,1],"reload":[1,1]},"ship":{"mass":200,"speed":[100,100],"rotation":[20,20],"acceleration":[50,50]}},"shape":[3,2.877,2.614,1.831,1.34,1.064,0.89,0.78,0.704,0.648,0.613,0.588,0.575,0.575,0.589,0.61,0.648,0.705,0.773,0.891,1.05,1.334,1.837,3.245,3.312,3.306,3.312,3.245,1.837,1.334,1.05,0.891,0.773,0.705,0.648,0.61,0.589,0.575,0.575,0.588,0.613,0.648,0.704,0.78,0.89,1.064,1.34,1.831,2.614,2.877],"lasers":[],"radius":3.312}}';
+var Condor_694 = '{"name":"Condor","level":6.9,"model":4,"size":1.5,"specs":{"shield":{"capacity":[450,450],"reload":[14,14]},"generator":{"capacity":[160,160],"reload":[63,63]},"ship":{"mass":350,"speed":[110,110],"rotation":[80,80],"acceleration":[120,120]}},"bodies":{"main":{"section_segments":12,"offset":{"x":0,"y":0,"z":0},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"y":[-110,-95,-100,-100,-45,-40,-25,-23,15,20,55,60,80,100,90],"z":[-10,-9,-8,-7,-6,-4,-2,0,0,0,0,0,0,0,0]},"width":[0,2,5,10,25,27,27,25,25,28,28,26,27,22,0],"height":[0,2,5,10,25,27,27,25,25,27,26,20,15,10,0],"texture":[6,2,3,10,5,63,5,8,5,2,5,63,12,4],"propeller":true,"laser":{"damage":[70,70],"rate":2.5,"type":2,"speed":[230,230],"number":1,"angle":0,"error":0}},"main2":{"section_segments":12,"offset":{"x":0,"y":0,"z":1},"position":{"x":[0,0,0,0,0,0,0,0,0,0,0],"y":[-100,-45,-40,-25,-23,15,20,55,60,80,100],"z":[-7,-6,-4,-2,0,0,0,0,0,0,0]},"width":[2.5,6,6,6,6,6,6,6,5,4,2],"height":[10,25,27,27,25,25,27,26,20,15,10],"texture":[5],"propeller":1},"main3":{"section_segments":12,"offset":{"x":0,"y":-5,"z":0},"position":{"x":[0,0],"y":[100,90],"z":[0,0]},"width":[15,0],"height":[10,0],"texture":[12,4],"propeller":true},"cannons":{"section_segments":12,"offset":{"x":70,"y":25,"z":-20},"position":{"x":[0,0,0,0,0,-4,-5],"y":[-53,-44,-20,0,20,50,55],"z":[0,0,0,0,0,0,0]},"width":[0,4,10,10,10,8,0],"height":[0,5,15,15,10,5,0],"angle":1,"laser":{"damage":[6,6],"rate":3,"type":1,"speed":[130,130],"number":1,"angle":0,"error":0},"propeller":false,"texture":[17,4,10,4,63,4]},"cockpit":{"section_segments":12,"offset":{"x":0,"y":-60,"z":8},"position":{"x":[0,0,0,0],"y":[-20,-8,20,65],"z":[0,-2,0,0]},"width":[0,6,12,0],"height":[0,12,15,5],"texture":[5]},"side_propulsors":{"section_segments":10,"offset":{"x":30,"y":-10,"z":-5},"position":{"x":[0,0,0,0,0,0,0,0,0,0],"y":[-20,-15,0,10,20,25,30,40,80,70],"z":[0,0,0,0,0,0,0,0,0,0]},"width":[0,10,15,15,15,10,10,15,10,0],"height":[0,10,15,15,15,10,10,15,10,0],"propeller":true,"texture":[4,4,2,2,5,63,5,4,12]}},"wings":{"back":{"offset":{"x":0,"y":25,"z":10},"length":[80,30],"width":[70,50,30],"angle":[-30,40],"position":[0,20,0],"texture":[3,63],"doubleside":true,"bump":{"position":10,"size":20}},"front":{"offset":{"x":0,"y":55,"z":10},"length":[80,30],"width":[70,50,30],"angle":[-30,-40],"position":[-60,-20,-20],"texture":[11,63],"doubleside":true,"bump":{"position":10,"size":10}}},"typespec":{"name":"Condor","level":6.9,"model":4,"code":694,"specs":{"shield":{"capacity":[450,450],"reload":[14,14]},"generator":{"capacity":[160,160],"reload":[63,63]},"ship":{"mass":350,"speed":[110,110],"rotation":[80,80],"acceleration":[120,120]}},"shape":[3.3,3.015,2.45,1.959,1.658,1.477,1.286,1.354,1.403,2.237,2.27,2.291,2.349,2.789,2.857,2.977,3.148,3.13,3.106,3.178,3.113,2.411,2.575,3.072,3.054,3.006,3.054,3.072,2.575,2.411,3.113,3.178,3.106,3.13,3.148,2.977,2.857,2.789,2.349,2.291,2.27,2.237,1.403,1.354,1.286,1.477,1.658,1.959,2.45,3.015],"lasers":[{"x":0,"y":-3.3,"z":0,"angle":0,"damage":[70,70],"rate":2.5,"type":2,"speed":[230,230],"number":1,"spread":0,"error":0,"recoil":0},{"x":2.072,"y":-0.84,"z":-0.6,"angle":1,"damage":[6,6],"rate":3,"type":1,"speed":[130,130],"number":1,"spread":0,"error":0,"recoil":0},{"x":-2.072,"y":-0.84,"z":-0.6,"angle":-1,"damage":[6,6],"rate":3,"type":1,"speed":[130,130],"number":1,"spread":0,"error":0,"recoil":0}],"radius":3.3}}';
+var Scorpion_692 = '{"name":"Scorpion","level":6.9,"model":2,"size":2,"specs":{"shield":{"capacity":[400,400],"reload":[-1,-1]},"generator":{"capacity":[300,300],"reload":[40,40]},"ship":{"mass":400,"speed":[50,50],"rotation":[40,40],"acceleration":[80,80]}},"bodies":{"main":{"section_segments":8,"offset":{"x":0,"y":0,"z":10},"position":{"x":[0,0,0,0,0,0,0,0],"y":[-90,-40,-30,0,50,100,120,110],"z":[-10,-5,0,0,0,0,20,20]},"width":[0,12,20,15,25,10,5],"height":[0,10,15,25,15,10,5],"texture":[1,4,63,11,11,4],"propeller":false},"tail":{"section_segments":14,"offset":{"x":0,"y":70,"z":50},"position":{"x":[0,0,0,0,0,0],"y":[-70,-25,-10,20,40,50],"z":[0,0,0,0,-10,-20]},"width":[0,5,35,25,5,5],"height":[0,5,25,20,5,5],"texture":[6,4,63,10,4],"laser":{"damage":[250,250],"rate":1,"type":1,"speed":[100,100],"number":1,"error":0,"recoil":300}},"cockpit":{"section_segments":8,"offset":{"x":13,"y":-44,"z":12},"position":{"x":[-5,0,0,0,0],"y":[-15,-5,0,5,15],"z":[0,0,0,1,0]},"width":[0,8,10,8,0],"height":[0,5,5,5,0],"texture":[6,5],"propeller":false},"deco":{"section_segments":8,"offset":{"x":70,"y":0,"z":-10},"position":{"x":[0,0,0,10,-5,0,0,0],"y":[-115,-80,-100,-60,-30,-10,20,0],"z":[0,0,0,0,0,0,0,0]},"width":[1,5,10,15,15,20,10,0],"height":[1,5,15,20,35,30,10,0],"texture":[6,6,1,1,11,2,12],"laser":{"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"angle":5,"error":0},"propeller":true},"wingends":{"section_segments":8,"offset":{"x":105,"y":-80,"z":-10},"position":{"x":[0,2,4,2,0],"y":[-20,-10,0,10,20],"z":[0,0,0,0,0]},"width":[2,3,6,3,2],"height":[5,15,22,17,5],"texture":4,"angle":0,"propeller":false}},"wings":{"main":{"length":[80,30],"width":[40,30,20],"angle":[-10,20],"position":[30,-50,-80],"texture":63,"bump":{"position":30,"size":10},"offset":{"x":0,"y":0,"z":0}},"font":{"length":[80,30],"width":[20,15],"angle":[-10,20],"position":[-20,-40],"texture":4,"bump":{"position":30,"size":10},"offset":{"x":0,"y":0,"z":0}}},"typespec":{"name":"Scorpion","level":6.9,"model":2,"code":692,"specs":{"shield":{"capacity":[400,400],"reload":[-1,-1]},"generator":{"capacity":[300,300],"reload":[40,40]},"ship":{"mass":400,"speed":[50,50],"rotation":[40,40],"acceleration":[80,80]}},"shape":[3.6,2.846,2.313,2.192,5.406,5.318,5.843,5.858,5.621,4.134,3.477,3.601,3.622,3.464,3.351,3.217,1.458,1.391,1.368,1.37,1.635,2.973,3.47,3.911,4.481,4.804,4.481,3.911,3.47,2.973,1.635,1.37,1.368,1.391,1.458,3.217,3.351,3.464,3.622,3.601,3.477,4.134,5.621,5.858,5.843,5.318,5.406,2.192,2.313,2.846],"lasers":[{"x":0,"y":0,"z":2,"angle":0,"damage":[250,250],"rate":1,"type":1,"speed":[100,100],"number":1,"spread":0,"error":0,"recoil":300},{"x":2.8,"y":-4.6,"z":-0.4,"angle":0,"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"spread":5,"error":0,"recoil":0},{"x":-2.8,"y":-4.6,"z":-0.4,"angle":0,"damage":[2,3],"rate":1.8,"type":1,"speed":[130,170],"number":2,"spread":5,"error":0,"recoil":0}],"radius":5.858}}';
+shiptree.push(Rock_Tower_696);
+shiptree.push(Chimera_700);
+shiptree.push(Torpedo_698);
+shiptree.push(Condor_694);
+shiptree.push(Scorpion_692);
+
+// OPTIONS
+
+
+
+var vocabulary = [
+      { text: "You", icon:"\u004e", key:"O" },
+      { text: "Me", icon:"\u004f", key:"E" },
+      { text: "Point", icon:"\u002a", key:"B" },
+      { text: "Wait", icon:"\u0048", key:"T" },
+      { text: "Yes", icon:"\u004c", key:"Y" },
+      { text: "No", icon:"\u004d", key:"N" },
+      { text: "Sorry", icon:"\u00a1", key:"S" },
+      { text: "Attack", icon:"\u0049", key:"A" },
+      { text: "Follow Me", icon:"\u0050", key:"F" },
+      { text: "Good Game", icon:"\u00a3", key:"G" },
+      { text: "Spectate", icon:"\u0059", key:"L" },
+      { text: "Regen", icon:"\u0078", key:"K" },
+      { text: "Hmm", icon:"\u004b", key:"Q" },
+      { text: "No Problem", icon:"\u0047", key:"P" },
+      { text: "Defend", icon:"\u0025", key:"D" },
+      { text: " ", icon:"\u{1F913}", key:"I" },
+] ;
+
+var map_3 = // 60
+"97 6 9 9695  7 5  8 6  8 7 5997 6  8 6    7 59 9 62 8 7  9 7\n"+
+"  69 9 6    79 9 8  9 8    9    9            9 9  9 9 49 994\n"+
+"98 9   3 9  4   94    5    6 4  6 5    5    6 4 97 5  9 6  8\n"+
+"999949 7 9  7 6 4  6 5  7 6    6 5    5    6  8 7  9 7  999 \n"+
+"4 3 897 9  7    8                          3    3    4    9 \n"+
+"  7 5 39   4    5 3  5 4    4    5 3    4    5  7 6 4999 5 9\n"+
+" 99 2   6 4  6 5    5                              9     9  \n"+
+" 3 29 4             2    3    3      2    3    4  6 4 3  9 3\n"+
+"9  9      5 3    4      3    3    4      3    4  6 4  7 9 97\n"+
+"84 2 9  34                                         9    2   \n"+
+"4 9  4 3      2    3      9    2           2    3  5 3  9949\n"+
+"997    8          2    3           3              5    5   9\n"+
+"9 3 9    2 8                                 9    9    2   9\n"+
+" 3    3        9                     2           9  4 2  4 3\n"+
+" 9  9 8 7    7                9                            8\n"+
+"93 9 8    9      8    9                9           9  3 9  3\n"+
+"9         6                                9    2    3  5 3 \n"+
+"9 6  9 7                                             8    8 \n"+
+"  2 9                                                  9 84 \n"+
+"    5                                9                   4  \n"+
+" 7    8 6    7                            7    7    8    9 7\n"+
+"   9                                               8    9  3\n"+
+" 8 6      5                                                 \n"+
+"7 6    6                                        6    7    8 \n"+
+"       3                                               9    \n"+
+"8 6 5           9           9  9                  5    6    \n"+
+" 6                           99                          8 6\n"+
+" 3    4                                                    2\n"+
+" 7 5 4    4                        9        5           5  7\n"+
+"7                        9        9                  6    79\n"+
+"3    4 2                  9       9                       49\n"+
+"7 6 4                     9        9              4    5  7 \n"+
+"         9               9                               7  \n"+
+" 2    3      2                                 3    3    4  \n"+
+" 6 4                          99           9          6 4  6\n"+
+"   9           9             9  9                           \n"+
+"3      2                                                5 3 \n"+
+"  5                                          3    4    4  7 \n"+
+"3 2 8    9                                             9    \n"+
+" 9    2                                             3    3  \n"+
+"      7                                 8             5    6\n"+
+" 2 9                                             9    9    2\n"+
+"2    3                                             3    4 29\n"+
+"7    8           7                8                       69\n"+
+"3 9 8    8                9                     9    2 9  3 \n"+
+"9   3                          6               9    2  4 39 \n"+
+"99  8 7    7                            7                8  \n"+
+"99 8  2 9                                        9  3 99 3 9\n"+
+"9  5    6    6      5    6           6    6    7   2 9  3 99\n"+
+"6  9 7    8 6    7           6    7              9     989  \n"+
+"299    9                               5    5    6   9 94 9 \n"+
+"9 5 9 96 9  7 5    6    6      5              7 6  8 6 4    \n"+
+" 99 8 6  8 7    7 6  8 6    7                   9    299 9 9\n"+
+"99 9   99  9                4    4    5    6 4  6 59 7 5 3 9\n"+
+" 6 49 9 9  7 9    6 5  7 5    6      5    6  8 6  9 7  99  6\n"+
+"6  8     97    8    8                          39  94    499\n"+
+" 9  939 9 99 9 4    5 3  6 4    5    5 4 96 59 7 59 7 9 48  \n"+
+"9 5  7 5       9 7 5  7 6 4  6 5  7 5  8 6    7999 7 99 9 99\n"+
+"9 899 99 79  9     9    9           9 9  3   93 9  9    5 39\n"+
+"9 9 4   94 39 9 9996 4  6 5 37 5 4  6949 795 9 96948 699 999";
+
+var map = // 50
+"99999999999999999999999    99999999999999999999999\n"+
+"9999999999999999999999  4   9999999999999999999999\n"+
+"999999999999999999999        999999999999999999999\n"+
+"99999999999999                      99999999999999\n"+
+"9999999999      6   8     6       7     9999999999\n"+
+"99999999                                  99999999\n"+
+"9999999                                5   9999999\n"+
+"999999  5       3      3         6          999999\n"+
+"99999      6                                 99999\n"+
+"99999                                    4   99999\n"+
+"9999            5           4                 9999\n"+
+"9999                                7         9999\n"+
+"9999                   5       6              9999\n"+
+"9999  6                                 8     9999\n"+
+"999      5                                     999\n"+
+"999                                         5  999\n"+
+"999                     5             5        999\n"+
+"999               3        7                   999\n"+
+"999                                            999\n"+
+"999           3                  3             999\n"+
+"999                   99  99                   999\n"+
+"99     5             9      9              4    99\n"+
+"9                   9        9     7             9\n"+
+"                    9        9                    \n"+
+"           3    3                                 \n"+
+" 3                                                \n"+
+"                    9        9        5           \n"+
+"9                   9        9               8   9\n"+
+"99                   9      9                   99\n"+
+"999           5       99  99    6         3    999\n"+
+"999     4                                      999\n"+
+"999                                            999\n"+
+"999              6    6                        999\n"+
+"999                           3        3       999\n"+
+"999 7                                       7  999\n"+
+"999                              6             999\n"+
+"9999   7                    8                 9999\n"+
+"9999               3                    8     9999\n"+
+"9999                                          9999\n"+
+"9999                                          9999\n"+
+"99999 4      7                               99999\n"+
+"99999                                     5  99999\n"+
+"999999   5         8         3      4       999999\n"+
+"9999999                  7                 9999999\n"+
+"99999999                                  99999999\n"+
+"9999999999     3            5           9999999999\n"+
+"99999999999999        8             99999999999999\n"+
+"999999999999999999999        999999999999999999999\n"+
+"9999999999999999999999      9999999999999999999999\n"+
+"99999999999999999999999    99999999999999999999999";
+
+var map_5 = //120
+"8 9 2   5 6     2              2     6 7   9 2 3   6 7     3      6       3     7 8   3 4 5   8 9     4      8     3 4  \n"+
+" 6     2 3   6 7 8   3 4     8      24      7     3 4   7 8 9   4       9      4       9     4 5 6 9 9 2   5       2    \n"+
+"       9      4     8 9   3 4 5 7 8 9 2   5 6    8       5     9 9   5 6     9 2     6      93    5 6     2 3   6 7 8   \n"+
+"    4 5     9              9     5 6   9 2 3 5 6 7     2      6       2     6 7   2 3     7 8 9   4      7     3 4     8\n"+
+"   9 2   5 6     2 3   6 7       4      7     3 3   7 7 8 2 3                      8     4 5   8 9 9 4 4 5     9      4 \n"+
+"   8            7 8   3 4 5   8 9   3 4 5                  8 9   4     8 9     5                6     9 2   5 6   9 2 3 \n"+
+"4 5 6 8 9     4              4 5   8 9 2   5 6   9 2                    6     9 2   5 6 7   2 3 4            3     7 8  \n"+
+"       6 6   9 2   5 6     2 3            2     6 7     3 3   7                      3 4   7 8 9 3 4 5   8 9       5    \n"+
+"     3      6       3 4   7 8   3 4     8 9            8     3       8     4                      9 9   5 6   9 9 2   5 \n"+
+"  7 8 9   4              4       9     4 5   8 9     5              5     9       6     9 2 3   6 7            6     2 3\n"+
+"   5     9 9   5 6     9 2            9       6     2 3   6                      2     7 7     3 4 5 7 8     4       9  \n"+
+" 2      6       2     6 7   2 3     7              7     3 4           3                      8     4 5     9 9   5 6   \n"+
+"7 8   3 4            3       8     4     8 9     4              4     8                     6 7     2      6     9 2   5\n"+
+"     8 9   4 5   8 9 9            9       6     9     5 6                    2     6       3 3   7 7     3       8      \n"+
+"     7      9     6 7   9 2   5 6                      3     7     3     7                8     3 4     8 9   4 5     9 \n"+
+"  3 3   7                7     3     7 8   3 4                                        4         2      5     9 2     6 7\n"+
+" 8 9   3 4     8     4                      9     5     9 9                                  6 7   9 3       8          \n"+
+" 6            5 6   9 9     6     9                      6     2     6                              8 9   3 4   7 8 9   \n"+
+"3   6 7                    2     6       3     7                            8     3                              5 6   9\n"+
+"     4     8     3                      8     4       9     5                            5     9 2     6 7     3        \n"+
+"   9      4     8 9                                  6     9                                    7     3 4   7 8 9   3   \n"+
+"5 6     2              2     6             7                      3     7     3                              4     8 9  \n"+
+" 3     7     3                      8     3             4                            5     9 9     5       2            \n"+
+"      4       9     4                            5     9 9                                  6     2 3   6 7 8   3 4     \n"+
+"6 9 9              9                   6                      2     6                                    4     8 9   3 4\n"+
+"   6 7   2     6                              8     3     7                8     4             5               6      9 \n"+
+"   5      8           8     3                              5           5                      9 2     6     2 3 4 6 7   \n"+
+"9 9   5                            5     9                                          2                      7 8     4    \n"+
+"     9 2                                  7     3     7                                    4     8       5              \n"+
+"            3     7       6                                  8     4                              6     9     5 6 7   2 \n"+
+"2 4 5                          5     9       5                                  9                              3 4   7  \n"+
+" 9 9     6                            6     2     6                                          7               9          \n"+
+" 7      2     6                                          8     3                              5     9     5 6 7   9 2   \n"+
+"4 5   8              8     4             5                            5     9                              2     6 7   2\n"+
+"     5     9                      6     9                                          3     7                       5      \n"+
+"                              2                3     7                                          8     4       9 9     6 \n"+
+"7 8 9              6                       8                9     5                                    2     6 7   9 2  \n"+
+" 4 5   8     4                              6           5                      2                   7                8   \n"+
+" 3                        9                                          3                      8             8 9   4 5     \n"+
+"8   3                                  7                                  6                              5 6     2 3   6\n"+
+"   8 9   3                              5     9     5                                          6                      3 \n"+
+"   6      9     5     9                                          2                                    8     3 4     8   \n"+
+"2 3                          3     7       3               5                  8                              9     5 6  \n"+
+" 8     4                                  8     4                                          5                            \n"+
+"      9     4                                          6                                          7     3       8       \n"+
+"3   6              6     2             3                             5    7                              9     4 5   9 9\n"+
+"   3     7     3                4     8                   4    8                 9     5                              6 \n"+
+"                            9                      8                                          6     2       7       4   \n"+
+"6 7   9                                  6                                                           8     4 5   8 9    \n"+
+" 3   6     2      6                       4                             6    8                                          \n"+
+"                        8                      9                                          6                   2       7 \n"+
+"  9                                  5                                             5                   3       8     4 5\n"+
+" 6 7   9                              3                                                      4                      9   \n"+
+"        7     3     7                                                                 5             6     9             \n"+
+"9                          9     5       9                9  9                  7                  3             3     7\n"+
+"     2                                  6               999  999                         3                      8       \n"+
+" 7        3                                  5         99      99          8                    5     9                 \n"+
+"      7                8             9                 9        9                                            3     7    \n"+
+"                   5                   9              99        99             7     3                              4   \n"+
+"   9                            2       7                                                   4     8                     \n"+
+"  7                                                                                                      2     6       3\n"+
+"4         6    4                                      99        99                                                    8 \n"+
+" 2   5                      9             2  8         9        9          5   7                                  4     \n"+
+"                  2                      7             99      99                   9     4       9     5               \n"+
+"                               8                        999  999                                 6     2             3  \n"+
+" 4 5                                  9                   9  9                                                4     8 9 \n"+
+"  2     6     2                                                                 8             9     4                   \n"+
+"8                    4     8                                                5                5       2     6     2      \n"+
+"     9                                  5    5                                     6     2                              \n"+
+"    5     9                                                                                     4     8 9               \n"+
+"  3              3     7             8                                   6                             5     9     5    \n"+
+" 8                            9     4                                          6     9       6                      3   \n"+
+"5                                          6    9                                           3 4   7 8     4             \n"+
+"             2                                                    6                                5     9 9   5       9\n"+
+"   3                      8             9            5     5          5    5                     2              2     6 \n"+
+"    9           9                      5                                          7     2       7     3                 \n"+
+"  7                          6                                                                 4     8 9     5     9    \n"+
+" 3                                  8     4     8                9                                          9     6 7   \n"+
+"8     4     8                              9                 5                6             7     2     6 7             \n"+
+"                         6                                                3                        8     4     8     4  \n"+
+"   7                                  3     7                                          8       5                6     9 \n"+
+"  3     8                                    5     9     5                                    2     6 7     2           \n"+
+"9              9     5                                          6     2                              4     8     3 4    \n"+
+" 7   2                      7     2                                          4     8                              9     \n"+
+"      8                                  4     8                                          9     5 6     2               \n"+
+"           9                                          9     6                                    3     7 8   3 4     8  \n"+
+" 9 2              6     6                   2                      7     3                                    9     4 5 \n"+
+"  7     3                            3                                          5     9             9                   \n"+
+"5                                8                9                                          2     6 7     3     7      \n"+
+"   4 5     9                            2     6                                                           8     4 5     \n"+
+"    2 3   6     2                                          3                                    9     5 5              5\n"+
+"  8                    4     8                                          9                        6     2 3   6 7   2 3  \n"+
+" 5     9 9                          9     5                                          6                              8   \n"+
+"9     6 6     2                            3     7     3                                    8     4 5     9             \n"+
+"             7     3                                          4     8                              9     6 7   9 2     6\n"+
+"   8 9     5              5     9                                          2     6                              7     3 \n"+
+"    6     9 2   6                      2     6                                          7     3       8 9     5         \n"+
+"         7       3                                  8     4                                    9     5 6   9 9     6    \n"+
+" 8   3 4       9      4                                          5     9                                    7     2 3   \n"+
+"5     9 2   5 6   9                9                                          3     7             8 8     4             \n"+
+"             3     7     2     6                                                           9     4 5     9     5       9\n"+
+" 3 3     8 8              8     4     8     4                                          5                      2 3     7 \n"+
+"  9 9   4 5   8 9     5                      9           9                      6             7     3 3                 \n"+
+"6              6     2     6       2                            3     7                      4       9 9   4 5   8 9    \n"+
+"     7 8     3              3     7     3                              5     9     4                      9       6 7   \n"+
+"    4 5     9 9   4                      9     5     9                                    6     2 3 4   7              7\n"+
+"           5     9 2     6     2                      7     2     6       3                      8     4 5   8 9     4  \n"+
+" 6       3              3     7 8     3     7                      4     8     4                              5     9 2 \n"+
+"  4     8 9   4 5     9              9     4                                    9     6     9       6 7                 \n"+
+"       5       9     5     9 2     6              6     9       7     2                      7     3 4   7 8     4      \n"+
+"   9 2       7              7     3 4   7     3                3     7 8     4     8                      5     9 9   4 \n"+
+"    7 8   3 4   7 8                    4 4     9     4     8 9              9     5 6     9     6       2              2\n"+
+"                 5     9 9   4 5 6   9              9 2     6     2 3   6 7                    2 3   6 7     3     7 8  \n"+
+" 9     6 6                    2 3   6 7   2 3     7              7 8     3 4   7 8   3                      8 9   4 5   \n"+
+"7     2 3   6 7     3       8              8 9   4 5   8 9     4 5            4       9     5     9       6             \n"+
+"             4     8 9   4 5     9 9     5              5     9 2   5 6 7   2 3            9       7     2     6 7     3\n"+
+"   5       9              9     5 6 7 9 2 3   6       3              3     7 8 9 2 3                    7       4     8 \n"+
+"  9 3     7 8   2       7              7     3 4   7 8 9   4 5     9 9     5      9     4     8       5              5  \n"+
+"         3     7 8     4     8 9     5       9      5     9 9   4 5 6   9 2     6              6     9     6 7     2    \n"+
+" 5     9              9     5 6     9 2   6 6     2 3     7      2     6 7   2 3 4   7                      3     7 8   ";
+
+MAP_SIZE = 60;
+
+this.options = {
+  // Game Options
+  map_name: "Goku Centauri",
+  max_level: 8,
+  max_players: 100,//120,
+  starting_ship: 701,
+  maxtierlives: 5,
+  starting_ship_maxed: true,
+  map_size: MAP_SIZE,
+  speed_mod: 1.2,
+  friendly_colors: 2,
+  weapons_store: false,
+  radar_zoom: 1,
+  // Asteroids
+  crystal_value: 0,
+  asteroids_strength: 1.5,
+  // Others Options
+  soundtrack: "crystals.mp3", //civilisation.mp3 | procedurality.mp3 | argon.mp3 | crystals.mp3
+  vocabulary: vocabulary,
+  ships: shiptree,
+  custom_map: map_3,
+};
+
+
+
+// BACKGROUND
+
+
+
+randpos = function(){
+  return [(Math.random()-0.5) * MAP_SIZE*10,(Math.random()-0.5) * MAP_SIZE*10];
+};
+
+var Spawn = {
+  id: "Spawn",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/zzzzz.png"//"https://raw.githubusercontent.com/TheGreatMegalodon/Spawn-arena/main/Dueling_Spawn.png",
+}; // https://raw.githubusercontent.com/atherixibis/alittlebitof/main/gkou.png
+var goku = {
+  id: "goku",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/gkou.png"
+};
+var base_red = {
+  id: "base_red",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/base-red.png"
+};
+var base_blue = {
+  id: "base_blue",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/base-blue.png"
+};
+
+game.setObject({ // sun
+  id: "goku",
+  type: goku,
+  position:{x:0,y:0,z:-130},
+  scale:{x:20,y:20,z:0},
+  rotation:{x:3.12,y:0,z:0}
+});
+
+game.setObject
+({ // secret
+  id: "goku3",
+  type: goku,
+  position:{x:150,y:0,z:60},
+  scale:{x:10/3,y:5/3,z:0},
+  rotation:{x:3.12,y:0,z:0}
+});
+
+game.setObject({ // sun
+  id: "base_red",
+  type: base_red,
+  position:{x:SPAWN.distance,y:-SPAWN.distance,z:-10},
+  scale:{x:SPAWN.radius*2.15,y:SPAWN.radius*2.15,z:0},
+  rotation:{x:3.12,y:0,z:0}
+});
+
+game.setObject({ // sun
+  id: "base_blue",
+  type: base_blue,
+  position:{x:-SPAWN.distance,y:SPAWN.distance,z:-10},
+  scale:{x:SPAWN.radius*2.15,y:SPAWN.radius*2.15,z:0},
+  rotation:{x:3.12,y:0,z:0}
+});
+
+CONTROLPOINT_red = {
+  id: "CONTROLPOINT_red",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/red-team-capture.png",
+};
+
+CONTROLPOINT_blue = {
+  id: "CONTROLPOINT_blue",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/blue-team-capture.png",
+};
+
+CONTROLPOINT_neutral = {
+  id: "CONTROLPOINT_neutral",
+  obj: "https://starblast.data.neuronality.com/mods/objects/plane.obj",//"https://starblast.data.neuronality.com/mods/objects/plane.obj",
+  emissive: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/neutral-capture.png"
+};
+
+var update_controlpoint = function(teamg)
+{
+  switch (teamg)
+  {
+    case 0:
+      game.modding.terminal.echo("make me red");
+      CONTROLPOINT_COLOR = 0;
+      game.removeObject("CONTROLPOINT_blue");
+      game.setObject
+      ({ // sun
+      id: "CONTROLPOINT_red",
+      type: CONTROLPOINT_red,
+      position:{x:0,y:0,z:-10},
+      scale:{x:POINT.radius*2.15,y:POINT.radius*2.15,z:0},
+      rotation:{x:3.12,y:0,z:0}
+      });
+      break;
+    case 1:
+      game.modding.terminal.echo("make me blue");
+      CONTROLPOINT_COLOR = 1;
+      game.removeObject("CONTROLPOINT_red");
+      game.setObject
+      ({ // sun
+      id: "CONTROLPOINT_blue",
+      type: CONTROLPOINT_blue,
+      position:{x:0,y:0,z:-10},
+      scale:{x:POINT.radius*2.15,y:POINT.radius*2.15,z:0},
+      rotation:{x:3.12,y:0,z:0}
+      });
+      break;
+    case 2:
+      game.modding.terminal.echo("make me grey");
+      CONTROLPOINT_COLOR = 1;
+      game.removeObject("CONTROLPOINT_red");
+      game.removeObject("CONTROLPOINT_blue");
+      game.setObject
+      ({ // sun
+      id: "CONTROLPOINT_neutral",
+      type: CONTROLPOINT_neutral,
+      position:{x:0,y:0,z:-10},
+      scale:{x:POINT.radius*2.15,y:POINT.radius*2.15,z:0},
+      rotation:{x:3.12,y:0,z:0}
+      });
+      break;
+  }
+};// help
+
+update_controlpoint(2);
+
+CONTROLPOINT_COLOR = 2;
+
+var lost_sector_aries = {
+  id: "lost_sector_aries",
+  obj: "https://starblast.io/lost_sector/LostSector_Aries_HardEdges.obj",
+  diffuse: "https://raw.githubusercontent.com/atherixibis/alittlebitof/main/gkou.png",//"https://starblast.io/lost_sector/LostSector_Aries_LostSector_Aries_Diffuse.jpg",
+  bump: "https://starblast.io/lost_sector/LostSector_Aries_LostSector_Aries_Height.jpg",
+  specular: "https://starblast.io/lost_sector/LostSector_Aries_LostSector_Aries_Specular.jpg",
+  shininess: 0,
+  emissiveColor: 0,
+  specularColor: 0x3fcf00,
+  transparent: false
+};
+game.setObject({
+  id: "lost_sector_aries",
+  type: lost_sector_aries,
+  position: {x:-4, y:-56, z:-90},
+  scale: {x:10, y:2, z:3},
+  rotation: {x:0.4, y:0.2, z:3.14}
+});
+
+
+
+// MISC BUTTON FUNCTIONS
+
+
+
+var ship_instructor = function(ship, message, character = "Lucina", delay = 0, hide_after = 0) {
+  if (!ship || !message || !message.length) {
+    return;
+  }
+  let instructor_func;
+  if (hide_after) {
+    instructor_func = function() {
+      ship.showInstructor();
+      ship.instructorSays(message, character);
+      setTimeout(() => { ship.hideInstructor() }, hide_after * 650);
+    };
+  } else {
+    instructor_func = function() {
+      ship.showInstructor();
+      ship.instructorSays(message, character);
+    };
+  }
+  setTimeout(instructor_func, delay * 650);
+};
+
+var switch_ship = function(ship) {
+  if (ship.custom.spectator) {
+    spectator_ship(ship);
+  } else if (!ship.custom.next_switch || game.step >= ship.custom.next_switch) {
+    ship.custom.next_switch = game.step + switch_ship_delay;
+    var next_type;
+    if (ship.type >= switch_ship_codes[0] && ship.type <= switch_ship_codes[1]) {
+      if (ship.type === switch_ship_codes[1]) {
+        next_type = switch_ship_codes[0];
+      } else {
+        next_type = ship.type + 1;
+      }
+    } else {
+      next_type = ship.custom.last_ship || switch_ship_codes[0];
+    }
+    ship.custom.last_ship = next_type;
+    ship.set({type:next_type,collider:true,stats:max_stats,shield:999,crystals:720});
+  }
+};
+var spectator_ship = function(ship) {
+  if (!ship.custom.spectator_switch || game.step >= ship.custom.spectator_switch) {
+    ship.custom.spectator_switch = game.step + spectator_switch_delay;
+    if (ship.custom.spectator) {
+      ship.custom.spectator = false;
+      if (!ship.custom.last_ship) {
+        ship.custom.last_ship = switch_ship_codes[0];
+      }
+      ship.set({type:ship.custom.last_ship,collider:true,stats:max_stats,shield:999,crystals:720});
+    } else {
+      ship.custom.spectator = true;
+      ship.custom.last_ship = ship.type;
+      ship.set({type:spectator_ship_code,crystals:720,stats:max_stats,shield:999,collider:false});
+    }
+  }
+};
+
+var admin_ship = function(ship) {
+  var next_type;
+  if (ship.type >= admin_ship_codes[0] && ship.type <= admin_ship_codes[1]) {
+    if (ship.type === admin_ship_codes[1]) {
+      next_type = admin_ship_codes[0];
+    } else {
+      next_type = ship.type + 1;
+    }
+  } else {
+    next_type = admin_ship_codes[0];
+  }
+  ship.set({type: next_type, collider: SCollider, healing: SHealing});
+};
+
+
+
+// MISC BUTTONS
+
+
+
+Admin = {
+  id: "Admin",
+  position: [64.25,5,7.4,4], // x y width height
+  clickable: true,
+  visible: true,
+  shortcut: "Z",
+  components: [ // x y width height
+    { type:"box",position:[0,0,100,100],fill:"rgba(68, 85, 102, 0)",stroke:"#FF0000",width:5},
+    { type: "text",position:[0,20,100,60],value:"Admin [Z]",color:"#FF8888"},
+  ]
+}
+
+Spectate = {
+  id: "Spectate",
+  position: [72.2,4.8,7.6,4],
+  clickable: true,
+  visible: true,
+  shortcut: "W",
+  components: [
+    { type:"box",position:[0,0,100,100],fill:"rgba(68, 85, 102, 0)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[0,20,100,60],value:"Spectate [W]",color:"#FFFFFF"},
+  ]
+}
+
+Switch = {
+  id: "Switch",
+  position: [64.1,0,7.6,4],
+  clickable: true,
+  visible: true,
+  shortcut: "V",
+  components: [
+    { type:"box",position:[0,0,100,100],fill:"rgba(68, 85, 102, 0)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[0,20,100,60],value:"Switch [V]",color:"#FFFFFF"},
+  ]
+}
+
+Regen = {
+  id: "Regen",
+  position: [72.2,0,7.6,4],
+  clickable: true,
+  visible: true,
+  shortcut: "M",
+  components: [
+    { type:"box",position:[0,0,100,100],fill:"rgba(68, 85, 102, 0)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[0,20,100,60],value:"Regen [M]",color:"#FFFFFF"},
+  ]
+}
+
+
+
+// SHIP SWITCH UI
+
+
+
+shipsShipnames =
+{
+  601:"Advanced-fighter",
+  602:"Scorpion",
+  603:"Marauder",
+  604:"Condor",
+  605:"A-Speedster",
+  606:"Rock-Tower",
+  607:"Barracuda",
+  608:"O-Defender",
+  609:"Contraband",
+  610:"Chimera",
+};
+switchLength = 10;
+UIheight = 30;
+
+class ShipButton
+{
+  constructor(id,position,text,box)
+  {
+    this.id = id;
+    this.position = position;
+    this.text = text;
+    this.Clickable = true;
+    this.box = box;
+    if (this.box == 0) { this.Clickable = false; }
+    this.button =
+    {
+      id: this.id,
+      position: this.position,
+      clickable: this.Clickable,
+      visible: true,
+      //shortcut: "V",
+      components: [
+        { type:"box",position:[0,0,this.box*100,this.box*100],fill:"rgba(68, 85, 102, 0.42)",stroke:"#FFFFFF",width:4},
+        { type: "text",position:[5,20,90,60],value:this.text,color:"#FFFFFF"},]
+    }
+  }
+  hide() { this.button.visible = false; this.button.clickable = false; }
+  show() { this.button.visible = true; this.button.clickable = true; }
+  setForShip(ship)
+  {
+    ship.setUIComponent(this.button);
+    if (this.button.visible == true) { ship.custom.selectingShip = true }
+    else { ship.custom.selectingShip = false }
+  }
+  setForEverybody() { for (let ship of game.ships){setForShip(ship)} }
+};
+
+shipSelButtons = []
+splitpoint = Math.floor(switchLength/2)
+for (let i=601; i<splitpoint+601; i++)
+{
+  shipSelButtons.push(new ShipButton("SETSHIP_"+i.toString(), [27,((i-600)*6)+UIheight,20,5], shipsShipnames[i],1))
+}
+for (let i=splitpoint+601; i<switchLength+601; i++)
+{
+  shipSelButtons.push(new ShipButton("SETSHIP_"+i.toString(), [53,(((i-splitpoint)-600)*6)+UIheight,20,5], shipsShipnames[i],1))
+}
+
+//DEBUG
+forceShipSelect = function() { for (let but of shipSelButtons) { but.show();but.setForEverybody() } }
+unforceShipSelect = function() { for (let but of shipSelButtons) { but.hide();but.setForEverybody() } }
+allButtonsForShip = function(ship) { for (let but of shipSelButtons) { but.show();but.setForShip(ship);but.hide() } }
+noButtonsForShip = function(ship) { for (let but of shipSelButtons) { but.hide();but.setForShip(ship); } }
+
+
+
+// ABILITY UI
+
+
+
+POINT_BAR = {
+  id: "POINT_BAR",
+  position: [37.5,2.5,50,5], // x y width height
+  visible: true,
+  components: [
+    { type:"box",position:[0,50,0,50],fill:"#FF6666",stroke:"#FFFFFF",width:2},
+    { type:"box",position:[0,50,50,50],fill:"rgba(68, 85, 102, 0)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[5,0,40,45],value:"Control Point Capture",color:"#FFFFFF"}
+  ]
+}
+
+POINTS_BLUE = {
+  id: "POINTS_BLUE",
+  position: [32,3.5,6,5], // x y width height
+  visible: true,
+  components: [
+    { type: "text",position:[0,0,100,100],value:"0",color:"#33FFFF"}
+  ]
+}
+
+POINTS_RED = {
+  id: "POINTS_RED",
+  position: [59+3,3.5,6,5], // x y width height
+  visible: true,
+  components: [
+    { type: "text",position:[0,0,100,100],value:"0",color:"#FF3333"}
+  ]
+}
+
+timer = {
+  id: "timer",
+  position: [50-3,8,6,5], // x y width height
+  visible: true,
+  components: [
+    { type: "text",position:[0,0,100,100],value:"10:00",color:"rgba(255, 255, 255, 0.5)"}
+  ]
+}
+
+format_time = function(time)
+{ // input is time in seconds
+  minutes = Math.floor(time/60)
+  seconds = time%60
+  if (time%60 === 0) { minutes = time/60; seconds = "00"; return minutes.toString()+":"+seconds }
+  if (seconds < 10) { seconds = "0"+seconds.toString()}
+  
+  return minutes.toString()+":"+seconds.toString()
+} // output is formatted time (like 10:00, 4:59, etc)
+
+updatePointCounters = function(blue,red)
+{
+  POINTS_BLUE.components[0].value = blue
+  POINTS_RED.components[0].value = red
+}
+
+var text = {
+  id: "text",
+  position: [0,92,40,4], // x y width height
+  clickable: true,
+  visible: true,
+  shortcut: "X",
+  components: [
+    { type: "text",position:[0,0,100,100],value:"This is our first public playtest of Arena mod. Hope you enjoy!",color:"#FFFFFF"},
+  ]
+}
+
+//game.ships[0].setUIComponent(text)
+
+var abilityUIPos = [46.4,85]
+
+var warning = {
+  id: "warning",
+  position: [0,0,100,40], // x y width height
+  visible: false,
+  components: [
+    { type: "text",position:[30,40,40,100],value:"Warning: EMP Strike!",color:"#FF8888"}
+  ]
+}
+
+var dashRadius = {
+  id: "dashRadius",
+  position: [29.8,16,50,85],
+  clickable: false,
+  visible: false,
+  components: [{
+    type: "round",position:[0,0,81,81],fill:"rgba(68, 85, 102, 0)",stroke:"rgba(204, 221, 238, 0.667)",width:1}
+  ]
+}
+
+var ability = {
+  id: "ability",
+  position: [0+abilityUIPos[0],1+abilityUIPos[1],7.2,4], // x y width height
+  clickable: true,
+  visible: true,
+  shortcut: "X",
+  components: [
+    { type:"box",position:[0,0,0,0],fill:"rgba(68, 85, 102, 0)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[0,20,100,60],value:"Fuck off [X]",color:"#FFFFFF"},
+  ]
+}
+
+var ship_selector = {
+  id: "ship_selector",
+  position: [3,30,15,10],
+  clickable: true,
+  visible: true,
+  shortcut: "V",
+  components: [
+    { type:"box",position:[0,0,100,100],fill:"rgba(68, 85, 102, 0.5)",stroke:"#FFFFFF",width:2},
+    { type: "text",position:[5,20,90,60],value:"Select your ship [V]",color:"#FFFFFF"},
+  ]
+}
+
+hideShipSelector = function()
+{ ship_selector.visible = false; ship_selector.clickable = false; }
+showShipSelector = function()
+{ ship_selector.visible = true; ship_selector.clickable = true; }
+
+var indicator_ready = {
+  id: "indicator",
+  position: [0+abilityUIPos[0],5+abilityUIPos[1],7.2,4],
+  clickable: false,
+  visible: true,
+  components: [ // rgba(68, 85, 102, 0) for empty
+    { type:"box",position:[0,0,100,100],fill:"#002200",stroke:"#00FF00",width:6},
+    { type: "text",position:[0,20,100,60],value:"Ready",color:"#88FF88"},
+  ]
+};
+
+var indicator_reloading = {
+  id: "indicator",
+  position: [0+abilityUIPos[0],5+abilityUIPos[1],7.2,4],
+  clickable: false,
+  visible: true,
+  components: [
+    { type:"box",position:[0,0,100,100],fill:"#220000",stroke:"#FF0000",width:4},
+    { type: "text",position:[0,10,100,80],value:"NaN",color:"#FFAAAA"},
+  ]
+
+};
+
+
+
+// ABILITY VALUES
+
+
+
+abilitycooldowns = { // 60 = 1 second
+  "default": 4*60, // a-speedster and no ability
+  609: 15*60, // contraband
+  607: 10*60, // barracuda
+  602: 30*60, // scorpion
+  692: 30*60, // scorpion final form
+  603: 5*60, // marauder
+  606: 25*60, // rock tower
+  696: 1000*60, // rock tower final form
+  610: 30*60, // chimera
+  700: 30*60, // chimera final form
+  601: 30*60, // advanced fighter
+  608: 40*60, // o-defender
+  698: 5*60, // o-defender torpedo
+  604: 35*60, // condor
+  694: 35*60, // condor final form
+};
+
+specialabilities = [609,607,602,692,603,606,696,601,610,700,608,698,604,694]
+
+var abilitydesc = "ERROR [X]";
+
+
+
+// ABILITY FUNCTIONS
+
+
+
+damageShip = function(ship,dmg)
+{
+  if ((ship.shield + ship.crystals) <= dmg)
+  {
+    ship.set({kill:true})
+  }
+  else
+  {
+    if (ship.shield >= dmg)
+    { ship.set({ shield:ship.shield-dmg }) }
+    else// 500 + (300-400)
+    { ship.set({ shield: 0, crystals: ship.crystals+(ship.shield-dmg) }) }
+  }
+}
+
+var dist2points = function (x1, y1, x2, y2) {
+  return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+}
+
+getFrontPosition = function(distance,x,y,r){
+  return [x + distance * Math.cos(r),y + distance * Math.sin(r)]
+}
+
+angle = function(x1, y1, x2, y2) { // find angle between 2 points
+  let dx = x2 - x1
+  let dy = y2 - y1
+  let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+  return angle * Math.PI/180;
+}
+
+findClosestPlayer = function(ship,distlimit=0)
+{
+  closestdist = 999999 //prevdist:1 }
+  distancelist = [999999]
+  closestship = game.ships[0]
+  shipsDistanceSorted = []
+  
+  for (Tship of game.ships)
+  { // check every ship
+    if (Tship.x != ship.x)
+    { // check every ship EXCEPT my own ship
+      Tdistance = dist2points(ship.x,ship.y,Tship.x,Tship.y)
+      distancelist.push(Tdistance)
+      if ( Tdistance < distlimit ) { shipsDistanceSorted.push(Tship) }
+      // the distance between the ship we're checking and us
+      if (Tdistance <= Math.min.apply(null, distancelist))
+      { // find the closest player to the user and do the following
+        closestdist = Tdistance
+        closestship = Tship
+      }
+    }
+  }
+  shipsDistanceSorted.sort(function(a, b) {
+  return a - b;
+  });
+  return [closestship,shipsDistanceSorted]
+}
+
+
+
+// ABILITIES
+
+
+
+abilityQuickdrive = function(ship){
+  ship.set({
+    x:getFrontPosition(5,ship.x,ship.y,ship.r)[0],
+    y:getFrontPosition(5,ship.x,ship.y,ship.r)[1],
+      
+    vx:getFrontPosition(0.7,ship.x,ship.y,ship.r)[0]-ship.x+ship.vx/1.5, // dash i guess
+    vy:getFrontPosition(0.7,ship.x,ship.y,ship.r)[1]-ship.y+ship.vy/1.5,
+    
+    collider: false,
+    invulnerable:100,
+  })
+  
+  setTimeout( () => { ship.set({collider:true}) }, 140 )
+  
+}
+
+abilityTorpedo = function(ship){
+  // torpedo code
+  ship.set
+  ({
+    type: 698,
+    stats: 888888888,
+    vx:getFrontPosition(0.5,ship.x,ship.y,ship.r)[0]-ship.x+ship.vx/1.5, // dash i guess
+    vy:getFrontPosition(0.5,ship.x,ship.y,ship.r)[1]-ship.y+ship.vy/1.5,
+    crystals: 0,
+  })
+  
+  /*
+  for (let i=0; i<6; i++) { game.addCollectible({code: 42, x: ship.x, y: ship.y}) }
+  setTimeout( () => { ship.emptyWeapons() }, 10000 )
+  */
+  
+}
+
+abilityDetonate = function(ship){
+  
+  myTeam = ship.team
+  
+  abilityPull(ship,-0.6,60)
+  
+  affectedships = findClosestPlayer(ship,40)[1]
+  
+  for (Qship of affectedships)
+  {
+    if (Qship.team != myTeam)
+    {
+      damageShip(Qship,600-dist2points(Qship.x,Qship.y,ship.x,ship.y)/10*100)
+    }
+  }
+  
+  ship.set
+  ({
+    kill:true,
+    type:608,
+  })
+
+}
+
+abilityDischarge = function(ship){
+  ship.set({
+    generator:200,
+    type:609,
+    stats:66666666,
+    invulnerable:100
+  })
+}
+
+abilityEvolve = function(ship){
+  ship.set({
+    generator:1000,
+    type:694,
+    stats:88888888,
+    invulnerable:100
+  })
+  
+  setTimeout( () => { ship.set({type:604,stats:88888888}) }, 10000 )
+}
+
+abilityAsteroid = function(ship){
+  game.addAsteroid
+  ({
+    x: getFrontPosition(3,ship.x,ship.y,ship.r)[0],
+    y: getFrontPosition(3,ship.x,ship.y,ship.r)[1],
+    vx: getFrontPosition(1.75,ship.x,ship.y,ship.r)[0]-ship.x+ship.vx/1.5,
+    vy: getFrontPosition(1.75,ship.x,ship.y,ship.r)[1]-ship.y+ship.vy/1.5,
+    size: 27,
+  })
+}
+
+abilityEMP = function(ship){
+  
+  myTeam = ship.team
+  
+  affectedships = findClosestPlayer(ship,40)[1]
+  abilityPull(ship,-0.15,70)
+  ship.set
+  ({
+    generator:0,
+    vx:getFrontPosition(-0.3,ship.x,ship.y,ship.r)[0]-ship.x+ship.vx/1.5, // dash i guess
+    vy:getFrontPosition(-0.3,ship.x,ship.y,ship.r)[1]-ship.y+ship.vy/1.5,
+    invulnerable:100
+  })
+  damageShip(ship,100)
+  
+  for (Qship of affectedships)
+  {
+    if (Qship.team != myTeam)
+    {
+      Qship.set
+      ({
+        idle:true,
+        generator: 0,
+      })
+      damageShip(Qship,150)
+      warning.visible = true
+      Qship.setUIComponent(warning)
+      Qship.custom.EMP = true
+    }
+  }
+  
+  setTimeout( () => {
+    for (Qship of affectedships)
+    {
+      if (Qship.team != myTeam)
+      {
+        Qship.set
+        ({
+          idle:false,
+          generator: 0,
+        })
+        Qship.custom.EMP = false
+        warning.visible = false
+        Qship.setUIComponent(warning)
+      }
+    }
+  }, 3500 )
+  
+}
+
+abilityExhaust = function(ship){
+  ship.set({
+    generator:1000,
+    type:696,
+    stats:88888888,
+    invulnerable:100
+  })
+  
+  setTimeout( () => { ship.set({type:606,stats:88888888}) }, 1500 )
+}
+
+abilityOverload = function(ship){
+  ship.set({
+    generator:1000,
+    type:700,
+    stats:88888888,
+    invulnerable:100,
+    //shield:ship.shield-100
+  })
+  damageShip(ship,100)
+  
+  setTimeout( () => { ship.set({type:610,stats:88888888,generator:0}) }, 1000 )
+}
+
+abilityPull = function(ship,strength=0.8,multiple=0){
+  
+  myTeam = ship.team
+  
+  if (!multiple) { closestship = findClosestPlayer(ship)[0] }
+  else { closestship = findClosestPlayer(ship,multiple)[1] }
+  
+  if (!multiple)
+  {
+    angl = angle(closestship.x,closestship.y,ship.x,ship.y)
+    if (closestship.x != ship.x)
+    {
+      closestship.set
+      ({
+        vx:getFrontPosition(strength,closestship.x,closestship.y,angl)[0]-closestship.x, // dash i guess
+        vy:getFrontPosition(strength,closestship.x,closestship.y,angl)[1]-closestship.y,
+        //collider: true,
+      })
+    }
+  }
+  else
+  {
+    for ( Qship of closestship )
+    {
+      angl = angle(Qship.x,Qship.y,ship.x,ship.y)
+      if (Qship.x != ship.x && Qship.team != myTeam)
+      {
+        Qship.set
+        ({
+          vx:getFrontPosition(strength,Qship.x,Qship.y,angl)[0]-Qship.x, // dash i guess
+          vy:getFrontPosition(strength,Qship.x,Qship.y,angl)[1]-Qship.y,
+          //collider: true,
+        })
+      }
+    }
+  }
+}
+
+abilityDummy = function(ship){
+  ship.set({
+    generator:300,
+    type:692,
+    stats:88888888,
+    invulnerable:100
+  })
+  
+  setTimeout( () => { ship.set({type:602,stats:88888888,generator:0}) }, 2500 )
+}
+
+
+
+// SPECIAL MODE STUFF
+
+
+
+randint = function(min,max){
+  if (max===undefined){
+     max=min+1;
+     min=0;
+  }
+  return min + Math.floor((max+1 - min) * Math.random());
+};
+
+POINT_CAPTURE = 0;     // negative if red team has more progress; positive if it hasn't; 0 if equal
+alien_spawn_cap = 4;
+
+THE_TIMER = 30*60; // (in seconds)
+SCORE_RED = 0
+SCORE_BLUE = 0
+
+killasteroids = function(){
+for(var i=0; i<game.asteroids.length; i++)
+   game.asteroids[i].set({
+     kill:true
+   });
+};
+
+
+
+// TICK, EVENT
+
+
+
+this.tick = function(game) {
+  
+  if (game.step % 60 === 0) { // every second
+    
+    THE_TIMER -= 1
+    timer.components[0].value = format_time(THE_TIMER)
+    updatePointCounters(Math.floor(SCORE_BLUE),Math.floor(SCORE_RED))
+    
+    if (THE_TIMER % 60 === 0) {killasteroids()}
+    
+    if (THE_TIMER < 1)
+    {
+      if (SCORE_RED > SCORE_BLUE || SCORE_RED >= SCORE_BLUE && POINT_CAPTURE < 0)
+      {
+        for (let ship of game.ships)
+        {
+          ship.gameover({"Time ran out":"RED team wins!","Kills: ":ship.kills,"Deaths: ":ship.deaths});
+          game.modding.terminal.echo("red wins");
+        }
+      }
+      else
+      {
+        for (let ship of game.ships)
+        {
+          ship.gameover({"Time ran out":"BLUE team wins!","Kills: ":ship.kills,"Deaths: ":ship.deaths});
+          game.modding.terminal.echo("blue wins");
+        }
+      }
+    }
+    
+    if (game.aliens.length < alien_spawn_cap && randint(1,15) == 5)
+    {
+      if (randint(1,2) == 1) {var spawnat = (Math.random() * 30 - 15) + game.options.map_size * -2.6; }
+      else { var spawnat = (Math.random() * 30 - 15) + game.options.map_size * 2.6; }
+      game.addAlien({
+        code: 10,
+        level: randint(0,2),
+        crystal_drop: 0,
+        weapon_drop: [10,11,12,20,21,41,42][randint(0,6)],
+        points: 0,
+        x: spawnat,
+        y: spawnat,
+      });
+    }
+    
+    //if ( POINT_CAPTURE < (POINT.limit/10) || POINT_CAPTURE > -(POINT.limit/10) ) { update_controlpoint(2); }
+    
+    if (POINT_CAPTURE != 0) {
+      switch (POINT_CAPTURE < 0)
+      {
+        case true: // if red team is leading
+          POINT_BAR.components[0].fill = "#FF3333";
+            POINT_BAR.components[0].position[2] = ((-POINT_CAPTURE)/(POINT.limit))*50;
+          if (CONTROLPOINT_COLOR != 0) { 
+          update_controlpoint(0) };
+          if (POINT_CAPTURE <= -POINT.limit)
+          { // if the point is fully captured by red team
+            SCORE_RED += 0.25
+            
+            if (SCORE_RED > 99)
+            {
+              for (let ship of game.ships)
+              {
+                ship.gameover({"Point captured":"RED team wins!","Kills: ":ship.kills,"Deaths: ":ship.deaths});
+                game.modding.terminal.echo("red wins");
+              }
+            }
+          }
+          break;
+          
+        case false: // if blue team is leading
+          POINT_BAR.components[0].fill = "#33FFFF";
+          POINT_BAR.components[0].position[2] = ((POINT_CAPTURE)/(POINT.limit))*50;
+          
+          if (CONTROLPOINT_COLOR != 1) { 
+          update_controlpoint(1) }
+          if (POINT_CAPTURE >= POINT.limit)
+          { // if the point is fully captured by blue team
+            SCORE_BLUE += 0.25
+            
+            if (SCORE_BLUE > 99)
+            {
+              for (let ship of game.ships)
+              {
+                ship.gameover({"Point captured":"BLUE team wins!","Kills: ":ship.kills,"Deaths: ":ship.deaths});
+                game.modding.terminal.echo("blue wins");
+              }
+            }
+          }
+          break;
+      }
+    }
+    
+    for (var ship of game.ships) {
+      
+      if (ship.type >= 699) { ship.set({type:605}) }
+      
+      if (!ship.custom.EMP) { ship.custom.cooldown += 61; }
+      ship.custom.timer += 1
+      ship.set({score:ship.custom.kills})
+      ship.setUIComponent(timer)
+      ship.setUIComponent(POINTS_RED)
+      ship.setUIComponent(POINTS_BLUE)
+      
+      //if (!ship.custom.EMP) { ship.custom.cooldown++; }
+      ////if  ( ship.type == ShipMaxRegen)
+      ////  ship.set({vx,vy});})
+      //if  ( ship.type == ShipMaxRegen)
+      //    ship.set({x:game.ships[0].x,y:game.ships[0].y});
+      //if  ( ship.type == ShipMaxRegen)
+      //    ship.set({vx,vy,x:game.ships[0].x,y:game.ships[0].y});
+      
+      if (ship.type == ShipMaxRegen)
+          ship.set({generator:max_regen,type:ShipMaxRegen,stats:max_stats,shield:max_sheild});
+      let max_crystals = 20 * Math.trunc(ship.type / 100) ** 2;
+      if (ship.custom.crystals_last_updated != ship.last_updated && ship.crystals >= max_crystals) {
+        ship.set({crystals: max_crystals - 1});
+        ship.custom.crystals_last_updated = ship.last_updated;
+      }
+      
+      if (ship.team == 1 && ship.custom.timer < 10)
+      { // if player is inside their base (blue team)
+        if (dist2points(ship.x, ship.y, -SPAWN.distance, SPAWN.distance) <= SPAWN.radius)
+        {
+          showShipSelector()
+          ship.setUIComponent(ship_selector)
+          hideShipSelector()
+        } else { noButtonsForShip(ship);hideShipSelector();ship.setUIComponent(ship_selector) }
+      }
+      if (ship.team == 0 && ship.custom.timer < 10)
+      {
+        if (dist2points(ship.x, ship.y, SPAWN.distance, -SPAWN.distance) <= SPAWN.radius)
+        { // if player is inside their base (red team)
+          showShipSelector()
+          ship.setUIComponent(ship_selector)
+          hideShipSelector()
+        } else { noButtonsForShip(ship);hideShipSelector();ship.setUIComponent(ship_selector) }
+      }
+      if (ship.custom.timer > 10 && ship.custom.selectingShip == true)
+      {
+        noButtonsForShip(ship);
+        hideShipSelector();
+        ship.setUIComponent(ship_selector)
+      }
+      
+      if (ship.alive && dist2points(ship.x, ship.y, POINT.x, POINT.y) <= POINT.radius)
+      { // if player is inside the point
+        if (POINT_CAPTURE > -POINT.limit && ship.team == 0) { POINT_CAPTURE -- }
+        if (POINT_CAPTURE < POINT.limit && ship.team == 1) { POINT_CAPTURE ++ }
+      }
+        ship.setUIComponent(POINT_BAR)
+        
+        //(!game.custom.admin && game.ships.length) {
+        if (game.ships.length) {    
+          //ship = game.ships[i]
+          Itype = ship.type
+           // change ability description depending on type
+          if (specialabilities.includes(Itype))
+          {
+            switch (Itype)
+            {
+              case 608: var abilitydesc = "Torpedo [X]"; break;
+              case 698: var abilitydesc = "Detonate [X]"; break;
+              case 609: var abilitydesc = "Discharge [X]"; break;
+              case 607: var abilitydesc = "Pull [X]"; break;
+              case 604: var abilitydesc = "Berserk [X]"; break;
+              case 694: var abilitydesc = "Berserk [X]"; break;
+              case 606: var abilitydesc = "Exhaust [X]"; dashRadius.visible = true; dashRadius.components[0].position = [0,0,100,100]; dashRadius.position = [20,0,60,100]; break;
+              case 696: var abilitydesc = "Exhaust [X]"; break;
+              case 610: var abilitydesc = "Overload [X]"; break;
+              case 700: var abilitydesc = "Overload [X]"; break;
+              case 603: var abilitydesc = "Asteroid [X]"; break;
+              case 602: var abilitydesc = "Impulse [X]"; break;
+              case 692: var abilitydesc = "Impulse [X]"; break;
+              case 601: var abilitydesc = "EMP [X]"; dashRadius.visible = true; dashRadius.components[0].position = [0,0,100,100]; dashRadius.position = [20,0,60,100]; break;
+            }
+            if (ship.type == 606 || ship.type == 601) { ship.setUIComponent(dashRadius) }
+            //ship.setUIComponent(dashRadius)
+            dashRadius.visible = false;
+            // change indicator to ready when appropriate
+            if (ship.custom.cooldown > abilitycooldowns[Itype.toString()]) {
+              ship.setUIComponent(indicator_ready); indicator_reloading.components[1].value = Math.round((abilitycooldowns[Itype.toString()]-1) / 60)
+              if (ship.type == 698 && ship.custom.cooldown > abilitycooldowns[Itype.toString()]) { abilityDetonate(ship); } // detonate ship after it gets ready
+            }
+          } else {
+            var abilitydesc = "Quickdrive [X]";
+            if (ship.custom.cooldown > abilitycooldowns["default"]) { ship.setUIComponent(indicator_ready); indicator_reloading.components[1].value = Math.round((abilitycooldowns["default"]-1) / 60) }
+            dashRadius.visible = true;
+            dashRadius.position = [29.8,16,50,85]
+            dashRadius.components[0].position = [0,0,81,81]
+            ship.setUIComponent(dashRadius)
+            dashRadius.visible = false;
+          }
+          ability.components[1].value = abilitydesc;
+          ship.setUIComponent(ability);
+          
+           // change reloading timer
+          
+          if (specialabilities.includes(Itype) && ship.custom.cooldown < abilitycooldowns[Itype.toString()] && Itype != 698)
+          {
+            indicator_reloading.components[1].value = Math.round((abilitycooldowns[Itype.toString()] - ship.custom.cooldown) / 60);
+            ship.setUIComponent(indicator_reloading);
+          }
+          
+          if (!specialabilities.includes(Itype) && ship.custom.cooldown < abilitycooldowns["default"] && Itype != 698)
+          {
+            indicator_reloading.components[1].value = Math.round((abilitycooldowns["default"] - ship.custom.cooldown) / 60);
+            ship.setUIComponent(indicator_reloading);
+          }
+      }
+    }
+  }
+}
+
+this.event = function(event){
+  var ship = event.ship; 
+  var max_sheild = 999;
+  switch (event.name){
+    case "ui_component_clicked":
+      var component = event.id;
+      if (component == "component"){
+      }  
+      else if (component == "ability" && !ship.custom.EMP){
+        // Everyone
+        //for (let s of game.ships) s.set({type:ShipMaxRegen})
+        //game.asteroids[0].set({x:0,y:0});
+        //for (let a of game.asteroids) a.set({kill:true})
+        
+        // Spawn
+        //game.ships[0].set({type:ShipMaxRegen});
+        
+        ship = event.ship
+        Itype = ship.type
+        
+        if (Itype == 698 && ship.custom.cooldown > abilitycooldowns[Itype.toString()]/3 ) { abilityDetonate(ship); break; }
+        
+        
+        if ( !specialabilities.includes(Itype) )
+        {
+          if ( ship.custom.cooldown > abilitycooldowns["default"] )
+          {
+            abilityQuickdrive(ship)
+            ship.custom.cooldown = 0;
+            indicator_reloading.components[1].value = Math.round((abilitycooldowns["default"]-1) / 60)
+            ship.setUIComponent(indicator_reloading);
+          }
+        }
+          else
+        {
+          if ( ship.custom.cooldown > abilitycooldowns[Itype.toString()] ) // holy shit it works!!!!!!!!!!!!
+          {
+            switch (Itype)
+            {
+              case 608: abilityTorpedo(ship); break;
+              case 609: abilityDischarge(ship); break; // if you're a contra, use contra ability
+              case 607: abilityPull(ship,0.8,40); break;
+              case 606: abilityExhaust(ship); break;
+              case 604: abilityEvolve(ship); break;
+              case 694: abilityEvolve(ship); break;
+              case 696: abilityExhaust(ship); break;
+              case 610: abilityOverload(ship); break;
+              case 700: abilityOverload(ship); break;
+              case 602: abilityDummy(ship); break;
+              case 603: abilityAsteroid(ship); break;
+              case 601: abilityEMP(ship); break;
+            }
+            ship.custom.cooldown = 0;
+            indicator_reloading.components[1].value = Math.round((abilitycooldowns[Itype.toString()]-1) / 60)
+            if (Itype != 608) { ship.setUIComponent(indicator_reloading); } else { ship.setUIComponent(indicator_ready); }
+          }
+        }
+      }
+      else if (component == "Regen"){
+        ship.set({crystals:719,
+                  shield:999,
+                  healing:false
+        });
+      }
+      else if (component == "Spectate"){
+        spectator_ship(ship);
+      }
+      else if (component == "Admin"){
+        admin_ship(ship);
+      }
+      else if (component == "Switch"){
+        switch_ship(ship);
+        ship.setUIComponent(indicator_reloading);
+      }
+      else if (component == "ship_selector"){
+        if (ship.custom.selectingShip == false)
+        {
+          showShipSelector()
+          allButtonsForShip(ship)
+          ship.setUIComponent(ship_selector)// ship.custom.selectingShip
+        }
+          else
+        {
+          hideShipSelector()
+          noButtonsForShip(ship)
+          ship.setUIComponent(ship_selector)// ship.custom.selectingShip
+        }
+      }
+      // "SETSHIP_601"
+      else if (component.slice(0,7) == "SETSHIP"){ // for switching ships using the switch menu
+        ship.set
+        ({
+          type:parseInt(component.slice(8)), // do not be afraid
+          collider:true,
+          stats:max_stats,
+          shield:999,
+          crystals:719,
+          generator:0,
+        })
+        ship.setUIComponent(indicator_reloading);
+      }
+    break;
+    case "ship_spawned":
+      if (!ship.custom.init) {
+        ship.custom.init = true;
+        
+        let instructor_paragaph = "Greetings, Commander.\nYour ship is equipped with a special ability module.\nPress [X] to activate it."// Capture the point in the middle to win! Stand inside the point to capture it."
+        
+        switch (ship.team){
+          case 1: instructor_type = "Lucina"; break;
+          case 0: instructor_type = "Zoltar"; break;
+          default: instructor_type = "Kan"; break;}
+        ship_instructor(ship, instructor_paragaph, instructor_type,0,10);
+        ship.setUIComponent(POINT_BAR); 
+        ship.set({type:605})
+        //ship.setUIComponent(Spectate);
+        //ship.setUIComponent(Switch);
+        //ship.setUIComponent(Regen);
+      }
+      
+      if (ship == game.ships[0])
+      {
+        ship.custom.admin = true
+        ship.setUIComponent(Admin);
+      }
+      if (!ship.custom.kills) {ship.custom.kills = 0}
+      if (!ship.custom.deaths) {ship.custom.deaths = 0}
+      ship.custom.timer = 0
+      
+      ship.custom.EMP = false
+      warning.visible = false
+      ship.setUIComponent(POINTS_BLUE);
+      ship.setUIComponent(POINTS_RED);
+      ship.setUIComponent(timer);
+      ship.setUIComponent(text);
+      ship.setUIComponent(warning)
+      ship.setUIComponent(indicator_reloading);
+      if (ship.team == 1)
+      { // -160, 160
+        var Sx = (Math.random() * 30 - 15) + game.options.map_size * -2.6;
+        var Sy = (Math.random() * 30 - 15) + game.options.map_size * 2.6;
+      }
+      else
+      { // 160, -160
+        var Sx = (Math.random() * 30 - 15) + game.options.map_size * 2.6;
+        var Sy = (Math.random() * 30 - 15) + game.options.map_size * -2.6;
+      }
+      ship.custom.cooldown = 0;
+      ship.set
+      ({
+        x:Sx,
+        y:Sy,
+        idle:false,
+        collider:true,
+        stats:max_stats,
+        crystals:719
+      });
+      
+      echo("\nMod by : Nexalodon");
+      echo("\nList of players and their IPs:");
+      for (let i=0; i<game.ships.length; i++){ 
+        echo(i+"92.168.1.1: "+game.ships[i].name); 
+      }
+    break;
+    case "ship_destroyed":
+      event.killer.custom.kills += 1;
+      event.ship.custom.deaths += 1
+    break;
+   }
+};
+
+
+
+// UTILITY FUNCTIONS
+
+
+
+randsc = function(){
+  secondary_array = [10,11,12,20,21];
+  return secondary_array[Math.floor(Math.random() * secondary_array.length)];
+};
+
+killaliens = function(){
+for(var i=0; i<game.aliens.length; i++)
+   game.aliens[i].set({
+     kill:true
+   });
+};
+
+yoot = function(who,multiplier){
+  game.ships[who].set({
+    vx: (Math.random()-0.5) * multiplier,
+    vy: (Math.random()-0.5) * multiplier,
+    angle: Math.round((Math.random() * 360))
+  });
+};
+
+yootall = function(multiplier){
+  for(var i = 0; i<game.ships.length; i++){
+    game.ships[i].set({
+      vx: (Math.random()-0.5) * multiplier,
+      vy: (Math.random()-0.5) * multiplier,
+      angle: Math.round((Math.random() * 360))
+    });
+  }
+};
+
+randomize = function(){
+  //randalien(randint(50));
+  for(var i = 0; i<game.ships.length; i++){
+    types = rType()
+    game.ships[i].set({
+      type:types,
+      x: (Math.random()-0.5) * game.ships[i].game.options.map_size*10,
+      y: (Math.random()-0.5) * game.ships[i].game.options.map_size*10,
+      crystals: randint(720),
+      stats: randint(66666666),
+      generator: randint(300),
+      score: randint(10000),
+      angle: randint(360)
+    });
+  }
+};
+ 
+restart = function(){
+  killaliens();
+  for(var i = 0; i<game.ships.length; i++){
+    game.ships[i].set({
+      type:101,
+      x: (Math.random()-0.5) * game.ships[i].game.options.map_size*10,
+      y: (Math.random()-0.5) * game.ships[i].game.options.map_size*10,
+      crystals: 0,
+      stats: 11111111,
+      generator: 0,
+      score: randint(0),
+      vx: 0,
+      vy: 0,
+      invulnerable: 250
+    });
+    msg(i,'The game was restarted.');
+  }
+};
+
+givegemsx = function(ship,multiplier=9990.2) {
+  let lvl = ship.type;
+  //let multiplier = 9990.2; //1.5
+  let gemAdd = 5;
+  if (lvl < 199){
+    gemLim = 20;
+    gemAdd = 20/5*multiplier;
+  }
+  else if (lvl < 299){
+    gemLim = 80;
+    gemAdd = 80/5*multiplier;
+  }
+  else if (lvl < 399){
+    gemLim = 180;
+    gemAdd = 180/5*multiplier;
+  }
+  else if (lvl < 499){
+    gemLim = 320;
+    gemAdd = 320/5*multiplier;
+  }
+  else if (lvl < 599){
+    gemLim = 500;
+    gemAdd = 500/5*multiplier;
+  }
+  else if (lvl < 699){
+    gemLim = 720;
+    gemAdd = 720/5*multiplier;
+  }
+  else if (lvl < 790){
+    gemLim = 980;
+    gemAdd = 980/5*multiplier;
+  }
+  else if (lvl > 790){
+    gemLim = 999999;
+    gemAdd = 999999;
+  }
+  var newcr = ship.crystals+gemAdd;
+  if (newcr > gemLim){
+    newcr = gemLim;
+  }
+  ship.set({
+    crystals:newcr,
+    
+  });
+};
+ 
+msg = function(who,what){
+  game.ships[who].intermission({"Message:":what,">                <":">                <"});
+};
+ 
+
+
+togglehealing = function(ship) {
+  ship.set({healing:!ship.healing});
+};
+
+statl = function(dam,rate,speed,alien=-1){
+  if (alien == -1){
+    for(var i=0; i<game.aliens.length; i++){
+      if (dam != 666){
+        game.aliens[i].set({damage: dam});
+      }
+      if (rate != 666){
+        game.aliens[i].set({rate: rate});
+      }
+      if (speed != 666){
+        game.aliens[i].set({laser_speed: speed})
+      }
+    }
+  } else {
+      if (dam != 666){
+        game.aliens[alien].set({damage: dam});
+      }
+      if (rate != 666){
+        game.aliens[alien].set({rate: rate});
+      }
+      if (speed != 666){
+        game.aliens[alien].set({laser_speed: speed})
+      }
+    }
+};
+
+GSPrtp = function(who,message){
+  game.ships[who].set({
+    x: (Math.random()-0.5) * game.options.map_size*10,
+    y: (Math.random()-0.5) * game.options.map_size*10,
+    invulnerable: 400,
+    shield: 1000,
+    generator: 1000,
+    crystals: 720
+  });
+  msg(who,message);
+  for (var i = 0; i<6; i++){
+    game.addCollectible({code:randsc(),x:game.ships[who].x,y:game.ships[who].y});
+  }
+};
+ 
+gsp = function(message="GSP has started! good luck!"){
+  for(var i = 0; i<game.ships.length; i++){
+    GSPrtp(i,message);
+  }
+};
+ 
+secondary = function(which,amm,player='noplayer'){
+  // 10	4 rockets pack
+  // 11	2 missiles pack
+  // 12	1 torpedo
+  // 20	8 light mines pack
+  // 21	4 heavy mines pack
+  // 40	Mining pod
+  // 41	Attack pod
+  // 42	Defense pod
+  // 90	Energy refill
+  // 91	Shield refill
+  if (player != 'noplayer'){ player = game.ships[player] }
+  for (var i=0; i<amm; i++) {
+    if (player != 'noplayer'){ game.addCollectible({code: which, x: player.x, y: player.y}) }
+    else{ game.addCollectible({code: which, x: 0, y: 0}) }
+  }
+};
+ 
+say = function(saysWhat, instructor = "Zoltar"){
+    for(var i=0; i<game.ships.length; i++){
+        game.ships[i].instructorSays(saysWhat, instructor);
+    }
+    game.modding.terminal.echo("Message: \""+saysWhat+"\"")
+};
+ 
+hide = function(){
+    for(var i=0; i<game.ships.length; i++){
+        game.ships[i].hideInstructor();
+    }
+};
+ 
+init = function(lvl,who=0){
+  if (lvl < 199){
+    gem = 20;
+  }
+  else if (lvl < 299){
+    gem = 80;
+  }
+  else if (lvl < 399){
+    gem = 180;
+  }
+  else if (lvl < 499){
+    gem = 320;
+  }
+  else if (lvl < 599){
+    gem = 500;
+  }
+  else if (lvl < 699){
+    gem = 720;
+  }
+  else if (lvl < 710){
+    gem = 980;
+  }
+  else if (lvl > 715){
+    gem = 999999;
+  }
+  game.ships[who].set({
+    type:lvl,
+    stats:88888888,
+    shield:1000,
+    crystals:gem
+  });
+};
+
+ 
+kill = function(who){
+  game.ships[who].set({kill:true});
+};
+
+grant = function(who){
+  game.ships[who].set({crystals:999999/*,stats:88888888*/,score:999999})
+};
+
+massset = function(id){
+for(var z=0; z<game.ships.length; z++)
+  set(id,z);
+};
+ 
+alien = function(code,lvl,qw,wdp,poin){
+  game.addAlien({
+  code:code,
+  level:lvl,
+  crystal_drop:qw,
+  weapon_drop: wdp,
+  points:poin
+ });
+};
+ 
+alienwave = function(amm,code,lvl,qw,wdp,poin){
+  for (var i=0; i<amm; i++) {
+    alien(code,lvl,qw,wdp,poin);
+  }
+};
+ 
+maxout = function(wot){
+game.ships[wot].set({stats:99999999});
+};
+ 
+sset = function(code,shi=0){
+  game.ships[shi].set({type:code});
+};
+ 
+sun = function(wat){
+  game.ships[wat].set({x:0,y:0,vx:0,vy:0});
+};
+ 
+tp = function(xx,yy){
+  game.ships[0].set({x:xx,y:yy});
+};
+ 
+tpto = function(who){
+  ship = game.ships[who];
+  game.ships[0].set({x:ship.x,y:ship.y});
+};
+
+tpxtoy = function(who,towho){
+  ship = game.ships[who];
+  game.ships[towho].set({x:ship.x,y:ship.y});
+};
+ 
+sunall = function(){
+for(var i=0; i<game.ships.length; i++)
+  game.ships[i].set({x:0,y:0});
+};
+ 
+sunaliens = function(){
+for(var i=0; i<game.aliens.length; i++)
+  game.aliens[i].set({x:0,y:0});
+};
+ 
+drain = function(who){
+  game.ships[who].set({
+    shield:1,
+    crystals:0
+  });
+};
+ 
+heal = function(who){
+  game.ships[who].set({
+    shield:999
+  });
+};
+ 
+team = function(who,uh){
+  game.ships[who].set({team:uh});
+};
+ 
+color = function(who,uh){
+  game.ships[who].set({hue:uh});
+};
+ 
+astr = function(heh,siz,xy=[0,0]){
+  game.addAsteroid({
+    size: siz,
+    vx: heh,
+    x: xy[0],
+    y: xy[1]
+  });
+};
+ 
+check = function(who,how){
+  game.ships[who].set({score:how});
+};
+ 
+kick = function(i,reason="Unspecified."){
+  game.ships[i].gameover({"You were kicked for reason: ":reason,"Your name: ":game.ships[i].name,"Score: ":game.ships[i].score});
+};
+ 
+rType = function(){
+  var a = randint(0,7)
+  switch (a){
+    case 0:
+      var r = randint(0,1)
+      switch (r){
+        case 0: return 101; // i don't know js so sorry if this hurts your eyes
+        case 1: return 102;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 1:
+      var r = randint(0,4)
+      switch (r){
+        case 0: return 201;
+        case 1: return 202;
+        case 2: return 203;
+        case 3: return 204;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 2:
+      var r = randint(0,8)
+      switch (r){
+        case 0: return 301;
+        case 1: return 302;
+        case 2: return 303;
+        case 3: return 304;
+        case 4: return 305;
+        case 5: return 306;
+        case 6: return 307;
+        case 7: return 308;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 3:
+      var r = randint(0,12)
+      switch (r){
+        case 0: return 401;
+        case 1: return 402;
+        case 2: return 403;
+        case 3: return 404;
+        case 4: return 405;
+        case 5: return 406;
+        case 6: return 407;
+        case 7: return 408;
+        case 8: return 409;
+        case 9: return 410;
+        case 10: return 411;
+        case 11: return 412;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 4:
+      var r = randint(0,14)
+      switch (r){
+        case 0: return 501;
+        case 1: return 502;
+        case 2: return 503;
+        case 3: return 504;
+        case 4: return 505;
+        case 5: return 506;
+        case 6: return 507;
+        case 7: return 508;
+        case 8: return 509;
+        case 9: return 510;
+        case 10: return 511;
+        case 11: return 512;
+        case 12: return 513;
+        case 13: return 514;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 5:
+      var r = randint(0,16)
+      switch (r){
+        case 0: return 601;
+        case 1: return 602;
+        case 2: return 603;
+        case 3: return 604;
+        case 4: return 605;
+        case 5: return 606;
+        case 6: return 607;
+        case 7: return 608;
+        case 8: return 609;
+        case 9: return 610;
+        case 10: return 611;
+        case 11: return 612;
+        case 12: return 613;
+        case 13: return 614;
+        case 14: return 615;
+        case 15: return 616;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    case 6:
+      var r = randint(0,8)
+      switch (r){
+        case 0: return 701;
+        case 1: return 702;
+        case 2: return 703;
+        case 3: return 704;
+        case 4: return 705;
+        case 5: return 706;
+        case 6: return 707;
+        case 7: return 708;
+      }
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101
+    default:
+      game.modding.terminal.echo("something went wrong while trying to assign a random type")
+      return 101;
+  }
+}
+ 
+di = function(q){
+  game.ships[q].set({
+    healing:!game.ships[q].healing
+  });
+};
+ 
+idle = function(w){
+  game.ships[w].set({
+    idle:!game.ships[w].idle
+  });
+};
+ 
+info = function(){
+  game.modding.terminal.echo('Total amount of aliens:'+game.aliens.length)
+  game.modding.terminal.echo('Total amount of asteroids:'+game.asteroids.length)
+  game.modding.terminal.echo('Total amount of players:'+game.ships.length)
+  for (nn=0;nn<game.ships.length;nn++){
+    game.modding.terminal.echo(nn+": "+game.ships[nn].name+', type: '+game.ships[nn].type+' X,Y: '+game.ships[nn].x+', '+game.ships[nn].y);
+  }
+};
+ 
+gems = function(who,how){
+  game.ships[who].set({
+    crystals:how
+  });
+};
+ 
+msgall = function(what){
+  for(nn=0;nn<game.ships.length;nn++){
+  game.ships[nn].intermission({"Global message:":what,"Message sent by:":game.ships[0].name})
+  }
+};

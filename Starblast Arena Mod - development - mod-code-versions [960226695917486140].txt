@@ -1,0 +1,757 @@
+==============================================================
+Guild: Starblast Arena Mod
+Channel: development / mod-code-versions
+Topic: skill issue
+==============================================================
+
+[03-Apr-22 10:20 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v0.9_first_playtest-72F84.txt
+
+
+[03-Apr-22 11:44 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v0.95-F0070.txt
+
+
+[04-Apr-22 01:43 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v1.2-3CD0B.txt
+
+
+[05-Apr-22 01:18 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v1.2.9-C5895.txt
+
+
+[06-Apr-22 05:43 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_1.3-78529.txt
+
+
+[06-Apr-22 10:41 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\Arena_mod_v1.4-52151.txt
+
+
+[06-Apr-22 10:56 AM] Nexagon#6069
+@Deleted User control point ui fixed
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v1.4.1-C26DB.txt
+
+
+[08-Apr-22 09:01 PM] Nexagon#6069
+version 1.5 (UNBALANCED: **PHOENIX**, **VESUVIUS** AND **INTERVENTION**)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_1.5_UNBALANCED-F2552.txt
+
+
+[09-Apr-22 10:57 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-85DF5.txt
+
+
+[09-Apr-22 01:33 PM] Nexagon#6069
+version 1.5.5
+- fixed bug where the control point progress bar doesn't appear full when it is
+- added vesuvius (**NO FIRE GRAPHICS, LEON MAKE THE FIRE GRAPHICS FOR F**
+- nerfed phoenix
+- nerfed odef range
+- fixed endless emp i guess? i dont know i think it should be fixed
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-020F1.txt
+
+
+[10-Apr-22 11:11 AM] Nexagon#6069
+#mod-updates 1.5.5
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-6DB36.txt
+
+
+[10-Apr-22 11:55 AM] Nexagon#6069
+1.5.5 (fixed adf)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-B901E.txt
+
+
+[10-Apr-22 03:16 PM] Nexagon#6069
+1.5.6, minor changes
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-CAB5E.txt
+
+
+[11-Apr-22 07:33 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\Arena_mod_1.5.7-DB4BA.txt
+
+
+[11-Apr-22 05:32 PM] Nexagon#6069
+added quandale dingle
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.5.7-C57A5.txt
+
+
+[12-Apr-22 08:53 AM] Nexagon#6069
+added lancelot and lootboxes
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1649767550365-B2606.txt
+
+
+[13-Apr-22 10:53 AM] Nexagon#6069
+version 1.6: https://discord.com/channels/958886979938955285/959037640940855306/963855276082086011
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.6-C0D5D.txt
+
+
+[13-Apr-22 11:23 AM] Nexagon#6069
+version 1.6, but kunai has a slightly lower range
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-2DB3B.txt
+
+
+[14-Apr-22 05:07 PM] Nexagon#6069
+1.6.2
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.6.2-0DDB6.txt
+
+
+[16-Apr-22 03:55 AM] Nexagon#6069
+1.6.4
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.6.4-621A9.txt
+
+
+[16-Apr-22 03:58 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\Arena_mod_1.6.3-B04A5.txt
+
+
+[16-Apr-22 06:49 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.6.5-24F3E.txt
+
+
+[16-Apr-22 07:51 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\1.6.55-B41AE.txt
+
+
+[17-Apr-22 11:51 AM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-CC8B6.txt
+
+
+[17-Apr-22 02:09 PM] Nexagon#6069
+1.6.9 (unbalanced: nerf lancelot, nerf hellcat, buff kunai and post it as 1.7)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-583B9.txt
+
+
+[17-Apr-22 02:30 PM] Nexagon#6069
+1.6.9.1  (unbalanced: nerf lancelot, nerf hellcat, buff kunai and post it as 1.7)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\message-B99B6.txt
+
+
+[18-Apr-22 05:22 AM] Nexagon#6069
+1.6.9.2  (NOT READY; UNBALANCED: make stats for the new ship, nerf lancelot, nerf hellcat, buff kunai, buff goliath and post it as 1.7)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_v1.6.9.2_UNBALANCED-5D35F.txt
+
+
+[18-Apr-22 05:43 AM] Deleted User#0000
+Buff Goliath again?
+
+
+[18-Apr-22 05:44 AM] Deleted User#0000
+Really?
+
+
+[19-Apr-22 12:33 PM] Nexagon#6069
+1.7 #mod-updates
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_1.7-0678F.txt
+
+
+[20-Apr-22 03:56 AM] Nexagon#6069
+1.7.0.5 (minor balance changes)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mo_1.7.0.5-A0647.txt
+
+
+[20-Apr-22 09:43 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_v1.7.1-8D6AF.txt
+
+
+[22-Apr-22 12:19 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_v1.7.2-7B6A8.txt
+
+
+[22-Apr-22 02:08 PM] Nexagon#6069
+sigma rule 1.7.2
+game.ships[0].set({collider: false})
+
+
+[24-Apr-22 09:08 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_v1.8-A41C9.txt
+
+
+[24-Apr-22 09:36 AM] Nexagon#6069
+1.8 as seen in #mod-updates
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8-76432.txt
+
+
+[24-Apr-22 09:38 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8-9F22B.txt
+
+
+[25-Apr-22 02:17 PM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.1-5C9CE.txt
+
+
+[25-Apr-22 03:00 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_v1.8.2-38AAB.txt
+
+
+[25-Apr-22 04:06 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.3-1E107.txt
+
+
+[28-Apr-22 06:38 PM] Nexagon#6069
+(unbalanced: arcane, wasp & bojis)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.4-05AFE.txt
+
+
+[29-Apr-22 12:47 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.5-590EE.txt
+
+
+[01-May-22 09:46 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.6-989D4.txt
+
+
+[01-May-22 12:03 PM] Nexagon#6069
+@Deleted User host this one next
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.7-2FA28.txt
+
+
+[02-May-22 07:58 PM] Nexagon#6069
+DO NOT HOST THIS VERSION; FLASHBANG BUGS AND MAKES YOUR SCREEN WHITE
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.8-B6781.txt
+
+
+[06-May-22 12:35 AM] Nexagon#6069
+host-ready version
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.8.9-F9CEB.txt
+
+
+[07-May-22 05:58 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_1.9-ED082.txt
+
+
+[17-May-22 08:35 AM] Nexagon#6069
+**2.0 (ver. B)** - HAS CORPORAL AND HAMMERHEAD
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_2.0_B-5D21A.txt
+
+
+[17-May-22 08:36 AM] Nexagon#6069
+**2.0 (ver. A)** - DOESN'T HAVE CORPORAL AND HAMMERHEAD
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_2.0_A-4BF6E.txt
+
+
+[17-May-22 08:37 AM] Nexagon#6069
+host whichever one you see fit
+
+
+[24-Sep-22 03:26 PM] Nexagon#6069
+V2.0.9 - too many changes to list here
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1664058346027-4A967.txt
+
+
+[25-Sep-22 04:08 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA_V2.1-20DCF.txt
+
+
+[26-Sep-22 12:24 PM] Nexagon#6069
+piercer fixed
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA-DB9ED.txt
+
+
+[27-Sep-22 07:26 AM] Nexagon#6069
+2.1.1 - nerfed piercer and changed zeus
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA_2.1.1-EA1C5.txt
+
+
+[28-Sep-22 07:37 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1664375795454-F1DCB.txt
+
+
+[29-Sep-22 09:26 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM-2.1.2-FBF22.txt
+
+{Reactions}
+🥸 
+
+[30-Sep-22 11:10 AM] Nexagon#6069
+@Megalodon remember to change the version to 3.0 for the public host
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_2.1.3-C7374.txt
+
+
+[30-Sep-22 06:33 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA_MOD_SEASON_2-6E886.txt
+
+
+[01-Oct-22 07:11 PM] Nexagon#6069
+3 maps: "flames", "nebula", "blockchain" (select them via customOptions.map_name)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA_MOD_SEASON_2_3.0.1-F4E2D.txt
+
+
+[02-Oct-22 10:10 AM] Nexagon#6069
+not "most recent version" anymore
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_3.0.1_with_phoenix-92BF4.txt
+
+
+[02-Oct-22 07:18 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\ARENA_MOD_SEASON_2_3.0.1-030AF.txt
+
+
+[04-Oct-22 12:50 AM] Nexagon#6069
+implemented ui parsing (slight client-side performance increase)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1664869801633-E8420.txt
+
+
+[06-Oct-22 08:39 AM] Deleted User#0000
+fixed guren, generator 0 after using the ability
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.2-A9302.txt
+
+
+[08-Oct-22 12:35 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.2-96612.txt
+
+
+[08-Oct-22 12:35 AM] Deleted User#0000
+fixed timer
+
+
+[08-Oct-22 01:27 AM] Nexagon#6069
+@Deleted User increase the alien spawn cap too
+
+
+[08-Oct-22 01:28 AM] Nexagon#6069
+you made it 0
+
+
+[08-Oct-22 01:28 AM] Nexagon#6069
+bring it back to 15
+
+
+[08-Oct-22 01:28 AM] Deleted User#0000
+oh fuck
+
+
+[08-Oct-22 01:28 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.2-4804A.txt
+
+
+[08-Oct-22 10:27 AM] Nexagon#6069
+scorp turns into vanilla odyssey
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665249991265-801F0.txt
+
+
+[08-Oct-22 10:53 AM] Nexagon#6069
+@Deleted User use this version when you host in 7 minutes
+
+
+[08-Oct-22 12:03 PM] Nexagon#6069
+nerfed zeus
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665255757677-33C73.txt
+
+
+[09-Oct-22 12:51 AM] Nexagon#6069
+nerfed viper
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665301854896-5BA20.txt
+
+
+[09-Oct-22 09:27 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.3-D3E98.txt
+
+
+[09-Oct-22 11:59 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.3-148D9.txt
+
+
+[09-Oct-22 11:59 AM] Deleted User#0000
+fixed piercer
+
+
+[10-Oct-22 11:44 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.3-696BD.txt
+
+
+[10-Oct-22 11:44 AM] Deleted User#0000
+AM latest
+
+
+[11-Oct-22 10:58 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.4-7CB96.txt
+
+
+[12-Oct-22 01:00 AM] Nexagon#6069
+@Caramel use the most recent version of the code, this one has a new map
+
+
+[12-Oct-22 03:06 AM] Nexagon#6069
+updated lancelot & phoenix
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665569154891-926C8.txt
+
+
+[12-Oct-22 08:09 AM] Nexagon#6069
+synchronizing clan wars and public
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665587326818-98101.txt
+
+
+[13-Oct-22 09:21 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665678055707-41D25.txt
+
+
+[13-Oct-22 09:26 AM] Nexagon#6069
+warthog capacity fixed
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665678355166-5AAAE.txt
+
+
+[13-Oct-22 02:27 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665696411383-70282.txt
+
+
+[14-Oct-22 08:27 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665761181943-9925B.txt
+
+
+[14-Oct-22 12:15 PM] Nexagon#6069
+@Deleted User remember to increase the timer
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665774906859-9E7DE.txt
+
+
+[14-Oct-22 03:52 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665787903317-59D1D.txt
+
+
+[15-Oct-22 04:01 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\AM_3.0.5-699DB.txt
+
+
+[15-Oct-22 04:01 AM] Deleted User#0000
+added spiral
+
+
+[16-Oct-22 04:11 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665918651660-6B5BD.txt
+
+
+[16-Oct-22 04:13 AM] Deleted User#0000
+what are the changes
+
+
+[16-Oct-22 04:16 AM] Nexagon#6069
+todo list
+
+
+[16-Oct-22 09:52 AM] Nexagon#6069
+thunder change added
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1665939082036-85DA3.txt
+
+
+[18-Oct-22 10:19 AM] Nexagon#6069
+synchronization and spitfire
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666113524014-FBC82.txt
+
+
+[18-Oct-22 04:28 PM] Deleted User#0000
+@BYLOLOPRO360
+
+
+[19-Oct-22 07:39 AM] Nexagon#6069
+balancing needed for SPITFIRE, BLUNDERBUSS, PHOENIX, VIKING
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666190345748-67A6A.txt
+
+
+[19-Oct-22 08:59 AM] Nexagon#6069
+@Deleted User
+
+
+[19-Oct-22 02:08 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666213710825-7EC44.txt
+
+
+[22-Oct-22 10:40 AM] Nexagon#6069
+public game synchronization
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666460383098-6D831.txt
+
+
+[22-Oct-22 12:46 PM] Nexagon#6069
+nerfed lancelotto
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666467961515-C7BEF.txt
+
+
+[26-Oct-22 06:13 AM] Nexagon#6069
+synchronization with clan wars
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1666789957926-CAFE5.txt
+
+
+[01-Nov-22 06:33 PM] Nexagon#6069
+ZEUS NERF
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1667352779651-242E3.txt
+
+
+[13-Nov-22 04:59 AM] Nexagon#6069
+- buffed advf and emp
+- buffed guren
+- buffed mosquit
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668344338639-95FB8.txt
+
+
+[13-Nov-22 05:02 AM] Nexagon#6069
+- buffed advf and emp
+- buffed guren
+- buffed mosquit
+(working version)
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668344507426-746FA.txt
+
+
+[13-Nov-22 05:41 AM] Nexagon#6069
+buffed guren again @Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668346838367-C19D7.txt
+
+
+[13-Nov-22 05:43 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668346975687-00D73.txt
+
+
+[13-Nov-22 06:32 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668349866865-5D892.txt
+
+
+[13-Nov-22 07:44 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\3dgifmaker19713-465EB.gif
+
+{Reactions}
+💀 
+
+[13-Nov-22 07:44 AM] Nexagon#6069
+wrong file
+
+
+[13-Nov-22 07:44 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668354201515-460CB.txt
+
+
+[13-Nov-22 08:22 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668356547117-12FE3.txt
+
+
+[13-Nov-22 09:43 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1668361297923-887BD.txt
+
+
+[29-Nov-22 09:29 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\Arena_mod_3.0.9-84431.txt
+
+{Reactions}
+feddy_five_night 
+
+[30-Nov-22 01:55 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\Arena_mod_3.1.0-225D6.txt
+
+
+[01-Dec-22 03:11 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\arena_mod_3.1.1-33E2E.txt
+
+
+[02-Dec-22 08:49 AM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - mod-code-versions [960226695917486140].txt_Files\starblast-mod_1669999694168-ADAF4.txt
+
+{Reactions}
+🤩 🇳 🇴 🇸 🇺 🇰 🇪 
+
+[22-Jan-23 06:51 AM] 𝒩𝑒́𝒷𝓊𝓁𝑒𝓊𝓈𝑒#0752
+@Nexagon , @Xerxes 
+Thank you for everything you have done for the game, and for the players in general even if sometimes Lex was raging, we had a great time together and I wanted to thank you
+
+{Reactions}
+❤️ (6) 
+
+==============================================================
+Exported 119 message(s)
+==============================================================

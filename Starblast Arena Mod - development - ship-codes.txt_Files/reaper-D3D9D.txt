@@ -1,0 +1,337 @@
+y = -5
+f = -40
+createcannon = (xx,zz,err,sect=6) ->
+  return k = 
+      section_segments: sect
+      offset:
+        x: 0
+        y: -90 + anchor
+        z: zz
+      position:
+        x: [xx,xx,xx,xx,xx,xx,xx,xx,xx]
+        y: [-85,-100,-70,-60,-55,-30,20,30,0]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,5,6,6,5,5,5,5,0]
+      height: [0,5,6,6,5,5,5,5,0]
+      angle: 0
+      propeller: false
+      texture: [17,4,63,17,13,4,4]
+      laser:
+        damage: [15,15]
+        rate: 0.1
+        type: 1
+        speed: [240,240]
+        number: 1
+        recoil: 10
+        error: err
+
+anchor = -20
+return model =
+  name: 'Reaper'
+  designer: 'Lex & nex'
+  level: 6
+  model: 38
+  size: 2.8
+  specs:
+    shield:
+      capacity: [400,450]
+      reload: [4,5]
+    generator:
+      capacity: [15,15]
+      reload: [400,400]
+    ship:
+      mass: 700
+      speed: [55,55]
+      rotation: [12,12]
+      acceleration: [100,100]
+  bodies:# X, Y, ERROR, SEGMENTS
+    can1: createcannon(5,15,0)
+    can2: createcannon(-5,15,0)
+    can3: createcannon(-15,5,0)
+    can4: createcannon(-15,-5,0)
+    can5: createcannon(-5,-15,0)
+    can6: createcannon(5,-15,1)
+    can7: createcannon(15,-5,1)
+    can8: createcannon(15,5,1)
+    
+    can2_1: createcannon(5,15,1,0)
+    can2_2: createcannon(-5,15,1,0)
+    can2_3: createcannon(-15,5,1,0)
+    can2_4: createcannon(-15,-5,1,0)
+    can2_5: createcannon(-5,-15,1,0)
+    can2_6: createcannon(5,-15,2,0)
+    can2_7: createcannon(15,-5,2,0)
+    can2_8: createcannon(15,5,2,0)
+    
+    can3_1: createcannon(5,15,2,0)
+    can3_2: createcannon(-5,15,2,0)
+    can3_3: createcannon(-15,5,3,0)
+    can3_4: createcannon(-15,-5,3,0)
+    can3_5: createcannon(-5,-15,3,0)
+    can3_6: createcannon(5,-15,3,0)
+    can3_7: createcannon(15,-5,3,0)
+    can3_8: createcannon(15,5,3,0)
+    
+    can4_1: createcannon(5,15,4,0)
+    can4_2: createcannon(-5,15,4,0)
+    can4_3: createcannon(-15,5,4,0)
+    can4_4: createcannon(-15,-5,5,0)
+    can4_5: createcannon(-5,-15,5,0)
+    can4_6: createcannon(5,-15,5,0)
+    can4_7: createcannon(15,-5,6,0)
+    can4_8: createcannon(15,5,7,0)
+    
+    can5_1: createcannon(5,15,6,0)
+    can5_2: createcannon(-5,15,6,0)
+    can5_3: createcannon(-15,5,7,0)
+    can5_4: createcannon(-15,-5,7,0)
+    can5_5: createcannon(-5,-15,7,0)
+    can5_6: createcannon(5,-15,8,0)
+    can5_7: createcannon(15,-5,8,0)
+    can5_8: createcannon(15,5,8,0)
+    
+    can6_1: createcannon(5,15,8,0)
+    can6_2: createcannon(-5,15,8,0)
+    can6_3: createcannon(-15,5,8,0)
+    can6_4: createcannon(-15,-5,8,0)
+    can6_5: createcannon(-5,-15,9,0)
+    can6_6: createcannon(5,-15,9,0)
+    can6_7: createcannon(15,-5,9,0)
+    can6_8: createcannon(15,5,9,0)
+    
+    can7_1: createcannon(5,15,10,0)
+    can7_2: createcannon(-5,15,10,0)
+    can7_3: createcannon(-15,5,10,0)
+    can7_4: createcannon(-15,-5,10,0)
+    can7_5: createcannon(-5,-15,11,0)
+    can7_6: createcannon(5,-15,11,0)
+    can7_7: createcannon(15,-5,11,0)
+    can7_8: createcannon(15,5,11,0)
+    
+    can8_1: createcannon(5,15,12,0)
+    can8_2: createcannon(-5,15,13,0)
+    can8_3: createcannon(-15,5,14,0)
+    can8_4: createcannon(-15,-5,15,0)
+    can8_5: createcannon(-5,-15,16,0)
+    can8_6: createcannon(5,-15,17,0)
+    can8_7: createcannon(15,-5,18,0)
+    can8_8: createcannon(15,5,20,0)
+    main:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 30 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-40,-60,-35,-40,-20,0,20,15,40,50,70,80,100,90]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,26,26,31,31,31,38,30,30,25,25,30,30,0]
+      height: [0,26,26,32,32,32,38,30,30,25,25,30,30,0]
+      texture: [13,12,4,10,2,63,4,18,4,13,4,3]
+    bodypillow:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 30 + anchor
+        z: 0
+      position:
+        x: [40+y,40+y,40+y,40+y,40+y,40+y,40+y,40+y,40+y,40+y]
+        y: [-50,-50,-45,-35,-25,35,45,55,60,60]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,15,20,20,20,20,20,20,15,0]
+      height: [0,15,20,20,20,20,20,20,15,0]
+      texture: [63,4,4,3,10,3,4,4,63]
+    pablo:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 60 + anchor
+        z: 0
+      position:
+        x: [f,f,f,f,f,f,f,f,f,f,f]
+        y: [-30,-40,-20,-25,-10,20,30,70,80,100,90]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,7,7,16,16,16,20,20,17,17,0]
+      height: [0,14,14,25,25,25,30,30,17,17,0]
+      texture: [4,3,4,1,2,4,8,4,2,4,4]
+    cockpittop:
+      section_segments: 6
+      offset:
+        x: 0
+        y: 25 + anchor
+        z: 32
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-40,-40,-40,-28,-19,-4,15,15]
+        z: [0,0,0,0,0,0,0,0]
+      width: [0,0,4,6,7,7,6,0]
+      height: [0,0,3,6,8,7,5,0]
+      propeller: false
+      texture: [4,4,5,17,5]
+    cockpitbottom:
+      section_segments: 6#
+      offset:
+        x: 0
+        y: 25 + anchor
+        z: 29
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-40,-46,-40,-28,-13,20,20]
+        z: [0,0,0,0,0,0,0]
+      width: [0,4,8,13,16,15,0]
+      height: [0,3,5,6,8,5,0]
+      propeller: false
+      texture: [ 3.9 ]
+    cockring2:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 5 + anchor
+        z: 0
+      position:
+        x: [40+y,40+y,40+y,40+y,40+y,40+y,40+y]
+        y: [-3,-3,3,3]
+        z: [0,0,0,0]
+      width: [0,25,25,0]
+      height: [0,25,25,0]
+      texture: [17,63,17]
+      propeller: false
+    cockring3:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 65 + anchor
+        z: 0
+      position:
+        x: [40+y,40+y,40+y,40+y,40+y,40+y,40+y]
+        y: [-3,-3,3,3]
+        z: [0,0,0,0]
+      width: [0,25,25,0]
+      height: [0,25,25,0]
+      texture: [17,63,17]
+      propeller: false
+    cockring:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -60 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-5,-3,3,7]
+        z: [0,0,0,0]
+      width: [0,23,23,20]
+      height: [0,23,23,20]
+      texture: [1,1,17]
+      propeller: false
+    cockring_final:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -150 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-1,-6,3,3]
+        z: [0,0,0,0]
+      width: [0,25,25,20]
+      height: [0,25,25,20]
+      texture: [4,1,17]
+      propeller: false
+    propulsors:
+      section_segments: 8
+      offset:
+        x: 15
+        y: 70 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-30,-25,-10,20,30,40,80,70]
+        z: [0,0,0,0,0,0,0,0]
+      width: [0,15,20,20,16,20,15,0]
+      height: [0,15,15,20,16,20,15,0]
+      texture: [4,3,2,4,4,8,17]
+      propeller: true
+    Main_rings:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -31 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,18,20,20,20,20,20,18,18,0]
+      height: [0,18,20,20,20,20,20,18,18,0]
+      texture: [17.93,4,4,4,13,17,4,18]
+    Main_rings2:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -47.8 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,14,16,16,16,16,16,14,14,0]
+      height: [0,14,16,16,16,16,16,14,14,0]
+      texture: [17.93,4,4,4,18,17,4,18]
+    Main_rings3:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -85 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-21,-18,-16,-14,-14,4,4,6,6,8]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,18,23,23,23,23,23,18,18,0]
+      height: [0,18,23,23,23,23,23,18,18,0]
+      texture: [17.93,4,4,4,1,17,4,18]
+  wings:
+    sides:
+      doubleside: true
+      offset:
+        x: 10
+        y: 90 + anchor
+        z: -25
+      length: [50,40,30]
+      width: [50,50,50,30]
+      angle: [0,90,135]
+      position: [-70,-50,-10,0]
+      texture: [4,13,63]
+      bump:
+        position: 20
+        size: 10
+    winglets1:
+      doubleside: true
+      offset:
+        x: 15
+        y: 90 + anchor
+        z: -5
+      length: [ 50 ]
+      width: [50,20]
+      angle: [ 0 ]
+      position: [0,25]
+      texture: [ 63 ]
+      bump:
+        position: 10
+        size: 20
+    winglets2:
+      doubleside: true
+      offset:
+        x: 20
+        y: 120 + anchor
+        z: -5
+      length: [ 35 ]
+      width: [50,20]
+      angle: [ 0 ]
+      position: [0,25]
+      texture: [ 63 ]
+      bump:
+        position: 10
+        size: 20

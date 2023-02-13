@@ -1,0 +1,193 @@
+energyREG = 65 # energy regen of the ship
+cannonsYMD = -27.5 # curve y modifier
+cannonsLEN = 20 # length of the curve
+cannonsDMG = 180 # combined damage of all cannons
+cannonsSPD = 120 # laser speed of all cannons
+
+cannonsAMM = 13 # total amount of lasers (dont change if you dont know what youre doing)
+
+createcannon = (x,num) ->
+  return k = 
+      section_segments: 6
+      offset:
+        x: x
+        y: cannonsYMD + cannonsLEN*-num
+        z: 0
+      position:
+        x: [0]
+        y: [0]
+        z: [0]
+      width: [0]
+      height: [0]
+      angle: 0
+      laser:
+        damage: [cannonsDMG/cannonsAMM,cannonsDMG/cannonsAMM]
+        rate: energyREG/cannonsDMG
+        type: 1
+        speed: [cannonsSPD,cannonsSPD]
+        number: 1
+        error: 0
+      propeller: false
+      texture: [17]
+
+anchor = 0
+return model =
+  name: 'Arcane'
+  designer: 'nex'
+  level: 6
+  model: 29
+  size: 1.54
+  specs:
+    shield:
+      capacity: [230,230]
+      reload: [8,8]
+    generator:
+      capacity: [cannonsDMG,cannonsDMG]
+      reload: [energyREG,energyREG]
+    ship:
+      mass: 200
+      speed: [180,180]
+      rotation: [55,55]
+      acceleration: [90,90]
+  bodies:
+    C1: createcannon(40,1)
+    C2: createcannon(40,2)
+    C3: createcannon(36,3)
+    C4: createcannon(32,4)
+    C5: createcannon(24,5)
+    C6: createcannon(12.5,5.8)
+    C7: createcannon(0,6.2)
+    main_INDICATOR:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-80,-75,-65,-50,-20,10,30,50,70,100,90]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,9,14.5,18,20,20,16,16,20,20,0]
+      height: [0,3,7,9,10,10,7,7,10,10,0]
+      texture: [4,2,1,11,10,4,13,4,8,17]
+      propeller: true
+      laser:
+        damage: [cannonsDMG,cannonsDMG]
+        rate: 10
+        type: 2
+        speed: [1,1]
+        number: 10
+        error: 0
+    cockpit:
+      section_segments: [40,80,180,280,320]
+      offset:
+        x: 0
+        y: 10 + anchor
+        z: 6
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-56,-50,-30,-10,20,40,50]
+        z: [3,0,0,0,0,0,0]
+      width: [0,9,13,14,8,6,0]
+      height: [0,8,10,10,8,6,0]
+      texture: [7,8.98,8.98,4]
+      propeller: false
+    side_propulssy:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 75 + anchor
+        z: 20
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-50,-45,-35,-20,-5,10,20,35,60,50]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,9,14,16,16,12,12,18,16,0]
+      height: [0,9,14,16,16,12,12,18,16,0]
+      texture: [3,2,1,10,4,3,4,11,17]
+      propeller: true
+    side_propellis:
+      section_segments: 8
+      offset:
+        x: 25
+        y: 90 + anchor
+        z: -7
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-50,-45,-35,-20,-5,10,20,35,60,50]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,9,14,16,16,12,12,18,16,0]
+      height: [0,9,14,16,16,12,12,18,16,0]
+      texture: [3,2,63,63,4,3,4,11,17]
+      propeller: true
+  wings:
+   wingas:
+     offset:
+       x: 0
+       y: -68 + anchor
+       z: -12
+     length: [11,13,11]
+     width: [170,125,65,20]
+     angle: [0,0,0]
+     position: [10,-5,-13,15]
+     texture: [1,2,3]
+     doubleside: true
+     bump:
+       position: 10
+       size: 10
+   wingass:
+     offset:
+       x: 0
+       y: 60 + anchor
+       z: 17
+     length: [11,13,11]
+     width: [120,100,60,20]
+     angle: [0,0,0]
+     position: [0,-6,-12,15]
+     texture: [2,4,3]
+     doubleside: true
+     bump:
+       position: 10
+       size: 10
+   wingarse:
+     offset:
+       x: 12
+       y: 20 + anchor
+       z: -10
+     length: [15,10]
+     width: [100,60,30]
+     angle: [0,0]
+     position: [0,0,20]
+     texture: [2,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   pinglets:
+     offset:
+       x: 35
+       y: 81 + anchor
+       z: -10
+     length: [35]
+     width: [35,15]
+     angle: [-30]
+     position: [0,30]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   goomblets:
+     offset:
+       x: 35
+       y: 115 + anchor
+       z: -10
+     length: [35]
+     width: [35,15]
+     angle: [-30]
+     position: [0,30]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10

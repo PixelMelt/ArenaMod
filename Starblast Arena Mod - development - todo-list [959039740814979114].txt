@@ -1,0 +1,1765 @@
+==============================================================
+Guild: Starblast Arena Mod
+Channel: development / todo-list
+Topic: todo lists only, no chatting
+==============================================================
+
+[02-Apr-22 08:47 AM] Deleted User#0000
+#1 one leaderboard, 1 kill = 1 point
+#2 spawn locations
+
+
+[02-Apr-22 08:47 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-65FC2.png
+
+
+[02-Apr-22 08:48 AM] Deleted User#0000
+#3
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-B6D05.png
+
+
+[02-Apr-22 08:48 AM] Deleted User#0000
+1 neutral point
+
+
+[02-Apr-22 08:50 AM] Nexagon#6069
+#4 rare secondary aliens in certain corners
+
+
+[02-Apr-22 08:50 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-01808.png
+
+
+[02-Apr-22 08:52 AM] Deleted User#0000
+#5 remove switch ship buttons and make ship select UI
+(you can select your ship within 10 seconds of spawning)
+
+
+[02-Apr-22 08:52 AM] Thuliux#9764
+steal the SDC ship select ui I guess
+
+
+[02-Apr-22 02:12 PM] Megalodon#0001
+looks like a good idea
+
+
+[03-Apr-22 01:15 PM] Nexagon#6069
+todo: add switch team function
+(not a button; server host will be able to switch teams of certain players)
+
+
+[03-Apr-22 01:21 PM] Deleted User#0000
+1: fix the buttons
+2: buff odef
+3: increase the point size
+4: increase map size
+5: fix the T7 issue
+6: chimera's ability turns to t7
+
+
+[03-Apr-22 01:30 PM] Nexagon#6069
+7: buff rock-tower ability
+8: nerf advanced-fighter and barracuda abilities
+
+
+[03-Apr-22 01:31 PM] Nexagon#6069
+9: add vampire
+
+
+[03-Apr-22 01:31 PM] Deleted User#0000
+10: u sieg
+
+
+[03-Apr-22 01:32 PM] Deleted User#0000
+11: remove radius from ships that dont need radius
+
+
+[04-Apr-22 01:44 PM] Deleted User#0000
+1: Balance all the ships again with meg
+
+
+[04-Apr-22 01:45 PM] Deleted User#0000
+2: Remodel hmerc, buff it and add it
+
+
+[04-Apr-22 01:45 PM] Deleted User#0000
+3: Solve the fucking radius issue
+
+{Reactions}
+🚫 
+
+[04-Apr-22 01:45 PM] Deleted User#0000
+4: do something about ship seleciton/invulnerability/whatever the fuck carme said
+
+
+[04-Apr-22 01:47 PM] Deleted User#0000
+5: host on wednesday
+
+
+[05-Apr-22 08:33 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\Hellcat-069BE.txt
+
+
+[05-Apr-22 08:35 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-02280.txt
+
+
+[06-Apr-22 12:07 PM] Nexagon#6069
+- buff advf and scorp abilities we nerfed them too hard
+
+
+[06-Apr-22 12:09 PM] Nexagon#6069
+- add herobrine
+
+
+[06-Apr-22 12:11 PM] Nexagon#6069
+- fix the leaderboard
+
+
+[06-Apr-22 12:12 PM] Deleted User#0000
+- activating abilities after death
+
+
+[06-Apr-22 12:16 PM] Nexagon#6069
+- increase a-speedster cooldown
+
+
+[06-Apr-22 12:34 PM] Nexagon#6069
+- clean up code
+
+
+[06-Apr-22 12:38 PM] Nexagon#6069
+- increase o-defender torpedo health and agility
+
+
+[06-Apr-22 03:34 PM] Nexagon#6069
+**Version 1.5**
+- 2 new ships!
+    **undefined** and **undefined**
+- you can no longer use abilities after death ✅
+- brand new leaderboard ✅
+- new map (same map size) ✅
+- buffed advanced-fighter, scorpion and other balance changes ✅
+- made the capture point map icon more transparent ✅
+- added warning after enemy team reaches over 80% points ✅
+- control point is slightly faster to capture ✅
+- control point stays colored gray until it's over halfway captured by one team ✅
+- control point naturally goes down to neutral if no one is inside it for long enough ✅
+- it's now impossible to switch ships outside of spawn region ✅
+- removed herobrine ✅
+
+
+[06-Apr-22 04:29 PM] Deleted User#0000
+- buff advf and scorp abilities we nerfed them too hard 
+- add herobrine
+- fix the leaderboard
+- activating abilities after death
+- increase a-speedster cooldown 
+- clean up code
+- increase o-defender torpedo health and agility
+- marauder velocity 0 in ability form
+
+
+[08-Apr-22 10:48 AM] Nexagon#6069
+vesuvius code for balancing, dont change the zoom or the size
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\starblast-editor_1649440005593-520F1.txt
+
+
+[08-Apr-22 07:29 PM] Nexagon#6069
+vesuvius updated code
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-1D4B4.txt
+
+
+[09-Apr-22 12:19 PM] Deleted User#0000
+- tidy up leaderboard
+- make endgame show total kills, deaths, caps and MVP of the game + their score
+- nerf phoenix
+- add vesiuiristusus
+- fix the infinite emp
+
+
+[09-Apr-22 12:20 PM] Nexagon#6069
+- nerf odef?
+
+
+[09-Apr-22 12:30 PM] Nexagon#6069
+> tidy up leaderboard
+in what way
+
+
+[09-Apr-22 01:07 PM] Nexagon#6069 (pinned)
+phoenix fucking ability code so i dont lose it again
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-C4F0B.txt
+
+
+[10-Apr-22 09:23 AM] Nexagon#6069
+**Version 1.5.5**
+- the ship **Vesuvius** is now selectable and playable ✅
+- leaderboard now shows kills and sorts by k/d ✅
+- the end screen now shows your kills, deaths and the MVP of the game + their score ✅
+
+
+[10-Apr-22 09:23 AM] Nexagon#6069
+is this good
+
+
+[10-Apr-22 01:07 PM] Nexagon#6069
+1. change every ship
+
+
+[10-Apr-22 01:10 PM] Deleted User#0000
+2. maruader ability more mass
+3. intervention deployed mode higher accel and more mass
+
+
+[10-Apr-22 03:22 PM] Nexagon#6069
+4. fix lingering object bug by setting scale to 0
+
+
+[11-Apr-22 03:23 PM] Nexagon#6069
+@Deleted User
+
+
+[12-Apr-22 03:39 AM] Nexagon#6069
+lancelot ship editor
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-D5CAC.txt
+
+
+[12-Apr-22 03:59 AM] Nexagon#6069
+lancelot ability ship editor
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-1B867.txt
+
+
+[12-Apr-22 04:36 AM] Nexagon#6069
+updated lancelot (not ability)
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-E3BE7.txt
+
+
+[12-Apr-22 05:00 AM] Nexagon#6069
+lancelot non ability again
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-B7FBF.txt
+
+
+[12-Apr-22 11:10 AM] Nexagon#6069
+nerf chimera
+
+
+[12-Apr-22 11:25 AM] Nexagon#6069
+make leaderboard highlight you
+
+
+[12-Apr-22 02:53 PM] Nexagon#6069
+0: fix the team separating thing not working properly 
+1. change every ship
+2. maruader ability more mass
+3. intervention deployed mode higher accel and more mass
+4. make rock tower less spammy
+5. cuda nerf
+6. chimera remove side lasers in ability form
+7: warthog reduce cooldown
+8: 
+9: vampire energy cap 190 > 195, buff ability form
+10: vulcan new ability
+11: kunai general buff
+12: Lancelot FIX URGENTLY
+
+
+[13-Apr-22 07:24 AM] Nexagon#6069
+@Deleted User do all or most of these while i fix the team separating and lancelot, send all ship codes in this channel so i can put it with the fixed code
+
+
+[13-Apr-22 08:05 AM] Deleted User#0000
+2. maruader ability more mass ✅ 
+ + Marauder buff
+
+
+[13-Apr-22 08:07 AM] Deleted User#0000
+3. intervention deployed mode higher accel and more mass ✅
+
+
+[13-Apr-22 08:11 AM] Deleted User#0000
+4. Rock tower less spammy ✅ 
+5. Cuda nerf (8s > 12s) ✅
+
+
+[13-Apr-22 08:14 AM] Deleted User#0000
+6. Chimera nerf, bullet speed (250 > 200) ✅
+
+
+[13-Apr-22 08:15 AM] Nexagon#6069
+7. fixed sb's weird team selection, you will always join the team with less players now ✅
+
+
+[13-Apr-22 08:20 AM] Deleted User#0000
+7. Warthog cooldown buff, (30s > 25s) ✅
+
+
+[13-Apr-22 08:31 AM] Deleted User#0000
+8. Vampire ability MAJOR buff (less bullet spread, all stats +5-10) ✅
+
+
+[13-Apr-22 08:46 AM] Nexagon#6069
+@Deleted User is your scroll wheel broken or something
+
+
+[13-Apr-22 08:46 AM] Deleted User#0000
+9. Kunai buff ✅
+
+
+[13-Apr-22 09:03 AM] Nexagon#6069
+@Deleted User can you look in this channel once
+
+
+[13-Apr-22 09:06 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-5B0DB.png
+
+
+[13-Apr-22 09:06 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-868E5.png
+
+
+[13-Apr-22 09:06 AM] Nexagon#6069
+its correct though
+
+
+[13-Apr-22 09:06 AM] Nexagon#6069
+cannons can be two
+
+
+[13-Apr-22 09:30 AM] Nexagon#6069
+- torp health max when it transforms, do not respawn as torp ✅
+
+
+[13-Apr-22 10:13 AM] Nexagon#6069
+- team select buttons
+
+
+[13-Apr-22 10:40 AM] Deleted User#0000
+All the new ships mod exports
+
+
+[13-Apr-22 10:41 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-46567.txt
+
+
+[13-Apr-22 10:41 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-C9014.txt
+
+
+[13-Apr-22 10:42 AM] Nexagon#6069
+i did
+
+
+[13-Apr-22 10:45 AM] Nexagon#6069
+yes
+
+
+[13-Apr-22 10:46 AM] Nexagon#6069
+until you can detonate manually
+
+
+[13-Apr-22 10:46 AM] Nexagon#6069
+5 seconds until you die
+
+
+[13-Apr-22 10:47 AM] Nexagon#6069
+why are you not understanding
+
+
+[13-Apr-22 10:47 AM] Nexagon#6069
+ok you automatically detonate after the cooldown
+
+
+[13-Apr-22 10:48 AM] Nexagon#6069
+5/3 seconds
+
+
+[13-Apr-22 10:48 AM] Nexagon#6069
+2 seconds
+
+
+[13-Apr-22 10:48 AM] Nexagon#6069
+no its until you automatically die
+
+
+[13-Apr-22 10:49 AM] Nexagon#6069
+yes
+
+
+[13-Apr-22 01:15 PM] Nexagon#6069
+buff: rt, condor, a-s, advf
+nerf: vulcan, odef cooldown
+
+
+[14-Apr-22 04:59 PM] Nexagon#6069
+- new ability for lancelot
+- new baby vulcan model
+- balance bfg demon fart
+- balance puck
+- team select
+
+
+[14-Apr-22 05:02 PM] Deleted User#0000
+- add blocker for buying new lives
+
+
+[15-Apr-22 02:04 PM] Nexagon#6069
+- vulcan ability
+
+
+[15-Apr-22 02:05 PM] Deleted User#0000
+nexs to do list:
+- team select
+- lives button blocker
+- vulcan ability
+
+
+[16-Apr-22 04:44 AM] Deleted User#0000
+new to do:
+- highlight leaderboard
+- base damage
+- full shield when spawning
+
+
+[16-Apr-22 04:44 AM] Deleted User#0000
+@Nexagon
+
+
+[16-Apr-22 04:44 AM] Nexagon#6069
+what base damage
+
+
+[16-Apr-22 12:35 PM] Nexagon#6069
+- fix puck not switching back
+- fix kunai infinite range
+- highlight leaderboard
+
+- nerf bfg (health and mass?)
+- buff puck
+- buff goliath
+
+
+[16-Apr-22 12:37 PM] Nexagon#6069
+- buff hellcat normal form & make attack pod stronger
+- buff lancelot mass, nerf everything else
+- new ability lancelot just anything
+
+
+[17-Apr-22 10:13 AM] Nexagon#6069
+- fixed puck and kunai infinite range ✅
+
+
+[17-Apr-22 10:41 AM] Nexagon#6069
+- fixed scorpion healing disappearing randomly ✅
+- fixed scorpion healing not working ✅
+
+
+[17-Apr-22 01:48 PM] Nexagon#6069
+- lower puck cooldown or make it stronger
+
+
+[17-Apr-22 01:51 PM] Deleted User#0000
+(5 seconds)
+
+
+[17-Apr-22 01:51 PM] Deleted User#0000
+- nerf lancelot
+
+
+[17-Apr-22 01:51 PM] Deleted User#0000
+- nerf hellcat
+
+
+[17-Apr-22 01:52 PM] Deleted User#0000
+- buff kunai
+
+
+[17-Apr-22 02:02 PM] Nexagon#6069
+- leaderboard now highlights you ✅
+
+
+[20-Apr-22 12:07 PM] Nexagon#6069
+- nerf vulcan lowered version
+
+
+[20-Apr-22 12:08 PM] Deleted User#0000
+- fix highlight
+
+
+[23-Apr-22 11:39 AM] Nexagon#6069
+- nerf ekho
+
+
+[23-Apr-22 11:40 AM] Deleted User#0000
+- buff sigma
+
+
+[23-Apr-22 11:46 AM] Deleted User#0000
+- lower deathray cooldown
+
+
+[23-Apr-22 11:59 AM] Nexagon#6069
+- make sigmas ability visible
+
+
+[23-Apr-22 12:09 PM] Nexagon#6069
+- nerf torpedo strength
+
+
+[23-Apr-22 12:14 PM] Nexagon#6069
+- change the chat key for W to "i am a fucking loser"
+
+
+[23-Apr-22 05:29 PM] Nexagon#6069
+- buff anomaly a lot
+
+
+[23-Apr-22 06:48 PM] Nexagon#6069
+- nerf lancelot ability
+
+
+[23-Apr-22 09:03 PM] Nexagon#6069
+- make stats for guren, here is the code::
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\starblast-editor_1650772657252-B97F7.txt
+
+
+[23-Apr-22 10:03 PM] Deleted User#0000
+todo for tomorrow
+- nerf ekho
+- buff sigma
+- lower deathray cooldown
+- nerf torpedo strength
+- buff anomaly (slightly)
+- nerf lancelot ability
+
+
+[23-Apr-22 10:05 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\Guren-3CDEA.txt
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\Pablo-C487D.txt
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\Sigma-369F5.txt
+
+
+[24-Apr-22 10:21 AM] Nexagon#6069
+@Deleted User
+
+
+[24-Apr-22 12:48 PM] Deleted User#0000
+to do for tomorrow:
+- nerf hellcat
+- buff intervention
+- buff sigma
+- buff pablo
+- nerf guren
+- fix leaderboard
+
+
+[24-Apr-22 12:51 PM] Nexagon#6069
+(nerf guren ability, buff guren normal)
+
+
+[27-Apr-22 05:33 PM] Nexagon#6069
+arcane code (first version, unbalanced)
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\message-2A3A8.txt
+
+
+[30-Apr-22 11:54 AM] Nexagon#6069
+1. lower torpedo health to 100
+
+
+[30-Apr-22 12:54 PM] Nexagon#6069
+2. nerf bfg (shield)
+
+
+[30-Apr-22 12:59 PM] Nexagon#6069
+3. buff phoenix ability severely (more damage, longer cooldown)
+
+
+[30-Apr-22 01:02 PM] Deleted User#0000
+- buff pablo
+
+
+[30-Apr-22 02:14 PM] Nexagon#6069
+5. whatever carme said
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-98C52.png
+
+
+[30-Apr-22 03:25 PM] Nexagon#6069
+6. nerf scorpion's healing
+
+
+[30-Apr-22 06:51 PM] Nexagon#6069
+7. increase odef cooldown greatly
+
+
+[30-Apr-22 06:51 PM] Nexagon#6069
+8. buff and remodel pablo :troj:
+
+
+[30-Apr-22 06:59 PM] Nexagon#6069
+9. buff EMP damage
+
+
+[30-Apr-22 07:03 PM] Nexagon#6069
+10. include control score in team balancing (only if teams are equal)
+
+
+[30-Apr-22 07:20 PM] Nexagon#6069
+11. buff guren normal form (change firing pattern?)
+
+
+[30-Apr-22 07:20 PM] Nexagon#6069
+12. buff wasp (more bullet speed but less damage / more energy regen)
+
+
+[01-May-22 02:22 AM] Deleted User#0000
+No
+
+
+[01-May-22 02:23 AM] Deleted User#0000
+You are the only one who doesn't like it
+
+
+[01-May-22 02:23 AM] Deleted User#0000
+We aren't changing a single thing on it
+
+
+[01-May-22 02:23 AM] Deleted User#0000
+Noo
+
+
+[01-May-22 02:24 AM] Deleted User#0000
+No
+
+
+[01-May-22 02:24 AM] Deleted User#0000
+No
+
+
+[01-May-22 09:44 AM] Nexagon#6069
+yes
+
+
+[01-May-22 12:10 PM] Nexagon#6069
+1. fix vulcan no nametag ✅
+2. finish checkmarks
+
+
+[01-May-22 12:52 PM] Nexagon#6069
+3. lower guren rotation but slightly increse ship speed in t7 mode
+
+
+[01-May-22 12:52 PM] Deleted User#0000
+4. buff arcane
+
+
+[01-May-22 12:53 PM] Nexagon#6069
+5. look into puck
+
+
+[01-May-22 12:56 PM] Deleted User#0000
+6. fix the lag
+
+
+[01-May-22 12:57 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-3D340.png
+
+
+[01-May-22 01:07 PM] Nexagon#6069
+ok "Aroace, Mild psychopath on psychopathy spectrum, apathetic"
+
+
+[01-May-22 06:25 PM] Nexagon#6069
+7. buff guren normal mode it cant do shit
+
+
+[01-May-22 06:26 PM] Nexagon#6069
+8. nerf warthog cooldown
+
+
+[04-May-22 11:56 AM] Nexagon#6069
+1. FIX FLASHBANG ABILITY LINGERING (VERY IMPORTANT)
+2. fix control point invisibility
+3. remove score correction
+4. fix team balancing
+
+
+[05-May-22 01:46 AM] Deleted User#0000
+5. nerf torpedo health to 1-shot levels (20-50), but increase damage
+6. buff chimera ability (lower cooldown or increase damage)
+7. increase health of all slow ships (ships not fast enough to outrun strong close ranges like vampire, arcane, phoenix, guren)
+    or increase their speed
+
+
+[05-May-22 01:48 AM] Deleted User#0000
+Increasing health of all slower ships will make speed-based ships obsolete
+
+
+[05-May-22 01:48 AM] Nexagon#6069
+no?
+
+
+[05-May-22 01:49 AM] Deleted User#0000
+Yes
+
+
+[05-May-22 01:49 AM] Nexagon#6069
+it will help them not get 1-shot by vampire, guren and arcane all the time
+
+
+[05-May-22 01:49 AM] Deleted User#0000
+Faster ships have a hard time taking out heavier ships as it is, no need to make it harder
+
+
+[05-May-22 01:49 AM] Deleted User#0000
+But it's going to make them way more powerful than they need to be
+
+
+[05-May-22 01:49 AM] Deleted User#0000
+Making your ability the only way to eliminate them
+
+
+[05-May-22 01:50 AM] Deleted User#0000
+Since your base ship will be too weak
+
+
+[05-May-22 01:50 AM] Nexagon#6069
+goliath turret wont help you against a speedster
+
+
+[05-May-22 01:50 AM] Nexagon#6069
+neither will the torpedo
+
+
+[05-May-22 01:50 AM] Nexagon#6069
+with the upcoming torpedo nerf
+
+
+[05-May-22 01:50 AM] Deleted User#0000
+They absolutely will, the Goliath turret kills anything and the torpedo ability is easy to use
+
+
+[05-May-22 01:51 AM] Nexagon#6069
+you said it yourself in #abilities-info that the goliath turret cant hit small agile ships
+
+
+[05-May-22 01:51 AM] Deleted User#0000
+It can if they're stupid enough to come close
+
+
+[05-May-22 01:51 AM] Deleted User#0000
+And that was before it was buffed 3 times
+
+
+[05-May-22 01:52 AM] Deleted User#0000
+People enjoy the mod as it is, don't fuck it up
+
+
+[05-May-22 01:52 AM] Deleted User#0000
+People often complain about things being too confusing and complicated, especially the Turks and frenches
+
+
+[05-May-22 01:52 AM] Deleted User#0000
+I don't want to follow the same path SBP did
+
+
+[05-May-22 01:52 AM] Nexagon#6069
+will increasing the shield cap or speed of some ships ruin the mod
+
+
+[05-May-22 01:52 AM] Deleted User#0000
+Yes
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+It absolutely will
+
+
+[05-May-22 01:53 AM] Nexagon#6069
+will that make things more complicated
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+You want BFG to have more health?
+
+
+[05-May-22 01:53 AM] Nexagon#6069
+no
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+Then leave things as they are
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+The ADF is a glass cannon, not a heavy ship
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+It hits hard, and it can't take too much damage
+
+
+[05-May-22 01:53 AM] Deleted User#0000
+Increasing its shield will make it omnipotent
+
+
+[05-May-22 01:54 AM] Deleted User#0000
+We based every ship of off the ADF and speedster
+
+
+[05-May-22 01:54 AM] Deleted User#0000
+Making the ADF any stronger will ruin the balance between all ships
+
+
+[05-May-22 01:54 AM] Nexagon#6069
+i didnt say adf
+
+
+[05-May-22 01:54 AM] Nexagon#6069
+adf can run from attacks
+
+
+[05-May-22 01:54 AM] Nexagon#6069
+its not as slow as goliath
+
+
+[05-May-22 01:54 AM] Nexagon#6069
+or use its recoil bullets
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+Besides there is no reason to buff the health of slower ships, they have more energy regen in return for high mass and low speed
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+Goliath needs more health, but not adf
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+In that case you should have said Goliath health buff
+
+
+[05-May-22 01:55 AM] Nexagon#6069
+thats what ive just told you
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+Not ALL slower ships
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+No
+
+
+[05-May-22 01:55 AM] Deleted User#0000
+You said all
+
+
+[05-May-22 01:56 AM] Deleted User#0000
+You need to realize the sheer magnitude of one "small" change
+
+
+[05-May-22 01:56 AM] Deleted User#0000
+Because that is s game changer
+
+
+[05-May-22 01:56 AM] Deleted User#0000
+Or in this case, a total collapse
+
+
+[05-May-22 01:56 AM] Nexagon#6069
+so if i increase advf shield by 5 the mod will be ruined forever
+
+
+[05-May-22 01:56 AM] Deleted User#0000
+Well knowing you, you'd do it by 50 points
+
+
+[05-May-22 01:57 AM] Deleted User#0000
+The adf isn't getting any modifications
+
+
+[05-May-22 01:57 AM] Deleted User#0000
+Every ship has been balanced using the adf
+
+
+[05-May-22 01:57 AM] Deleted User#0000
+Do not crack the foundation everything rests upon
+
+
+[05-May-22 01:58 AM] Nexagon#6069
+!help
+
+
+[05-May-22 01:58 AM] Carl-bot#1536
+
+{Embed}
+Help | Nexagon
+**HELP COMMANDS -**
+!help levels
+Shows the rank card for a member.
+!help leaderboard
+Lists your members based on their xp. Supply a page number to see people not on the frontpage (1-indexed)
+!help twitch
+Help for twitch
+!help youtube
+Does nothing without a subcommand
+
+
+[05-May-22 01:58 AM] Nexagon#6069
+how do i delete this
+
+
+[05-May-22 01:59 AM] Nexagon#6069
+holy shit how do i clear text
+
+
+[05-May-22 01:59 AM] Deleted User#0000
+What the fuck
+
+
+[05-May-22 02:00 AM] Deleted User#0000
+There is no need to clear trxt
+
+
+[05-May-22 02:00 AM] Deleted User#0000
+Top
+
+
+[05-May-22 02:00 AM] Deleted User#0000
+Stop
+
+
+[05-May-22 02:00 AM] Deleted User#0000
+We chatted here before it doesn't matter
+
+
+[05-May-22 02:00 AM] Nexagon#6069
+!help clear
+
+
+[05-May-22 02:00 AM] Carl-bot#1536
+No command called "clear" found.
+
+
+[05-May-22 02:00 AM] Nexagon#6069
+this bot sucks
+
+
+[05-May-22 02:00 AM] Nexagon#6069
+ok
+
+
+[05-May-22 02:01 AM] Deleted User#0000
+1. FIX FLASHBANG ABILITY LINGERING (VERY IMPORTANT)
+2. fix control point invisibility
+3. remove score correction
+4. fix team balancing
+
+5. nerf torpedo health to 1-shot levels (20-50), but increase damage
+6. buff chimera ability (lower cooldown or increase damage)
+7. Buff Goliath and Guren max health, BFG rotation buff (+3)
+
+
+[08-May-22 04:48 AM] Nexagon#6069
+1. EXPERIMENTAL: make getting kills recharge your ability cooldown slightly
+
+
+[22-Sep-22 06:55 AM] Deleted User#0000
+Pinned a message.
+
+
+[23-Sep-22 09:47 AM] Nexagon#6069
+@Deleted User
+
+
+[23-Sep-22 09:48 AM] Nexagon#6069
+only we 2 can view this
+
+
+[23-Sep-22 09:48 AM] Nexagon#6069
+write the grand todo list here
+
+
+[23-Sep-22 09:49 AM] Deleted User#0000
+Nex
+- BFG remodel + more size
+- Remodel KAT
+- Reaper ability
+
+Lex
+- balance: ghoul, viking, blunderbuss, thunder, phoenix, walkyrie
+
+{Reactions}
+🚶‍♂️ 
+
+[23-Sep-22 11:26 AM] Deleted User#0000
+- kunai bigger
+
+
+[23-Sep-22 11:26 AM] Deleted User#0000
+- ekho less ereg (-2)
+
+
+[23-Sep-22 11:29 AM] Deleted User#0000
+- phoenix bigger, more mass
+
+
+[23-Sep-22 12:04 PM] Nexagon#6069
+**Nex**
+   ✅ ~~remodel BFG~~
+   - remodel KAT
+   ✅ ~~build Zeus/Thor~~
+   ✅ ~~implement reaper ability~~
+   ✅ ~~fix reaper ability ~~
+   ✅ ~~remove radius from arcane ability~~
+   ✅ ~~make the crossbow ship~~
+   ✅ ~~fix the 1 second bullshit on toadfish~~
+   ✅ ~~nerf ghoul ereg, increase cooldown on ability~~
+   ✅ ~~revamp zeus~~
+   ✅ ~~kunai bigger~~
+   - map bigger and denser
+**L.gaming**
+   ✅ ~~balance **erebos**, **ghoul**, __**viking**__, __**blunderbuss**__, **thunder**, __**phoenix**__, __**valkyrie**__, **bfg**, **reaper**, **kat-38**, **o-defender**, __**piercer**__~~
+   ✅ ~~go through and balance/think of ideas for every ship with meg or a group of 4 players~~
+   ✅ ~~phoenix bigger, more mass (buff?)~~
+   ✅ ~~do the things i forgot to do~~
+   ✅ ~~ekho less ereg (-2)~~
+   ✅ ~~fix zeus~~
+   ✅ ~~arcane nerf~~
+   ✅ ~~warthog less rotation, bigger~~
+   ✅ ~~1 more ship idea~~
+   ✅ ~~think of reaper ability~~
+   ✅ ~~blunder more cd~~
+   ✅ ~~ekho more cd, less shield and shield reg~~
+   ✅ ~~wasp nerf~~
+   ✅ ~~remove valkyrie radius~~
+   ✅ ~~bfg ereg nerf~~
+   ✅ ~~arcane less mass~~
+   ✅ ~~warthog bigger~~
+**Us both**
+   - think of KAT non-ability firing pattern
+
+
+[07-Oct-22 09:09 AM] Nexagon#6069
+```js
+this.event = function (event, game) {
+  let ship = event.ship;
+  if (ship != null) switch (event.name) {
+    case "ui_component_clicked":
+      switch (event.id) {
+        case "using_subspace":
+          ship.gameover({"Kicked!": "No cheating/hacking clients allowed!"});
+          echo("Kicked/Disqualified " + ship.name + ". Reason: Using Subspace Client");
+          break;
+      }
+      break;
+  }
+}
+```
+
+
+[11-Oct-22 06:37 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-77E41.png
+
+
+[11-Oct-22 06:45 AM] Deleted User#0000
+it's a problem with the ids is it not?
+
+
+[11-Oct-22 06:45 AM] Nexagon#6069
+no
+
+
+[11-Oct-22 06:45 AM] Nexagon#6069
+it happens when you use your ability and die during it
+
+
+[11-Oct-22 07:12 AM] Deleted User#0000
+if you respawn after everyone gets tpd to base, you can move around
+
+
+[11-Oct-22 07:24 AM] Nexagon#6069
+- nerf wasp
+
+
+[11-Oct-22 09:01 AM] Nexagon#6069
+clan wars:
+   respawn problems: respawn as t7, respawn too late
+   puck, kunai, advf, etc affect spectators
+
+
+[11-Oct-22 09:03 AM] Deleted User#0000
+- remove puck
+
+
+[11-Oct-22 09:35 AM] Nexagon#6069
+@Deleted User nerf mosquit ability and wasp before you host
+
+
+[11-Oct-22 09:35 AM] Deleted User#0000
+get in vc
+
+
+[11-Oct-22 10:36 AM] Nexagon#6069
+- nerf lancelot (i'll do it)
+
+
+[11-Oct-22 10:39 AM] Nexagon#6069
+no i have an idea to change the firing pattern
+
+
+[11-Oct-22 10:40 AM] Nexagon#6069
+the sword in non ability will be longer and the bullets will go backwards faster, but in exchange the ability will have 2x cooldown and less damage
+
+
+[11-Oct-22 10:40 AM] Deleted User#0000
+do it
+
+
+[11-Oct-22 10:40 AM] Nexagon#6069
+tmr
+
+
+[11-Oct-22 10:55 AM] Nexagon#6069
+__**TODO LIST**__
+= **CLAN WARS**:
+   ✅ @Nexagon: fix respawn problems: respawn as t7 (duplicate ships), respawn too late (leave base early)
+   ✅ @Nexagon: fix puck, kunai, advf, etc affecting spectators
+   ✅ @Nexagon: fix puck bypassing forced spectator
+   ✅ @Nexagon: always idle ships before the round starts
+   ✅ @Nexagon: pause() and unpause()
+= **VANILLA** (also applies to clan wars):
+   ✅@Nexagon:overhaul lancelot (default sword longer, ability less damage & cooldown 2x)
+   ✅ @Deleted User:  nerf/fix/change mosquit ability
+   ✅ ?:         buff phoenix (ability and/or the ship) : BUFFED ABILITY DAMAGE
+   - @Deleted User:  balance the new lancelot
+
+
+[12-Oct-22 09:10 AM] Deleted User#0000
+- spectators tp to middle
+
+
+[12-Oct-22 09:23 AM] Nexagon#6069
+no
+
+
+[12-Oct-22 09:25 AM] Deleted User#0000
+yes
+
+
+[12-Oct-22 09:25 AM] Deleted User#0000
+its dumb when you have to travel from your base
+
+
+[12-Oct-22 09:25 AM] Deleted User#0000
+just tp to 0,0 when you die
+
+
+[12-Oct-22 11:37 AM] Nexagon#6069
+- make max player setting work
+
+
+[12-Oct-22 11:51 AM] Deleted User#0000
+- ekho nerf
+
+
+[12-Oct-22 12:52 PM] Deleted User#0000
+- point score set to 0 when the game is starting
+
+
+[12-Oct-22 01:13 PM] Deleted User#0000
+- shuffle everyones ships so there are no duplicates
+
+
+[12-Oct-22 01:14 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-C763E.png
+
+
+[12-Oct-22 02:22 PM] Deleted User#0000
+@Nexagon
+
+
+[12-Oct-22 02:32 PM] Nexagon#6069
+does this happen in the newest version i sent
+
+
+[13-Oct-22 05:23 AM] Deleted User#0000
+**__TODO LIST__**
+@Nexagon:
+- spectators tp to middle upon dying (its annoying having to travel to the middle to get to the action)
+- point score set to 0 when the game is starting
+- shuffle everyones ships so there are no duplicates
+- fix any other issues
+- write lore for ships
+
+@Deleted User:
+- nerf ekho (longer cooldown, cant stay in stealth forever, -2 ereg, slower lasers)
+- rebalance + nerf piercer (bullet speed, cooldown longer, a bit more mass)
+- write lore and make more videos
+- buff spitfire
+- nerf viper
+- goliath bigger both modes
+- buff warthog
+
+
+[13-Oct-22 05:40 AM] Nexagon#6069
+- buff spitfire
+
+
+[13-Oct-22 06:37 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-AECB9.png
+
+
+[13-Oct-22 06:38 AM] Deleted User#0000
+i wanted to get peircer but hte puck ability turned me back into puck
+
+
+[13-Oct-22 06:38 AM] Deleted User#0000
+when i was pierver
+
+
+[13-Oct-22 06:38 AM] Deleted User#0000
+and then i couldnt get it anymore
+
+
+[13-Oct-22 07:31 AM] Nexagon#6069
+#ship-codes
+
+
+[13-Oct-22 07:48 AM] Nexagon#6069
+put it in ship codes
+
+
+[13-Oct-22 08:01 AM] Nexagon#6069
+- buff warthog
+
+
+[13-Oct-22 08:12 AM] Nexagon#6069
+- fix mosquit ability
+
+
+[13-Oct-22 10:17 AM] Deleted User#0000
+- nerf warthog
+- nerf wasp ability
+
+
+[13-Oct-22 10:48 AM] Deleted User#0000
+- nerf piercer
+
+
+[13-Oct-22 01:24 PM] Deleted User#0000
+- ghoul nerf
+
+
+[14-Oct-22 12:08 AM] Deleted User#0000
+---------------------
+
+
+[14-Oct-22 12:09 AM] Deleted User#0000
+- nerf synthesis
+- nerf Ghoul
+
+
+[14-Oct-22 09:17 AM] Deleted User#0000
+- wasp new ability
+
+
+[14-Oct-22 10:05 AM] Deleted User#0000
+button is missing
+
+
+[14-Oct-22 10:05 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-C48B2.png
+
+
+[14-Oct-22 10:53 AM] Deleted User#0000
+Nex: 
+- radar minimum
+- fix any other issues
+- aliens cannot spawn until the 30 second timer runs out (there have been a lot of complaints about the aliens base-camping during the match countdown)
+- ekho CD 23 > 25
+
+
+[14-Oct-22 10:53 AM] Deleted User#0000
+@Nexagon
+
+
+[14-Oct-22 10:54 AM] Nexagon#6069
+what about piercer
+
+
+[14-Oct-22 10:54 AM] Nexagon#6069
+do i change the cooldown
+
+
+[14-Oct-22 10:55 AM] Deleted User#0000
+12
+
+
+[14-Oct-22 10:56 AM] Deleted User#0000
+we will remove it
+
+
+[14-Oct-22 10:56 AM] Nexagon#6069
+really?
+
+
+[14-Oct-22 10:56 AM] Nexagon#6069
+some people rely on it
+
+
+[14-Oct-22 10:57 AM] Nexagon#6069
+and its cool
+
+
+[14-Oct-22 10:57 AM] Deleted User#0000
+edward is right
+
+
+[14-Oct-22 10:58 AM] Deleted User#0000
+i got too attached to the ship and it can never be balanced
+
+
+[14-Oct-22 11:03 AM] Nexagon#6069
+but i dont wanna remove it
+
+
+[14-Oct-22 11:04 AM] Nexagon#6069
+maybe we can change how it works but i want the crossobow ship to stay
+
+
+[14-Oct-22 11:06 AM] Deleted User#0000
+i want to replace it with Raijin
+
+
+[14-Oct-22 12:32 PM] Nexagon#6069
+- viper ability: no invulnerability, less push force
+
+
+[14-Oct-22 12:34 PM] Nexagon#6069
+- sigma more cooldown
+
+
+[14-Oct-22 12:53 PM] Nexagon#6069
+- arcane more bullet speed
+
+
+[14-Oct-22 12:59 PM] Nexagon#6069
+@Deleted User you're gonna have to give it the current stats
+
+
+[14-Oct-22 01:01 PM] Deleted User#0000
+sigma 28 > 35 cd
+
+
+[14-Oct-22 01:41 PM] Nexagon#6069
+- piercer 300 gems
+
+
+[14-Oct-22 02:31 PM] Deleted User#0000
+400
+
+
+[14-Oct-22 02:31 PM] Deleted User#0000
+- lancelot less ereg
+
+
+[15-Oct-22 12:56 AM] Deleted User#0000
+Vulcan no iframes
+
+
+[15-Oct-22 04:50 AM] Nexagon#6069
+- nerf phoenix ability
+
+
+[15-Oct-22 05:16 AM] Deleted User#0000
+- kunai ereg nerf
+
+
+[15-Oct-22 06:22 AM] Nexagon#6069
+- erebos ability more cooldown
+
+
+[15-Oct-22 11:49 AM] Nexagon#6069
+- force idle when outside the base before the round starts
+
+
+[15-Oct-22 11:49 AM] Nexagon#6069
+- force remove buttons once the round starts
+
+
+[15-Oct-22 11:49 AM] Nexagon#6069
+- add custom teams
+
+
+[15-Oct-22 03:18 PM] Deleted User#0000
+- spectator less zoom
+
+
+[15-Oct-22 03:39 PM] Nexagon#6069
+more view range or less?
+
+
+[15-Oct-22 03:39 PM] Deleted User#0000
+see less
+
+
+[15-Oct-22 03:39 PM] Deleted User#0000
+cuz you see so much that you cant see shit
+
+
+[16-Oct-22 05:41 AM] Deleted User#0000
+- piercer way bigger
+
+
+[16-Oct-22 12:22 PM] Deleted User#0000
+- buff blunderbussy ability 1k > 1.5k dmg
+
+
+[16-Oct-22 12:51 PM] Nexagon#6069
+- fix horizontal
+
+
+[16-Oct-22 02:17 PM] Deleted User#0000
+- viking nerf
+
+
+[16-Oct-22 04:21 PM] Deleted User#0000
+- when someone joins after the round has already started, they are a spectator
+
+
+[16-Oct-22 04:23 PM] Nexagon#6069
+- fix forced spectator buttons
+
+
+[16-Oct-22 04:24 PM] Nexagon#6069
+- fix forced spectator collider
+
+
+[16-Oct-22 05:27 PM] Deleted User#0000
+- nerf viking again
+
+
+[16-Oct-22 06:50 PM] Deleted User#0000
+- spitfire buff
+
+
+[17-Oct-22 05:16 PM] Nexagon#6069
+**Legagon**
+✅ ~~spitfire buff~~
+- balance **SPITFIRE, BLUNDERBUSS, PHOENIX, VIKING** with meg
+**El Nexo**
+✅ ~~piecrer 400 gems~~
+✅~~ fix forced spectator hue~~
+✅ ~~forced spectator fix render banned buttons~~
+✅ ~~make sure forced spectator works~~
+✅ ~~spitfire nerf~~ 💀 
+✅ ~~spitfire more cooldown~~
+✅ ~~nerf viking~~
+✅ ~~buff blunder ability~~
+✅ ~~nerf phoenix ability (only mobility stats & energy regen (ereg is safe to change without it breaking))~~
+- host more clan war tests to find more problems
+
+deadline to get all this done: __**the 22nd**__
+
+
+[18-Oct-22 09:43 AM] Nexagon#6069
+clan wars has the most recent versions of the ships, so take them from there
+
+
+[18-Oct-22 09:43 AM] Nexagon#6069
+send me ship codes when you're done balancing and ill put them in both versions
+
+
+[19-Oct-22 12:51 PM] Nexagon#6069
+- buff lancelot
+
+
+[19-Oct-22 04:37 PM] Nexagon#6069
+- buff zeus
+
+
+[19-Oct-22 05:14 PM] Nexagon#6069
+- in-match spectators have collider, gems and spawn in bases
+
+
+[20-Oct-22 12:38 PM] Nexagon#6069
+- buff ekho side lasers
+
+
+[20-Oct-22 12:53 PM] Nexagon#6069
+- fix team balancing in clan wars
+
+
+[20-Oct-22 12:53 PM] Nexagon#6069
+- spawn in the enemy base when the match starts
+
+
+[20-Oct-22 02:05 PM] Nexagon#6069
+**GELAXON**
+ - buff zeus, balance it with meg
+**XEGANON**
+ ✅ ~~fix in-match spectators have collider, gems and spawn in bases~~
+ ✅~~ fix manual team balancing in clan wars~~
+ ✅ ~~fix spawning in the enemy base in new rounds~~
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+@Nexagon absolutely not
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+what the fuck is wrong with you
+
+
+[22-Oct-22 01:04 PM] Nexagon#6069
+yes
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+do you realize how much of a troll that creates
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+no absolutely not
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+don't be autistic
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+nerf the damage, thats it
+
+
+[22-Oct-22 01:04 PM] Deleted User#0000
+nothing else
+
+
+[22-Oct-22 01:16 PM] Nexagon#6069
+- add emotes: gems, ability, push, warning, you
+
+
+[22-Oct-22 01:17 PM] Deleted User#0000
+no
+
+
+[22-Oct-22 01:17 PM] Nexagon#6069
+why not
+
+
+[22-Oct-22 01:17 PM] Deleted User#0000
+- gems
+- ready (✅)
+- you
+
+
+[22-Oct-22 01:18 PM] Deleted User#0000
+"push" and "warning" can be expressed by spamming attack or wait
+
+
+[22-Oct-22 01:18 PM] Nexagon#6069
+push is also for being pushed by teammates
+
+
+[22-Oct-22 01:18 PM] Deleted User#0000
+no
+
+
+[22-Oct-22 01:40 PM] Deleted User#0000
+- guren buff
+
+
+[22-Oct-22 02:10 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\unknown-90CD2.png
+
+
+[22-Oct-22 02:10 PM] Deleted User#0000
+fix spectators showing colors on map and getting gems
+
+
+[23-Oct-22 04:50 AM] Nexagon#6069
+**LEGALODON**
+- guren buff
+**NULLIUX**
+✅ remove puck from clan wars
+✅ lower torpedo damage so that it no longer instakills at full health
+✅ add emotes: gems, ready, you, thanks
+**ANYONE**
+✅ buff ekho side lasers rate, they're pretty useless right now
+✅ consider kron's suggestion for ekho 
+<https://discord.com/channels/958886979938955285/1033486686400815164/1033486686400815164>
+✅ lower intervention rotation
+
+
+[25-Oct-22 04:10 PM] Nexagon#6069
+- bfg punish lasers, more acceleration and rotation in default mode, slightly less size
+
+
+[29-Oct-22 12:34 PM] Nexagon#6069
+- wasp ability overhaul
+
+
+[13-Nov-22 02:58 AM] Nexagon#6069
+**TODO LIST FOR AR vs IS**
+- buff guren
+- increase emp stun time
+
+
+[13-Nov-22 02:58 AM] Nexagon#6069
+@Deleted User
+
+
+[13-Nov-22 12:04 PM] Nexagon#6069
+- nerf guren ability bullet speed
+
+
+[13-Nov-22 02:01 PM] Deleted User#0000
+- synth buff
+
+
+[14-Nov-22 07:22 AM] Deleted User#0000
+- buff/rebalance hallcat
+
+
+[14-Nov-22 07:23 AM] Nexagon#6069
+make hellcat ability set your velocity to 0
+
+
+[16-Nov-22 04:38 PM] Nexagon#6069
+**TODO LIST (can be done any time)**
+- rebalance hellcat, velocity 0 in the ability
+- buff synthesis
+- nerf guren ability bullet speed
+- wasp ability overhaul
+- bfg punish lasers
+
+
+[16-Nov-22 04:44 PM] Deleted User#0000
+(probably won't be done for a loooong time.)
+
+
+[21-Nov-22 10:47 AM] Deleted User#0000
+condor slight buff
+
+
+[25-Nov-22 09:29 AM] Deleted User#0000
+- guren cap fix
+- thunder adjustment
+- megalodon
+
+
+[25-Nov-22 09:37 AM] Deleted User#0000
+- synth buff
+
+
+[26-Nov-22 12:38 PM] Deleted User#0000
+- guren cap fix ✅ 
+- condor slight buff ✅ 
+- thunder adjustment ✅ 
+- synthesis buff ✅ 
+- hellcat buff ✅ 
+- marauder buff ✅ 
+- mosquit ability buff ✅ 
+- added ||M̸̎̂Ì̸̎Ě̸͝i̴̊̽?̸͐͘e̵̅̽g̸̈̇g̷͑̾!̶͊̉i̷͑̚a̶̓̉\̶͘͝l̷͊̌d̵͊̒O̷̓͛o̷͐͋n̴̓͑||
+
+
+[01-Dec-22 08:14 AM] Deleted User#0000
+- remove infinite gems (constant 719 gems function)
+- gems drop 50%
+- implement megalodon playable ship
+- make puck unable to mirror megalodon
+- balance TBF
+
+
+[01-Dec-22 08:14 AM] Deleted User#0000
+- start working on team mode
+
+
+[01-Dec-22 01:06 PM] Deleted User#0000
+- nerf ADF
+
+
+[02-Dec-22 08:41 AM] Nexagon#6069
+- remove infinite gems (constant 719 gems function) ✅
+- gems drop 50% ✅
+- implement megalodon playable ship ✅
+- make puck unable to mirror megalodon ✅
+- nerf ADF ✅
+- balance TBF ✅
+
+
+[02-Dec-22 08:51 AM] Nexagon#6069
+**OPTIONAL TODO LIST**
+- rebalance hellcat, velocity 0 in the ability
+- nerf guren ability bullet speed
+- wasp ability overhaul
+- bfg punish lasers
+- reaper shield ability restores actual shield of the ship
+
+
+[03-Dec-22 10:22 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - todo-list [959039740814979114].txt_Files\STARBLAST.IO_-_Google_Chrome_2022-12-03_06-09E0A.mp4
+
+
+[04-Dec-22 07:06 AM] Deleted User#0000
+- nerf arcane and meg immediately
+
+
+==============================================================
+Exported 357 message(s)
+==============================================================

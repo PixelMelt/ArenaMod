@@ -1,0 +1,310 @@
+anchor = 0
+clawtex = 115
+return model =
+  name: 'Guren' # gay ass
+  designer: 'nex'
+  level: 7
+  model: 25
+  size: 1.65
+  specs:
+    shield:
+      capacity: [230,230] # low
+      reload: [13,13] # very high
+    generator:
+      capacity: [10000,10000] # high
+      reload: [10000,10000] # 1000 DPS
+    ship:
+      mass: 800 # medium-higher
+      speed: [5,5] # medium-higher
+      rotation: [50,50] # medium
+      acceleration: [100,100] # higher
+  bodies:
+    RWS:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -65 + anchor
+        z: -5
+      position:
+        x: [0,0,0,0,0]
+        y: [0,-10,0,12,62.5]
+        z: [0,0,0,2,8]
+      width: [0,15,17,20,0]
+      height: [0,10,12,15,0]
+      texture: [18,12,11,11]
+      propeller: false
+      laser:
+        damage: [40,40]
+        rate: 10 # 200
+        type: 1
+        speed: [25,25]
+        number: 2
+        error: 180
+        angle: 10
+        recoil: 0
+    RWS2:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -65 + anchor
+        z: -5
+      position:
+        x: [0,0,0,0,0]
+        y: [0,-10,0,12,62.5]
+        z: [0,0,0,2,8]
+      width: [0,15,17,20,0]
+      height: [0,10,12,15,0]
+      texture: [18,12,11,11]
+      propeller: false
+      laser:
+        damage: [100,100]
+        rate: 10 # 500
+        type: 1
+        speed: [15,15]
+        number: 2
+        error: 200
+        angle: 15
+        recoil: 0
+    RWS3:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -65 + anchor
+        z: -5
+      position:
+        x: [0,0,0,0,0]
+        y: [0,-10,0,12,62.5]
+        z: [0,0,0,2,8]
+      width: [0,15,17,20,0]
+      height: [0,10,12,15,0]
+      texture: [18,12,11,11]
+      propeller: false
+      laser:
+        damage: [20,20]
+        rate: 10 # 300
+        type: 1
+        speed: [60,60]
+        number: 6
+        error: 160
+        angle: 10
+        recoil: 0
+    RWS3:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -65 + anchor
+        z: -5
+      position:
+        x: [0,0,0,0,0]
+        y: [0,-10,0,12,62.5]
+        z: [0,0,0,2,8]
+      width: [0,15,17,20,0]
+      height: [0,10,12,15,0]
+      texture: [18,12,11,11]
+      propeller: false
+      laser:
+        damage: [20,20]
+        rate: 10 # 100
+        type: 1
+        speed: [3,3]
+        number: 2
+        error: 240
+        angle: 20
+        recoil: 0
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0 + anchor
+        z: 10
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-55,-60,-50,-30,-15,-5,10,30,45,70,65,60]
+        z: [-10,-10,-10,-10,-10,-10,-5,0,1,0,0,0]
+      width: [0,10,15,18.5,20,20,15,15,20,18,9,0]
+      height: [0,5,7,8,10,10,7,7,10,8,4,0]
+      texture: [4,2,2,2,4,63,4,63,12,17]
+      propeller: true
+    yoinky:
+      section_segments: [0,125,-175]
+      offset:
+        x: 0
+        y: 5
+        z: 8
+      position:
+        x: [-12,-12,-9,-13,-19]
+        y: [-35,-40,-15,20,50]
+        z: [-7,-6,-3,-3,-7.4]
+      width: [0,10,18,20,0]
+      height: [0,6,8,8,0]
+      texture: [3.9,3.9,10,3.9]#[3.9,3.9,10,3.9]
+    sploinky:
+      section_segments: [0,175,-125]
+      offset:
+        x: 0
+        y: 5
+        z: 8
+      position:
+        x: [12,12,9,13,19]
+        y: [-35,-40,-15,20,50]
+        z: [-7,-6,-3,-3,-7.4]
+      width: [0,10,18,20,0]
+      height: [0,6,8,8,0]
+      texture: [4.1,4.1,10,4.1]#[4.1,4.1,10,4.1]
+    cockpit_meat:
+      section_segments: 3
+      offset:
+        x: 0
+        y: -9 + anchor
+        z: 12
+      position:
+        x: [-20,0,5,0,-20,0,0]
+        y: [-20,-10,0,10,20]
+        z: [-6,-2,-1,-2,-6,0,0]
+      width: [0,14,16,14,0]
+      height: [0,6,6,6,0]
+      texture: [ 8.6 ]
+      angle: 90
+    side_properulerusorgporeugepjvdkmcxzAAAAAAAAAAAAAAAAAAAnrus_zxc:
+      section_segments: 8
+      offset:
+        x: 40
+        y: 40 + anchor
+        z: -4
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-30,-25,-10,10,25,35,50,80,60]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,12,17,20,12,12,20,16,0]
+      height: [0,12,17,20,12,12,20,16,0]
+      texture: [4,3,4,13,4,13,10,17]
+      propeller: true
+      angle: 0
+    not_side_propulsor:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 45 + anchor
+        z: 20
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-30,-25,-10,10,25,35,50,80,60]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,12,17,17,12,12,20,16,0]
+      height: [0,12,17,17,12,12,20,16,0]
+      texture: [4,63,1,13,4,13,10,17]
+      propeller: true
+      angle: 0
+    cockpit_meat:
+      section_segments: 3
+      offset:
+        x: 0
+        y: -9 + anchor
+        z: 12
+      position:
+        x: [-20,0,5,0,-20,0,0]
+        y: [-20,-10,0,10,20]
+        z: [-6,-2,-1,-2,-6,0,0]
+      width: [0,14,16,14,0]
+      height: [0,6,6,6,0]
+      texture: [ 8.6 ]
+      angle: 90
+  wings:
+   cockpit_cover:
+     offset:
+       x: 0
+       y: 11 + anchor
+       z: 17
+     length: [10,9]
+     width: [50,50,0]
+     angle: [-5,-40]
+     position: [-1,4,-8]
+     texture: [4,9]
+     doubleside: true
+     bump:
+       position: 30
+       size: 10
+   main:
+     offset:
+       x: -3
+       y: 26 + anchor
+       z: 0
+     length: [35,25,37.5]
+     width: [45,40,35,20]
+     angle: [40,-5,-30]
+     position: [0,0,30,30]
+     texture: [11,63,8]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   unnecessary_wing:
+     offset:
+       x: 5
+       y: 70 + anchor
+       z: 20
+     length: [20,40]
+     width: [40,30,10]
+     angle: [-5,-10]
+     position: [0,20,30]
+     texture: [2,4]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   another_unnecessary_wing:
+     offset:
+       x: 7
+       y: -50 + anchor
+       z: 0
+     length: [20,30]
+     width: [40,30,10]
+     angle: [15,30]
+     position: [0,20,30]
+     texture: [8,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   claw_C:
+     offset:
+       x: -6
+       y: -75 + anchor
+       z: 10
+     length: [0,6,6]
+     width: [0,40,130,40]
+     angle: [0,0,0]
+     position: [0,0,-20,0]
+     texture: clawtex
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   claws_BD:
+     offset:
+       x: 10
+       y: -65 + anchor
+       z: -10
+     length: [0,6,6]
+     width: [0,20,80,20]
+     angle: [-25,-25,-25]
+     position: [0,0,-10,0]
+     texture: clawtex
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   claws_AE:
+     offset:
+       x: 25
+       y: -50 + anchor
+       z: 1
+     length: [0,6,6]
+     width: [0,40,120,40]
+     angle: [-10,-10,-10]
+     position: [0,0,-25,0]
+     texture: clawtex
+     doubleside: true
+     bump:
+       position: 0
+       size: 10

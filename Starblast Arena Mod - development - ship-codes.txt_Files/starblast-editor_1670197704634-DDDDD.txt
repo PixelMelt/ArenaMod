@@ -1,0 +1,190 @@
+anchor = -150
+anchorZ = 10
+return model =
+  name: 'Penetrator'
+  designer: 'nex'
+  level: 7
+  model: 3
+  size: 0.8
+  zoom: 0.87
+  specs:
+    shield:
+      capacity: [300,300]
+      reload: [4,4]
+    generator:
+      capacity: [80,80]
+      reload: [80,80]
+    ship:
+      mass: 400
+      speed: [70,70]
+      rotation: [25,25]
+      acceleration: [150,150]
+  bodies:
+    main:
+      section_segments: [45,135,225,315]#[40,90,180,270,320]
+      offset:
+        x: 0
+        y: 0 + anchor
+        z: 10 + anchorZ
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-100,0,170,220,260,330,380,260]
+        z: [-15,-15,-15,-5,0,0,0,0,0,0]
+      width: [30,30,35,45,45,45,40,0]
+      height: [20,20,20,20,20,20,12,0]
+      texture: [1,2,15,4,8,4,17]
+      propeller: true
+    sidemain:
+      section_segments: 4
+      offset:
+        x: 35
+        y: 100 + anchor
+        z: -20 + anchorZ
+      position:
+        x: [0,-5,0,10,10,10,10,10]
+        y: [-200,-50,55,40,90,160,250,170]
+        z: [15,6,-15,-5,0,0,0,0,0,0]
+      width: [15,15,17,25,30,30,20,0]
+      height: [10,20,20,20,20,20,12,0]
+      texture: [15.1,18,4,13,8,4,17]
+      propeller: true
+    bow:
+      section_segments: 4
+      offset:
+        x: 0.01
+        y: -100 + anchor
+        z: 0 + anchorZ
+      position:
+        x: [-70,-60,-35,5,18,14,-12,0,-5,-10,-45,-55,-60]
+        y: [-310,-280,-210,-160,-90,-45,-10,10,40,100,200,280,300]
+        z: [-95,-90,-75,-60,-45,-30,-6,6,20,32,45,55,60]
+      width: [0,13,19,22,27,30,25,22,25,20,15,10,0]
+      height: [0,10,12,13,14,15,17,17,15,15,12,10,0]#[20,20,20,20,20,20,20,20,20,20]
+      texture: [4,3,2,1,-1,6,4,6,-1,1,2,3,4]
+      propeller: false
+      angle: 80
+    rails:
+      section_segments: 4
+      offset:
+        x: 12
+        y: -40 + anchor
+        z: 10 + anchorZ
+      position:
+        x: [0,0,0,0]
+        y: [-50,0,0,250]
+        z: [0,0,0,0]
+      width: [7,7,7,7]
+      height: [4,4,7,7]
+      texture: [4]
+      propeller: false
+      angle: 0
+    string:
+      section_segments: 4
+      offset:
+        x: 0.001
+        y: -40 + anchor
+        z: 0 + anchorZ
+      position:
+        x: [-11,0,0,-4]
+        y: [-295,0,0,270]
+        z: [-99,20,20,55]
+      width: [2,4,4,2]
+      height: [4,4,4,4]
+      texture: [49]
+      propeller: false
+      angle: 80
+    cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 260 + anchor
+        z: 50 + anchorZ
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-50,-40,-20,20,40,110,130,190,-50]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,30,30,30,20,20,25,25,0]
+      height: [0,30,30,30,20,20,25,25,0]
+      texture: [9,4,63,4,8,4,3,17]
+      propeller: true
+    cannon:
+      section_segments: 8
+      offset:
+        x: 60
+        y: 130 + anchor
+        z: 0 + anchorZ
+      position:
+        x: [0,0,0,0,0,-10]
+        y: [-50,-60,-10,30,70,140]
+        z: [0,0,0,0,0,0]
+      width: [0,9,10,13,12,0]
+      height: [0,9,10,13,12,0]
+      texture: [4,8,4,13,4]
+      propeller: false
+      angle: 0
+      laser:
+        damage: [10,10]
+        rate: 2.5
+        type: 1
+        speed: [120,120]
+        number: 1
+        error: 2
+        angle: 0
+        recoil: 0
+  wings:
+   main:
+     offset:
+       x: 0
+       y: 335 + anchor
+       z: 0 + anchorZ
+     length: [45,30,40,70]
+     width: [60,50,150,130,80]
+     angle: [0,-60,0,130]
+     position: [-20,-10,-40,0,30]
+     texture: [11,4,18,1]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15
+   main2:
+     offset:
+       x: 6
+       y: 140 + anchor
+       z: -10 + anchorZ
+     length: [20,30,40,40]
+     width: [60,50,150,200,80]
+     angle: [0,-60,90,120]
+     position: [-20,-10,0,0,0]
+     texture: [11,4,8,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 10
+   support1:
+     offset:
+       x: 0
+       y: 0 + anchor
+       z: 0 + anchorZ
+     length: [240]
+     width: [40,30]
+     angle: [-20]
+     position: [0,-100]
+     texture: [2]
+     doubleside: true
+     bump:
+       position: 20
+       size: 15
+   support2:
+     offset:
+       x: 0
+       y: 0 + anchor
+       z: -2 + anchorZ
+     length: [200]
+     width: [40,20]
+     angle: [13]
+     position: [10,-20]
+     texture: [4]
+     doubleside: true
+     bump:
+       position: 20
+       size: 15

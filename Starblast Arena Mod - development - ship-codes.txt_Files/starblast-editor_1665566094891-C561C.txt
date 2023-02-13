@@ -1,0 +1,330 @@
+anchor = 0
+
+energyREG = 70 # energy regen of the ship
+cannonsY = -0 # y position modifier of all cannons
+extraDMG = 5 # extra damage from lasers in the middle
+extraAMM = 11 # amount of cannons with extra damage (dont change)
+cannonsDMG = 200 # combined damage of all cannons
+cannonsLEN = 60 # length of the sword
+cannonsWID = 50 # width of the sword
+
+cannonsAMM = 36 # total amount of lasers (dont change if you dont know what youre doing)
+
+createcannon = (numb,weed=0,dmg=0) ->
+  return k = 
+      section_segments: 0
+      offset:
+        x: cannonsWID - ( weed*(cannonsWID/5) )
+        y: -80 + cannonsY - numb*cannonsLEN
+        z: 0
+      position:
+        x: [0,0]
+        y: [0,-20]
+        z: [0,0]
+      width: [15,0]
+      height: [0,0]
+      angle: 180
+      laser:
+        damage: [(((cannonsDMG - (extraAMM*extraDMG))/cannonsAMM)+dmg),(((cannonsDMG - (extraAMM*extraDMG))/cannonsAMM)+dmg)]
+        rate: energyREG/cannonsDMG
+        type: 1
+        speed: [25,25]
+        number: 1
+        error: 0
+      propeller: false
+      texture: [17]
+
+return model =
+  name: 'Lancelot'
+  designer: 'nex'
+  level: 6
+  model: 20
+  size: 1.3
+  specs:
+    shield:
+      capacity: [300,300]
+      reload: [3,3]
+    generator:
+      capacity: [cannonsDMG,cannonsDMG]
+      reload: [energyREG,energyREG]
+    ship:
+      mass: 270
+      speed: [105,105]
+      rotation: [50,50]
+      acceleration: [130,130]
+  bodies:
+    sword1: createcannon(1)
+    sword2: createcannon(2)
+    sword3: createcannon(3)
+    sword4: createcannon(4)
+    sword5: createcannon(5)
+    sword6: createcannon(6)
+    sword7: createcannon(7)
+    sword8: createcannon(8)
+    sword9: createcannon(9)
+    sword10: createcannon(10)
+    sword11: createcannon(11,1.5)
+    sword12: createcannon(12,3)
+    sword13: createcannon(13,5) # single
+    # 11 cannons below, 25 above
+    sword14: createcannon(1,5,extraDMG)
+    sword15: createcannon(2,5,extraDMG)
+    sword16: createcannon(3,5,extraDMG)
+    sword17: createcannon(4,5,extraDMG)
+    sword18: createcannon(5,5,extraDMG)
+    sword19: createcannon(6,5,extraDMG)
+    sword20: createcannon(7,5,extraDMG)
+    sword21: createcannon(8,5,extraDMG)
+    sword22: createcannon(9,5,extraDMG)
+    sword23: createcannon(10,5,extraDMG)
+    sword24: createcannon(11,5,extraDMG)
+    handle:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 0 + anchor
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-70,-80,-65,-50,-20,15,50,45,80,120,90]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,11,18,22,16,16,21,27,40,30,0]
+      height: [0,7,13,16,11,12,15,20,30,20,0]
+      texture: [1,2,3,2,10,2,18,18,4,17]
+      propeller: true
+      laser:
+        damage: [cannonsDMG,cannonsDMG]
+        rate: 10
+        type: 2
+        speed: [1,1]
+        number: 20
+        error: 360
+      propeller: true
+    cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 25 + anchor
+        z: 3
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-60,-54,-35,-10,10,40,60]
+        z: [0,0,0,0,3,8,10]
+      width: [0,9,13,14,13,10,0]
+      height: [0,10,15,15,13,10,0]
+      texture: [7,9,9,4]
+      propeller: false
+    support_pulsors:
+      section_segments: 8
+      offset:
+        x: 43
+        y: 90 + anchor
+        z: 24
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-50,-28,-35,-10,0,10,45,30]
+        z: [0,0,0,0,0,0,0,0]
+      width: [0,7,15,20,15,25,19,0]
+      height: [0,7,15,20,15,25,19,0]
+      texture: [1,13,2,4,4,8,17]
+      propeller: 1
+    pulsors_support:
+      section_segments: 8
+      offset:
+        x: 20
+        y: 40 + anchor
+        z: -15
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-38,-35,-10,0,10,45,30]
+        z: [0,0,0,0,0,0,0]
+      width: [0,12,16,11,20,16,0]
+      height: [0,10,13,11,15,15,0]
+      texture: [3,10,4,4,1]
+      propeller: !1
+    handguard:
+      section_segments: [35,65,105,145,215,325]
+      offset:
+        x: -25
+        y: -75
+        z: 0
+      position:
+        x: [-15,-5,3,-7,-6,20,0]
+        y: [-125,-115,-90,-55,-25,0,30]
+        z: [0,0,0,0,0,0,-9]
+      width: [0,6,10,14,19,27,15]
+      height: [0,6,13,13,20,25,5]
+      texture: [4,3,2,3,4,5]
+      angle: 80
+    handguardofthehandguard:
+      section_segments: [35,65,105,145,215,325]
+      offset:
+        x: -25
+        y: -75
+        z: -21
+      position:
+        x: [-10,-2.5,3,-7,-6,0,0]
+        y: [-105,-95,-75,-50,-30,0,30]
+        z: [0,0,0,0,0,-5,0]
+      width: [0,6,10,14,19,27,15]
+      height: [0,6,13,13,20,25,5]
+      texture: [5,4,3,4,5,5]
+      angle: 115
+    covering_the_bad_parts_with_more_bodies_hell_yeah_dont_remove_this_please:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -61
+        z: 2
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-40,-50,-30,-10,10,53]
+        z: [5,5,0,0,-4,5]
+      width: [0,16,18,28,16,0]
+      height: [0,16,22,26,22,0]
+      texture: [13,1,63,3,4]
+      angle: 0
+      vertical: !1
+    eye:
+      section_segments: 8
+      angle: 0
+      offset:
+        x: 0
+        y: 27
+        z: 80
+      position:
+        x: [0,0,0,0,0]
+        y: [-7,-7,6,2,6]
+        z: [0,0,0,0,0]
+      width: [0,15,10,6,0]
+      height: [0,30,16,10,0]
+      texture: [4,4,17,5]
+      vertical: true
+    ring:
+      section_segments: 12
+      offset:
+        x: 60
+        y: 110
+        z: 6
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [0,0,0,0,13,26,18,13,5,0]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [18,18,18,27,27,24,19,0,18,18]
+      height: [18,18,18,27,27,24,19,0,18,18]
+      texture: [4,3,4,3,1,18,17]
+      vertical: false
+      angle: 90
+  wings:
+   plasmacutters:
+     offset:
+       x: 5
+       y: -70 + anchor
+       z: 0
+     length: [8,9,8]
+     width: [30,70,70,30]
+     angle: [0,0,0]
+     position: [-20,-60,-45,-20]
+     texture: [17,75,2]
+     doubleside: true
+     bump:
+       position: 0
+       size: 5
+   guardthing:
+     offset:
+       x: 0
+       y: -42 + anchor
+       z: 0
+     length: [45]
+     width: [105,10]
+     angle: [5]
+     position: [15,-40]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: -15
+       size: 10
+   guardsomething:
+     offset:
+       x: 0
+       y: -70 + anchor
+       z: -4
+     length: [85]
+     width: [60,10]
+     angle: [0]
+     position: [20,-10]
+     texture: [4]
+     doubleside: true
+     bump:
+       position: 0
+       size: 5
+   coolhandguardthingfucknamingstuff:
+     offset:
+       x: 0
+       y: -83 + anchor
+       z: 0
+     length: [95]
+     width: [50,15]
+     angle: [0]
+     position: [2,0]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 15
+       size: 20
+   wi:
+     offset:
+       x: 15
+       y: 75 + anchor
+       z: 14
+     length: [0,55]
+     width: [0,60,10]
+     angle: [80,80]
+     position: [0,0,40]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15
+   ng:
+     offset:
+       x: 0
+       y: 75 + anchor
+       z: 14
+     length: [0,55]
+     width: [0,60,10]
+     angle: [90,90]
+     position: [-10,-10,50]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15
+   shield_top:
+     offset:
+       x: 30
+       y: 110 + anchor
+       z: -10
+     length: [30,45,40]
+     width: [40,100,90,40]
+     angle: [0,90,110]
+     position: [-30,0,0,0]
+     texture: [4,8,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 11
+   shield_bot:
+     offset:
+       x: 35
+       y: 80 + anchor
+       z: 0
+     length: [-10,25,40]
+     width: [0,100,90,40]
+     angle: [-90,-90,-110]
+     position: [0,0,0,0]
+     texture: [63,4,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 11

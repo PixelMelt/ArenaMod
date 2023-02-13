@@ -1,0 +1,461 @@
+anchor = -30
+
+ship_regen = 75 # high but hard to hit
+laser_totaldmg = 350 # damage of every laser combined
+laser_rate = ship_regen/laser_totaldmg
+laser_speed = 300 # 400
+laser_ypos = -1433 # -1450
+laser_xspread = 400 # 500
+
+laser_shape = [[0],[0],[0]] # [[-15,15],[0,5],[0,0]]
+laser_count = 16 
+cursor_height = 50
+return model =
+  name: 'Vesuvius'
+  designer: 'nex'
+  level: 6
+  model: 16
+  size: 1.65
+  zoom: 0.75
+  specs:
+    shield:
+      capacity: [350,350] # medium
+      reload: [7,7] # higher
+    generator:
+      capacity: [laser_totaldmg,laser_totaldmg]
+      reload: [ship_regen,ship_regen]
+    ship:
+      mass: 300 # medium-higher
+      speed: [70,70] # medium-lower
+      rotation: [45,45] # medium-higher
+      acceleration: [115,115] # medium-higher
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0 + anchor
+        z: 5
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-100,-92.5,-70,-45,-20,10,35,55,75,100,90]
+        z: [-10,-10,-10,-9,-8,-6,-4,-2,0,0,0]
+      width: [0,10,13,15,18,23,25,20,20,18,0]
+      height: [0,6,8,10,13,16,18,15,15,13,0]
+      texture: [3,2,10,1,2,3,3,4,4]
+      propeller: !1
+    cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 10 + anchor
+        z: 3
+      position:
+        x: [0,0,0,0,0]
+        y: [-58,-50,-30,0,60]
+        z: [0,0,0,4,15]
+      width: [0,7,12,15,7]
+      height: [0,9,16,16,7]
+      texture: [7,9,9,4]
+      propeller: false
+    feets:
+      section_segments: 12
+      offset:
+        x: 30
+        y: 105 + anchor
+        z: -1
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-60,-55,-35,-15,0,15,40,65,50]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,12,20,23,17,25,25,15,0]
+      height: [0,12,20,23,17,25,25,23,0]
+      texture: [4,3,10,4,4,8,12,17]
+      propeller: 1
+    foots:
+      section_segments: 12
+      offset:
+        x: 60
+        y: 95 + anchor
+        z: -25
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-60,-55,-35,-15,0,15,40,65,50]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,12,20,23,17,25,25,15,0]
+      height: [0,12,20,23,17,25,25,23,0]
+      texture: [4,3,10,4,4,8,12,17]
+      propeller: 1
+    fists:
+      section_segments: 8
+      offset:
+        x: 15
+        y: -47.5 + anchor
+        z: -15
+      position:
+        x: [0,0,0,0,0,5,-7,15,15]
+        y: [-50,-45,-30,-10,0,10,58,100,90]
+        z: [0,0,0,0,0,0,4,9,10]
+      width: [0,12,18,20,10,20,20,15,0]
+      height: [0,10,14,16,10,16,16,14,0]
+      texture: [2,1,2,4,3,11,18]
+      propeller: false
+    deco:
+      section_segments: 8
+      offset:
+        x: 65
+        y: -47.5 + anchor
+        z: -15
+      position:
+        x: [-14,-13,-5,2,10]
+        y: [-40,-15,0,20,30]
+        z: [0,0,0,0,0]
+      width: [0,5,9,5,0]
+      height: [0,10,15,10,0]
+      texture: [3,4,63,2]
+      propeller: false
+    giant_cannon_INDICATOR_DOESNOTSHOOT:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 35 + anchor
+        z: 5
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-50,-170,-100,-20,0,20,35,30,50,70,100,90]
+        z: [60,115,80,40,30,20,13,15,-3,-10,-20,-20]
+      width: [0,8,9,15,12,12,20,20,30,25,20,0]
+      height: [0,8,9,12,12,12,16,20,25,25,25,0]
+      texture: [13,13,4,63,10,63,4,2,4,8,13]
+      propeller: !1
+      angle: 0
+      laser:
+        damage: [laser_totaldmg,laser_totaldmg]
+        rate: 10
+        type: 2
+        speed: [1000,1000]
+        number: 30
+        error: 360
+        angle: 360
+        recoil: 360
+    NOHITBOX_airstrike_side:
+      section_segments: 12
+      offset:
+        x: laser_xspread
+        y: -50 + anchor + laser_ypos
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 90
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_front:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -50 + anchor + laser_ypos - laser_xspread
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 180
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_frontdouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 1.333
+        y: -50 + anchor + laser_ypos - laser_xspread / 1.333
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 45*3
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_back:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -50 + anchor + laser_ypos + laser_xspread
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 0
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_backdouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 1.333
+        y: -50 + anchor + laser_ypos + laser_xspread / 1.333
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 45
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_backdoubledouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 2.3
+        y: -50 + anchor + laser_ypos + laser_xspread / 1.05
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 45/2
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_middledoubledouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 1.05
+        y: -50 + anchor + laser_ypos + laser_xspread / 2.25
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 45+45/2
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_frontdoubledouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 2.3
+        y: -50 + anchor + laser_ypos - laser_xspread / 1.05
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 155
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    NOHITBOX_airstrike_frontmiddledoubledouble:
+      section_segments: 12
+      offset:
+        x: 0 + laser_xspread / 1.05
+        y: -50 + anchor + laser_ypos - laser_xspread / 2.25
+        z: 5
+      position:
+        x: laser_shape[2]
+        y: laser_shape[0]
+        z: laser_shape[2]
+      width: laser_shape[1]
+      height: laser_shape[1]
+      texture: [17]
+      propeller: !1
+      angle: 90+45/2
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+        ###CURSOR_TOP:
+      section_segments: 12
+      offset:
+        x: 5
+        y: -45 + anchor + laser_ypos
+        z: cursor_height
+      position:
+        x: [0,0]
+        y: [0,20]
+        z: [0,0]
+      width: [0,5]
+      height: [0,0]
+      texture: [17]
+      propeller: !1
+      angle: 45
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    CURSOR_BOTTOM:
+      section_segments: 12
+      offset:
+        x: 5
+        y: -55 + anchor + laser_ypos
+        z: cursor_height
+      position:
+        x: [0,0]
+        y: [0,20]
+        z: [0,0]
+      width: [0,5]
+      height: [0,0]
+      texture: [17]
+      propeller: !1
+      angle: 45*3
+      laser:
+        damage: [laser_totaldmg/laser_count,laser_totaldmg/laser_count]
+        rate: laser_rate
+        type: 1
+        speed: [laser_speed,laser_speed]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0###
+  wings:
+   frfont:
+     offset:
+       x: 10
+       y: -50 + anchor
+       z: -20
+     length: [35,25]
+     width: [70,40,20]
+     angle: [10,0]
+     position: [0,20,-15]
+     texture: [8,1]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15
+   shields:
+     offset:
+       x: 20
+       y: 80 + anchor
+       z: -3
+     length: [60,35,50]
+     width: [50,90,70,30]
+     angle: [-40,60,140]
+     position: [-30,-30,40,-6]
+     texture: [18,63,11]
+     doubleside: true
+     bump:
+       position: -20
+       size: 15
+   shields2:
+     offset:
+       x: 10
+       y: 90 + anchor
+       z: 5
+     length: [70,56,40]
+     width: [40,80,70,30]
+     angle: [-55,30,-30]
+     position: [-30,-60,50,90]
+     texture: [15,4,63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15
+   winglets:
+     offset:
+       x: -2
+       y: 95 + anchor
+       z: 0
+     length: [70]
+     width: [80,20]
+     angle: [50]
+     position: [0,40]
+     texture: [63]
+     doubleside: true
+     bump:
+       position: 0
+       size: 15

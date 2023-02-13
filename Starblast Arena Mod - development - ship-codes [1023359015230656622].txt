@@ -1,0 +1,425 @@
+==============================================================
+Guild: Starblast Arena Mod
+Channel: development / ship-codes
+==============================================================
+
+[24-Sep-22 03:24 PM] Nexagon#6069
+reaper
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\reaper-D3D9D.txt
+
+
+[24-Sep-22 03:25 PM] Nexagon#6069
+bfg ability
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message_6-4C850.txt
+
+
+[24-Sep-22 03:25 PM] Nexagon#6069
+bfg normal
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664046763289-53023.txt
+
+
+[26-Sep-22 08:22 AM] Nexagon#6069
+piercer non ability
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664205739622-6A067.txt
+
+
+[26-Sep-22 12:03 PM] Nexagon#6069
+piercer ability
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664218910209-80345.txt
+
+
+[29-Sep-22 07:07 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-89495.txt
+
+
+[29-Sep-22 07:07 AM] Deleted User#0000
+phoenix 2.1.2
+
+
+[29-Sep-22 08:14 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-7002C.txt
+
+
+[29-Sep-22 08:14 AM] Deleted User#0000
+phoenix ability 2.1.2
+
+
+[29-Sep-22 09:04 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\bfg_normal_2.1.2-308A4.txt
+
+
+[29-Sep-22 09:04 AM] Deleted User#0000
+bfg normal 2.1.2
+
+
+[01-Oct-22 10:12 AM] Nexagon#6069
+bfg normal 3.0
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664644318665-6FFDC.txt
+
+
+[01-Oct-22 07:06 PM] Nexagon#6069
+reaper 3.0.1
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664676334275-EEB4E.txt
+
+
+[02-Oct-22 10:01 AM] Nexagon#6069
+phoenix updated firewall
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1664730034151-70C84.txt
+
+
+[12-Oct-22 02:16 AM] Nexagon#6069
+new lancelot non ability (needs balancing)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1665566094891-C561C.txt
+
+
+[12-Oct-22 07:43 AM] Nexagon#6069
+lancelot non ability update @Deleted User put it in your mod version and post it
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1665585794501-1D813.txt
+
+
+[13-Oct-22 05:27 AM] Nexagon#6069
+lancelot non ability update, again (longer sword, more damage)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1665664014938-E90BC.txt
+
+
+[13-Oct-22 07:48 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-589B3.txt
+
+
+[13-Oct-22 07:49 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-7DA37.txt
+
+
+[13-Oct-22 07:49 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-4D65B.txt
+
+
+[13-Oct-22 07:50 AM] Nexagon#6069
+what do i make the cooldown for piercer
+
+
+[13-Oct-22 07:55 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-86ABA.txt
+
+
+[13-Oct-22 08:05 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-78290.txt
+
+
+[13-Oct-22 08:09 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-A4928.txt
+
+
+[13-Oct-22 09:00 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-FEE35.txt
+
+
+[13-Oct-22 09:01 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\unknown-D5104.png
+
+
+[13-Oct-22 10:55 AM] Deleted User#0000
+**__new balance__** ---------------------------------------------------------
+
+
+[13-Oct-22 10:55 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-AD6D7.txt
+
+
+[13-Oct-22 10:55 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-C689C.txt
+
+
+[13-Oct-22 01:46 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-6C6E8.txt
+
+
+[13-Oct-22 01:46 PM] Deleted User#0000
+balanced piercer
+
+
+[13-Oct-22 01:46 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-39AB1.txt
+
+
+[14-Oct-22 08:08 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-B5FDB.txt
+
+
+[14-Oct-22 08:08 AM] Deleted User#0000
+synthesis nerfed
+
+
+[14-Oct-22 08:10 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-BC72E.txt
+
+
+[14-Oct-22 09:30 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-EF7B7.txt
+
+
+[14-Oct-22 11:31 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-784D5.txt
+
+
+[14-Oct-22 11:31 AM] Deleted User#0000
+valkyrie attack mode buff
+
+
+[14-Oct-22 11:33 AM] Deleted User#0000
+@Nexagon please compile the clan war code for tomorrow
+
+
+[14-Oct-22 11:33 AM] Deleted User#0000
+with reduced radar vision
+
+
+[14-Oct-22 02:38 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-B71FE.txt
+
+
+[14-Oct-22 03:16 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-A25FD.txt
+
+
+[14-Oct-22 03:16 PM] Deleted User#0000
+balanced piercer
+
+
+[15-Oct-22 04:58 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\AM_3.0.6-BFA28.txt
+
+
+[15-Oct-22 04:58 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-62010.txt
+
+
+[15-Oct-22 04:59 AM] Deleted User#0000
+rock tower 10s cd
+
+
+[15-Oct-22 05:00 AM] Deleted User#0000
+piercer 12s
+
+
+[15-Oct-22 06:53 AM] Deleted User#0000
+- fix button glitching when the match ends
+
+
+[16-Oct-22 07:40 AM] Nexagon#6069
+@Deleted User kunai (VERY OLD VERSION, YOU'LL HAVE TO GIVE IT THE NEW STATS)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message_9-26B3F.txt
+
+
+[16-Oct-22 07:41 AM] Nexagon#6069
+i did
+
+
+[16-Oct-22 07:52 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-A7673.txt
+
+{Reactions}
+✅ 
+
+[16-Oct-22 07:52 AM] Nexagon#6069
+i'll react with ✅ to ships i put in
+
+
+[17-Oct-22 12:15 PM] Nexagon#6069
+megalodon (no proper stats), to be used in season 3 (or earlier)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1666034062107-07AB4.txt
+
+
+[18-Oct-22 10:02 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-6369A.txt
+
+
+[18-Oct-22 10:18 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\message-BAE14.txt
+
+
+[13-Nov-22 03:04 PM] Nexagon#6069
+megalodon updated model (no stats)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1668380531614-F8B25.txt
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-710BA.png
+
+
+[14-Nov-22 04:23 AM] Nexagon#6069
+updated meg model
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1668428518004-8FF3A.txt
+
+
+[14-Nov-22 07:11 AM] Nexagon#6069
+looks like this
+
+
+[14-Nov-22 07:11 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-8485D.png
+
+
+[14-Nov-22 07:13 AM] Nexagon#6069
+megalodon weak version
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1668438703154-68BB9.txt
+
+
+[14-Nov-22 07:13 AM] Nexagon#6069
+looks like this (can be changed)
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-AA069.png
+
+
+[14-Nov-22 07:49 AM] Nexagon#6069
+weak version 2
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1668440961257-D937F.txt
+
+
+[14-Nov-22 07:50 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-AC280.png
+
+
+[01-Dec-22 07:01 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\turbodick-B37D2.txt
+
+
+[01-Dec-22 07:01 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\turbodick_t7-EBADF.txt
+
+
+[01-Dec-22 07:01 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\meg_smol-529A2.txt
+
+
+[01-Dec-22 07:01 PM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\meg_big-9BC49.txt
+
+
+[04-Dec-22 07:21 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\arcane_nerf-51E12.txt
+
+
+[04-Dec-22 07:23 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\meg_nerf-B2456.txt
+
+
+[04-Dec-22 03:48 PM] Nexagon#6069
+penetwator UNLOADED
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-595BC.png
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1670197704634-DDDDD.txt
+
+
+[04-Dec-22 03:50 PM] Nexagon#6069
+penetrator LOADED
+
+{Attachments}
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\image-C58FC.png
+Starblast Arena Mod - development - ship-codes [1023359015230656622].txt_Files\starblast-editor_1670197769628-1675E.txt
+
+
+==============================================================
+Exported 71 message(s)
+==============================================================

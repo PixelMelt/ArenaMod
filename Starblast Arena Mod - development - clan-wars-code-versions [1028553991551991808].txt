@@ -1,0 +1,420 @@
+==============================================================
+Guild: Starblast Arena Mod
+Channel: development / clan-wars-code-versions
+Topic: skill solution
+==============================================================
+
+[10-Oct-22 12:59 PM] Nexagon#6069
+@Deleted User (MAY HAVE ISSUES, TESTING NEEDED)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665431869072-B0EB5.txt
+
+
+[10-Oct-22 01:27 PM] Nexagon#6069
+fixed lingering buttons (hopefully)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665433549802-A0A7E.txt
+
+
+[10-Oct-22 03:09 PM] Nexagon#6069
+(MAY HAVE ISSUES, TESTING NEEDED)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665439731186-75E8D.txt
+
+
+[11-Oct-22 05:07 AM] Nexagon#6069
+implemented killfeed (note: killfeed only appears when the match has started)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665489949379-F2FAE.txt
+
+
+[11-Oct-22 06:57 AM] Nexagon#6069
+not sure if its fixed, we'll have to test
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665496625030-79E1D.txt
+
+
+[12-Oct-22 07:49 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\AM_CLAN_WARS_0.4-A9C1B.txt
+
+
+[12-Oct-22 08:09 AM] Nexagon#6069
+synchronizing clan wars and public
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665587328178-CA56E.txt
+
+
+[12-Oct-22 10:48 AM] Nexagon#6069
+buffed god, fixed issues
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665596871483-A8BCF.txt
+
+
+[12-Oct-22 11:44 AM] Nexagon#6069
+fixed
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665600217519-1DA70.txt
+
+
+[12-Oct-22 12:47 PM] Nexagon#6069
+@Deleted User fixed everything
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665604002869-26A1A.txt
+
+
+[12-Oct-22 01:43 PM] Nexagon#6069
+hopefully fixed buttons
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665607387387-6F762.txt
+
+
+[13-Oct-22 06:26 AM] Nexagon#6069
+more recent version
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665667538614-9C486.txt
+
+
+[13-Oct-22 09:13 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665677562363-6164F.txt
+
+
+[13-Oct-22 09:26 AM] Nexagon#6069
+warthog capacity fixed
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665678352228-41E20.txt
+
+
+[13-Oct-22 02:27 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665696410038-F0894.txt
+
+
+[14-Oct-22 08:27 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665761184186-C586B.txt
+
+
+[14-Oct-22 09:58 AM] Nexagon#6069
+increased wasp bullet speed by 6400
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665766705539-0802D.txt
+
+
+[14-Oct-22 10:26 AM] Nexagon#6069
+hopefully fixed buttons
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665768366159-00ACA.txt
+
+
+[14-Oct-22 11:46 AM] Nexagon#6069
+most likely final version
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665773139584-C5931.txt
+
+
+[14-Oct-22 03:52 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665787901992-F160B.txt
+
+
+[15-Oct-22 06:33 AM] Deleted User#0000
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\AMCW-3245F.txt
+
+
+[15-Oct-22 07:36 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665844536986-5FBB7.txt
+
+
+[16-Oct-22 06:54 AM] Nexagon#6069
+custom teams added (line 63 and below for explanation & guide)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665928435434-4203B.txt
+
+
+[16-Oct-22 09:52 AM] Nexagon#6069
+thunder change added
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665939080711-956CF.txt
+
+
+[16-Oct-22 01:29 PM] Nexagon#6069
+fixed horizontal bases & custom teams
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665952127116-3A3CE.txt
+
+
+[16-Oct-22 01:42 PM] Nexagon#6069
+IF THIS VERSION HAS UI BUGS USE THE ONE ABOVE
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665952951024-B7713.txt
+
+
+[16-Oct-22 02:04 PM] Nexagon#6069
+@Deleted User host this version instad
+
+
+[16-Oct-22 03:04 PM] Nexagon#6069
+fixed viking
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665957839723-9B213.txt
+
+
+[16-Oct-22 05:03 PM] Nexagon#6069
+fixed spectator
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665964982575-791EC.txt
+
+
+[16-Oct-22 06:31 PM] Nexagon#6069
+testing required
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1665970231365-DED9C.txt
+
+
+[16-Oct-22 06:45 PM] Deleted User#0000
+What's new
+
+
+[18-Oct-22 07:42 AM] Nexagon#6069
+stop streaming before you download this
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666104116082-40F49.txt
+
+
+[18-Oct-22 07:42 AM] Nexagon#6069
+@Deleted Usertry this version
+
+
+[18-Oct-22 07:58 AM] Nexagon#6069
+new setting: `spectator_amount`
+   max amount of forced spectators allowed (not playing, only spectating)
+   goes above `max_players`, for example if `max_players` is 10 and `spectator_amount` is 2, 10 people will be
+   able to play normally and 2 will spectate
+new command: `unspectate(ID)`: self explanatory
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666105103507-4B83A.txt
+
+
+[18-Oct-22 10:19 AM] Nexagon#6069
+synchronization and spitfire
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666113519967-87589.txt
+
+
+[18-Oct-22 04:00 PM] Nexagon#6069
+most recent version
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666134001863-F4A0A.txt
+
+
+[18-Oct-22 04:15 PM] Nexagon#6069
+@BYLOLOPRO360 you now have access to this channel, the most recent versions of the code will be posted here
+
+
+[18-Oct-22 04:26 PM] Nexagon#6069
+@BYLOLOPRO360 whenever you want to host next, look at this channel and use the most recent version of the mod posted (right now, the one i'm replying to)
+
+{Reactions}
+👍 
+
+[18-Oct-22 05:03 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666134001863-01B54.txt
+
+
+[19-Oct-22 07:39 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666190350812-F3CDE.txt
+
+
+[19-Oct-22 02:06 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666213561073-69A12.txt
+
+
+[21-Oct-22 09:42 AM] Nexagon#6069
+fixed some manual team balancing issues and spectators
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666370480513-3490D.txt
+
+
+[21-Oct-22 11:15 AM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666376059250-D27D1.txt
+
+
+[22-Oct-22 12:43 PM] Nexagon#6069
+special S&C vs YA version with custom teams ( ⚠️ HOST VERSION BELOW ⚠️)
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666467774198-E3AD9.txt
+
+
+[22-Oct-22 12:44 PM] Nexagon#6069
+HOST THIS VERSION, THE ONE ABOVE IS **ONLY** FOR S&C VS YA
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666467861451-308BF.txt
+
+
+[24-Oct-22 08:06 PM] Nexagon#6069
+this version has a more complete todo list, but it hasn't been tested yet; if it doesn't work, host the version above
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666667067707-DF945.txt
+
+
+[26-Oct-22 06:08 AM] Nexagon#6069
+nerfed ekho
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1666789677064-D7B89.txt
+
+
+[26-Oct-22 06:13 AM] Deleted User#0000
+how much bspeed now
+
+
+[26-Oct-22 06:13 AM] Nexagon#6069
+150
+
+
+[01-Nov-22 06:27 PM] Nexagon#6069
+@BYLOLOPRO360 from now on, host only once per day unless it's the weekend
+
+
+[01-Nov-22 06:27 PM] Nexagon#6069
+there's been too many hosts recently
+
+
+[01-Nov-22 06:29 PM] Nexagon#6069
+NERFED ZEUS
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1667352527374-6DEE2.txt
+
+
+[13-Nov-22 04:59 AM] Nexagon#6069
+- buffed advf and emp
+- buffed guren
+- buffed mosquit
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668344183801-9AE1C.txt
+
+
+[13-Nov-22 05:41 AM] Nexagon#6069
+buffde guren again
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668346836251-C35EE.txt
+
+
+[13-Nov-22 05:43 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668346973617-C418F.txt
+
+
+[13-Nov-22 06:32 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668349871862-688A4.txt
+
+
+[13-Nov-22 06:34 AM] Nexagon#6069 (pinned)
+SPECIAL AR vs IS CUSTOM TEAMS CODE
+```js
+customTeams.red =  {name:"[AR]" ,color:"#FF00FF"  ,hue:300,      objectColor:0xFF00FF};// default: RED,  #FF0000, 0  , 0xFF0000
+customTeams.blue = {name:"[IS]" ,color:"#FF7700"  ,hue:30,       objectColor:0xFF7700};// default: BLUE, #00FFFF, 180, 0x00FFFF
+```
+FOR THE OFFICIAL AR VS IS MATCH, REPLACE THIS AT THE TOP OF THE CODE (line 59 and 60)
+
+
+[13-Nov-22 06:34 AM] Nexagon#6069
+Pinned a message.
+
+
+[13-Nov-22 07:44 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668354199935-71590.txt
+
+
+[13-Nov-22 08:21 AM] Nexagon#6069
+@Deleted User fixed puck, increased advf cooldown
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668356402731-EA138.txt
+
+
+[13-Nov-22 09:43 AM] Nexagon#6069
+custom teams reverted to red vs blue, remember to switch it back to the pinned message for ar vs is
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1668361294315-5E2E7.txt
+
+
+[13-Nov-22 11:37 AM] Nexagon#6069
+@Deleted User take this version, replace lines 59 and 60 with the following and its good
+```js
+customTeams.red =  {name:"AR" ,color:"#FF00FF"  ,hue:300,      objectColor:0xFF00FF};// default: RED,  #FF0000, 0  , 0xFF0000
+customTeams.blue = {name:"IS" ,color:"#FF7700"  ,hue:30,       objectColor:0xFF7700};// default: BLUE, #00FFFF, 180, 0x00FFFF
+```
+
+
+[03-Dec-22 08:45 AM] Nexagon#6069
+ship synchronization
+
+{Attachments}
+Starblast Arena Mod - development - clan-wars-code-versions [1028553991551991808].txt_Files\starblast-mod_1670085879263-AF792.txt
+
+{Reactions}
+🤩 (2) 
+
+==============================================================
+Exported 63 message(s)
+==============================================================

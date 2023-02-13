@@ -1,0 +1,220 @@
+==============================================================
+Guild: Starblast Arena Mod
+Channel: development / team-code-versions
+==============================================================
+
+[02-Dec-22 06:28 PM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670034488741-7C307.txt
+
+
+[03-Dec-22 08:33 AM] Nexagon#6069
+t1-t3s complete (unbalanced)
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670085158883-55540.txt
+
+
+[03-Dec-22 10:57 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670093817617-61263.txt
+
+
+[03-Dec-22 07:08 PM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670123199498-D72FD.txt
+
+
+[03-Dec-22 07:09 PM] Deleted User#0000
+to do:
+- pulse nerf
+- mercury more Z
+- vanguard bigger, ability less laser speed 
+you really dont like saying good night do you
+
+
+[03-Dec-22 07:10 PM] Nexagon#6069
+last one is the most important
+
+
+[04-Dec-22 10:44 AM] Deleted User#0000
+- x1 buff
+- ydef more recoil
+
+
+[04-Dec-22 10:52 AM] Deleted User#0000
+- mercury slight nerf
+
+
+[04-Dec-22 11:06 PM] Nexagon#6069
+t4s complete (balancing needed)
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670223906747-15C8E.txt
+
+
+[05-Dec-22 06:59 PM] Nexagon#6069
+t5s semi-complete (every ship needs revisiting)
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670295456241-D3F94.txt
+
+
+[06-Dec-22 12:07 AM] Nexagon#6069
+todo: revisit t5 and crusader abilities, remodel bat-def, howler and bastard
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670313971745-39896.txt
+
+
+[07-Dec-22 01:06 AM] Nexagon#6069
+crusader & howler need new abilities
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670403877257-79F03.txt
+
+
+[08-Dec-22 02:35 AM] Nexagon#6069
+todo: t7 abilities, bastard ability
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670495405320-61E45.txt
+
+
+[08-Dec-22 06:21 PM] Nexagon#6069
+todo:
+- ability for bastard
+- remodel bastard and all t7s
+- balance EVERYTHING (even t6s)
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670552398153-AC82F.txt
+
+
+[08-Dec-22 09:36 PM] Nexagon#6069
+previous todo still stands
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670564125061-DF55F.txt
+
+
+[09-Dec-22 05:57 PM] Xerxes#4539
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670637440143-F0505.txt
+
+
+[09-Dec-22 11:31 PM] Nexagon#6069
+todo:
+- ability for bastard
+- remodel bastard and all t7s
+- balance EVERYTHING (even t6s)
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670657495246-AC517.txt
+
+
+[10-Dec-22 02:22 PM] Nexagon#6069
+shouldve posted it here
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\AMTM_2-BA76E.txt
+
+
+[10-Dec-22 06:03 PM] Nexagon#6069
+for the list of changes look in latest update in this file
+
+todo:
+- balance or remove reaper
+- balance t7s
+- remodel bastard
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670724005083-B4F61.txt
+
+
+[11-Dec-22 08:37 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670776526202-17F07.txt
+
+
+[11-Dec-22 09:46 AM] Nexagon#6069
+@Deleted User
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670780739834-F6FCD.txt
+
+
+[11-Dec-22 12:40 PM] Nexagon#6069
+- nerf viper
+- buff reaper
+- buff megalodon
+- nerf aries ability
+- lower station size and station regen again
+- lower station gem capacity
+- 2 teams
+
+
+[11-Dec-22 12:47 PM] Xerxes#4539
+- make lower tiers more viable
+
+
+[11-Dec-22 12:47 PM] Nexagon#6069
+- make the games last much shorter one way or another
+- buff watcher (make it so it doesnt die instantly)
+- nerf goliath slightly (it's nearly unstoppable in non ability, cuda cant even ram it)
+- thunder less cd
+- aetos ability infinite range, take 700 gems
+- less cooldown on lower tiers
+- replace mercury ability (too much trolling potential)
+
+
+[11-Dec-22 12:51 PM] Nexagon#6069
+- give watcher negative acceleration so it can build up infinite speed
+
+
+[11-Dec-22 12:51 PM] Xerxes#4539
+- buff aetos
+
+
+[11-Dec-22 12:53 PM] Nexagon#6069
+- howler less cooldown
+
+
+[11-Dec-22 01:30 PM] Xerxes#4539
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670794216727-C592F.txt
+
+
+[12-Dec-22 01:54 AM] Nexagon#6069
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1670838049639-0D3A4.txt
+
+
+[16-Dec-22 09:07 AM] Nexagon#6069
+cobra added, needs balancing
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1671210363367-A62F2.txt
+
+
+[17-Dec-22 03:35 AM] Nexagon#6069
+see in-file latest update
+
+{Attachments}
+Starblast Arena Mod - development - team-code-versions [1048415636553994300].txt_Files\starblast-mod_1671276844040-8AF2B.txt
+
+{Reactions}
+❤️ 
+
+==============================================================
+Exported 31 message(s)
+==============================================================
