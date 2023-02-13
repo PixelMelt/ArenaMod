@@ -1,6 +1,6 @@
 # ArenaMod Archive
 
-This archive includes every publically available version of the starblast.io mod "Arena Mod" created by lexagon and nex (among others).
+This archive includes every publically available version of the starblast.io mod "Arena Mod" created by lex and nexagon (among others).
 This archive also includes chatlogs for channels of interest from the arena mod discord server. Along with art ascociated with arena mod.
 
 
